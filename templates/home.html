@@ -21,9 +21,10 @@
               <li><a href="{{ url_for('about') }}">About Us</a></li>
               <li><a href="{{ url_for('work') }}">Work</a></li>
               <li><a href="{{ url_for('testimonials') }}">Testimonials</a></li>
-                <li><a href="#">Contribute</a></li>t
-                <li><a href="#">Contact</a></li>
-                
+              <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+              <li><a href="{{ url_for('contribute') }}">Contribute</a></li>
+              <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                              
             </ul>
         </nav>
     </div>
@@ -38,7 +39,7 @@
     <div class="slider-container">
         <div class="slider">
             <div class="slide">
-              <img src="{{ url_for('static', filename='static\IMG_4010.JPG') }}" alt="Image1">
+              <img src="{{ url_for('static', filename='20TH oct.JPG') }}" alt="Image1">
 
                 <div class="text-overlay">Welcome to Sanskar</div>
             </div>
@@ -67,15 +68,15 @@
     <div class="center-container">
       <div class="picture-grid">
         <div class="image-container">
-          <img src="WhatsApp Image 2024-08-27 at 12.11.00_eb9c8fa4.jpg" alt="Food">
-          <p class="image-caption">Food</p>
-        </div>
-        <div class="image-container">
-          <img src="WhatsApp Image 2024-08-27 at 12.12.02_cba6405f.jpg" alt="Education">
+          <img src="{{ url_for('static', filename='children5.JPG') }}" alt="Education">
           <p class="image-caption">Education</p>
         </div>
         <div class="image-container">
-          <img src="WhatsApp Image 2024-08-27 at 12.12.25_c2483b68.jpg" alt="Animal Welfare">
+          <img src="WhatsApp Image 2024-08-27 at 12.12.02_cba6405f.jpg" alt="FOOD">
+          <p class="image-caption">FOOD</p>
+        </div>
+        <div class="image-container">
+          <img src="{{ url_for('static', filename='dog.jpg') }}" alt="Animal Welfare">
           <p class="image-caption">Animal Welfare</p>
         </div>
         <div class="image-container">
@@ -101,8 +102,10 @@
         <h2 class="section-title">Programs</h2>
         <div class="sliding-pictures">
             <!-- Add sliding images here -->
-            <img src="" alt="Education 1">
-            <img src="static\WhatsApp Image 2024-03-21 at 18.54.51_2c97f765.jpg" alt="Education 2">
+            <img src="{{ url_for('static', filename='children4.JPG') }}" alt="children">
+            <img src="{{ url_for('static', filename='haldwani10.jpg') }}" alt="children">
+            <img src="{{ url_for('static', filename='2oth oct2.JPG') }}" alt="children">
+            <img src="{{ url_for('static', filename='20th oct 1.JPG') }}" alt="children">
             <img src="WhatsApp Image 2024-08-27 at 12.12.46_9d951169.jpg" alt="Education 3">
         </div>
     </div>

@@ -1,6 +1,48 @@
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template, request  # Added request import
+import pandas as pd
+import os
 
 app = Flask(__name__)
+# Path to the Excel file
+EXCEL_FILE = os.path.join('data', 'contacts.xlsx')
+
+# Check if the Excel file exists, if not, create it with appropriate headers
+if not os.path.exists(EXCEL_FILE):
+    df = pd.DataFrame(columns=['Name', 'Email', 'Phone', 'Address', 'Description'])
+    df.to_excel(EXCEL_FILE, index=False)
+
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
+
+@app.route('/submit', methods=['POST'])
+def submit():
+    # Get form data
+    name = request.form['name']
+    email = request.form['email']
+    phone = request.form['phone']
+    address = request.form['address']
+    description = request.form['description']
+    
+    # Load the existing Excel file
+    df = pd.read_excel(EXCEL_FILE)
+
+    # Create a new entry
+    new_entry = pd.DataFrame({
+        'Name': [name],
+        'Email': [email],
+        'Phone': [phone],
+        'Address': [address],
+        'Description': [description]
+    })
+
+    # Append the new entry to the DataFrame and save it back to the Excel file
+    df = pd.concat([df, new_entry], ignore_index=True)
+    df.to_excel(EXCEL_FILE, index=False)
+
+    return "Form submitted successfully!"
+
+
 
 # Route for the home page
 @app.route('/')
@@ -20,6 +62,16 @@ def work():
 @app.route('/testimonials')
 def testimonials():
     return render_template('testimonials.html')
+
+@app.route('/gallery')
+def gallery():
+    return render_template('gallery.html')
+
+
+@app.route('/contribute')
+def contribute():
+    return render_template('contribute.html')
+
 
 @app.route('/p1')
 def p1():
