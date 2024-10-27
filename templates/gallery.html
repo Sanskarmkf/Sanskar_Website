@@ -3,181 +3,310 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Organization</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Document</title>
 </head>
 <body>
 
-   
-
     <!-- Top Bar Section -->
-    <div class="top-bar">
-        <div class="logo">
-            <img src="logo.png" alt="Logo" width="100">
-        </div>
-        <nav class="top-nav">
-            <ul>
-              <li><a href="{{ url_for('home') }}">Home</a></li>
-              <li><a href="{{ url_for('about') }}">About Us</a></li>
-              <li><a href="{{ url_for('work') }}">Work</a></li>
-              <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
-              <li><a href="{{ url_for('contribute') }}">Contribute</a></li>
-              <li><a href="{{ url_for('contact') }}">Contact</a></li>
-              
-            </ul>
-        </nav>
+  <div class="top-bar">
+    <div class="logo">
+        <img src="logo.png" alt="Logo" width="100">
     </div>
+    <nav class="top-nav">
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About Us</a></li>
+            <li><a href="{{ url_for('work') }}">Work</a></li>
+            <li><a href="{{ url_for('testimonials') }}">Testimonials</a></li>
+            <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+            <li><a href="{{ url_for('contribute') }}">Contribute</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            
+            
+        </ul>
+    </nav>
+  </div>
 
-     <!-- Top Announcement Bar -->
-     <div class="announcement-bar">
-        <p>Applications Open now for September 2024 Batch | Applications Close: Sep 15, 2024 |</p>
-        <button class="join-btn">Join Now</button>
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar">
+    <p>Applications Open now for September 2024 Batch | Applications Close: Sep 15, 2024 |</p>
+    <a href="{{ url_for('contact') }}"><button class="join-btn">Join Now</button></a>
+  </div>
+
+  <!--===NGO-Gallery-Section==================================================-->
+  <section id="ngo-gallery">
+    <!--heading-->  
+    <div class="gallery-heading">
+      
+      <h3>GALLERY</h3>
     </div>
-    <style>
-  
-        /* General Styling */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #f0f0f0;
-            }
-            
-            .slider-container {
-            position: relative;
-            width: 100%;
-            max-width: 100%;
-            overflow: hidden;
-            border: none; /* Remove border to match the banner style */
-            border-radius: 0; /* Remove border radius */
-            background-color: #fff;
-            height: 80vh; /* Adjust the height to make it look like a banner */
-            }
-            
-            .slider {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-            height: 100%;
-            }
-            
-            .slide {
-            min-width: 100%;
-            box-sizing: border-box;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-            }
-            
-            .slide img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Ensure the image covers the entire slide */
-            object-position: center; /* Focus on the central part of the image */
-            }
-            .text-overlay {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: white;
-            font-size: 3em; /* Adjust the font size as needed */
-            font-weight: bold;
-            text-align: center;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Optional: adds a shadow for better readability */
-            z-index: 2; /* Ensure the text is above the image */
-            }
-            
-            button.prev, button.next {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(0, 0, 0, 0.5);
-            border: none;
-            color: white;
-            padding: 10px;
-            cursor: pointer;
-            border-radius: 50%;
-            z-index: 10; /* Ensure buttons are above the images */
-            }
-            
-            button.prev {
-            left: 10px;
-            }
-            
-            button.next {
-            right: 10px;
-            }
-            
-            button.prev:hover, button.next:hover {
-            background-color: rgba(0, 0, 0, 0.7);
-            }
-            * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            }
-            
-            body {
-            font-family: 'Arial', sans-serif;
-            background-color: #ffffff; /* White Background */
-            color: #333; /* Dark Gray Text */
-            }
-            
-            /* Announcement Bar Section */
-            .announcement-bar {
-            background-color: orange; /* IITM Red */
-            color: white;
-            text-align: center;
-            padding: 10px;
-            font-size: 16px;
-            position: relative;
-            }
-            
-            .join-btn {
-            background-color: #ffffff; /* White */
-            color: #b7282e; /* Red Text */
-            border: 1px solid #b7282e;
-            padding: 6px 15px;
-            border-radius: 5px;
-            position: absolute;
-            right: 20px;
-            top: 4px;
-            cursor: pointer;
-            font-weight: bold;
-            }
-            
-            .join-btn:hover {
-            background-color: #b7282e;
-            color: #fff;
-            }
-            .top-bar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #333333; /* Dark Gray */
-            padding: 20px 40px;
-        }
+    <!--filter-->  
+    <ul class="gallery-filter">
+      <li class="list gallery-filter-active" data-filter="all">All</li>
+      <li class="list" data-filter="birthday">Birthday</li>
+      <li class="list" data-filter="street-dogs">Street Dogs</li>
+      <li class="list" data-filter="food">Food</li>
+      <li class="list" data-filter="education">Education</li>
+      <li class="list" data-filter="books">Books</li>
+    </ul>
+    <!--container-->  
+    <div class="gallery-container">
+      <!--1: Birthday-->
+      <div class="gallery-box birthday">
+        <img src="{{ url_for('static', filename='birthday-celebration-thumb.jpg') }}" alt="Birthday Celebration">
+        
+      </div>
+      <!--2: Street Dogs-->
+      <div class="gallery-box street-dogs">
+        <img src="{{ url_for('static', filename='dog.jpg') }}" alt="Street Dogs">
+        
+      </div>
+      <!--3: Food Distribution-->
+      <div class="gallery-box food">
+        <img src="{{ url_for('static', filename='food-distribution.jpg') }}" alt="Food Distribution">
+        
+      </div>
+      <!--4: Education Drive-->
+      <div class="gallery-box education">
+        <img src="{{ url_for('static', filename='children.JPG') }}" alt="Education Drive">
+        
+        
+      </div>
+      <div class="gallery-box education">
+        
+        <img src="{{ url_for('static', filename='static\children5.JPG') }}" alt="Education Drive">
+        
+      </div>
+      <div class="gallery-box education">
+        
+        <img src="{{ url_for('static', filename='children2.JPG') }}" alt="Education Drive">
+        
+      </div>
+      <div class="gallery-box education">
+        
+        <img src="{{ url_for('static', filename='children3.JPG') }}" alt="Education Drive">
+        
+      </div>
+      <div class="gallery-box education">
+        
+        <img src="{{ url_for('static', filename='children4.JPG') }}" alt="Education Drive">
+        
+      </div>
+      <div class="gallery-box education">
+        
+        <img src="{{ url_for('static', filename='breeze foundation 1.JPG') }}" alt="Education Drive">
+        
+      </div>
+      <!--5: Books Donation-->
+      <div class="gallery-box books">
+        <img src="{{ url_for('static', filename='books-donation-thumb.jpg') }}" alt="Books Donation">
+        
+      </div>
+    </div>
+</section>
 
-        .top-bar .logo img {
-            width: 120px;
-        }
 
-        .top-nav ul {
-            list-style: none;
-            display: flex;
-        }
+  <style>
+    /* Gallery Title Styling */
+.gallery-heading h3 { font-size: 2.5em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    /* Lighten text slightly */
+}
+.gallery-filter {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
 
-        .top-nav ul li {
-            margin-left: 30px;
-        }
+/* Breadcrumb Styling */
+.breadcrumb {
+    font-size: 1em;
+    color: #f1f1f1;
+    margin-top: 10px;
+}
 
-        .top-nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 16px;
-        }
+.breadcrumb a {
+    color:white;
+    text-decoration: none;
+}
 
-        .top-nav ul li a:hover {
-            text-decoration: underline;
-        }
-            </style>
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb span {
+    margin: 0 5px;
+    color: #ddd;
+}
+
+    
+    
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #ffffff; /* White Background */
+  color: #333; /* Dark Gray Text */
+}
+
+/* Announcement Bar Section */
+.announcement-bar {
+  background-color: orange; 
+  color: white;
+  text-align: center;
+  padding: 12px;
+  font-size: 15px;
+  position: relative;
+  height: 45px;
+}
+
+.join-btn {
+  background-color: #ffffff; 
+  color: #b7282e; 
+  border: 1px solid #b7282e;
+  padding: 8px 15px;
+  border-radius: 5px;
+  position: absolute;
+  right: 20px;
+  top: 8px;
+  cursor: pointer;
+  font-weight: bold;
+ 
+}
+
+.join-btn:hover {
+  background-color: #b7282e;
+  color: #fff;
+}
+
+/* Top Bar Section */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333333; /* Dark Gray */
+  padding: 20px 40px;
+}
+
+.top-bar .logo img {
+  width: 120px;
+}
+
+.top-nav ul {
+  list-style: none;
+  display: flex;
+}
+
+.top-nav ul li {
+  margin-left: 30px;
+}
+
+.top-nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.top-nav ul li a:hover {
+  text-decoration: underline;
+}
+   /* Gallery Section */
+#ngo-gallery {
+  padding: 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.gallery-heading {
+  margin-bottom: 20px;
+}
+
+.gallery-filter {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  gap: 10px;
+}
+
+.gallery-filter .list {
+  padding: 10px 16px;
+  cursor: pointer;
+}
+
+.gallery-filter-active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Container for Gallery - Aligns and spaces images */
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center alignment */
+  gap: 30px; /* Spacing between gallery boxes */
+  padding: 20px;
+}
+
+/* Gallery Box Styling */
+.gallery-box {
+  width: 300px; /* Larger width for each box */
+  height: 300px; /* Larger height for each box */
+  overflow: hidden; /* Crop overflowed content */
+  position: relative;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for box */
+  transition: transform 0.3s; /* Smooth hover effect */
+}
+
+/* Image Styling */
+.gallery-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures images cover the box area without distortion */
+  border-radius: 10px; /* Aligns with box corners */
+}
+
+/* Optional: Hover Effect for Gallery Box */
+.gallery-box:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+
+</style>
+<script>
+const filterItems = document.querySelectorAll('.gallery-filter .list');
+const galleryBoxes = document.querySelectorAll('.gallery-box');
+filterItems.forEach(item => {
+    item.addEventListener('click', function() {
+        // Remove active class from all filter items
+        filterItems.forEach(i => i.classList.remove('gallery-filter-active'));
+
+        // Add active class to the selected filter item
+        this.classList.add('gallery-filter-active');
+
+        // Get the filter category from the data attribute
+        const filterValue = this.getAttribute('data-filter');
+
+        // Show/Hide gallery boxes based on the selected filter
+        galleryBoxes.forEach(box => {
+            // Use "flex" instead of "block" if flexbox layout is applied
+            if (filterValue === 'all' || box.classList.contains(filterValue)) {
+                box.style.display = 'flex'; // or 'block' if you're not using flexbox
+            } else {
+                box.style.display = 'none';
+            }
+        });
+    });
+});
+</script>
+ 

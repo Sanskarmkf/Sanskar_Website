@@ -32,22 +32,23 @@
      <!-- Top Announcement Bar -->
      <div class="announcement-bar">
         <p>Applications Open now for September 2024 Batch | Applications Close: Sep 15, 2024 |</p>
-        <button class="join-btn">Join Now</button>
+        <a href="{{ url_for('contact') }}"><button class="join-btn">Join Now</button></a>
     </div>
     
     <!-- Banner Section -->
     <div class="slider-container">
         <div class="slider">
             <div class="slide">
-              <img src="{{ url_for('static', filename='20TH oct.JPG') }}" alt="Image1">
-
+              <img src="{{ url_for('static', filename='20th oct3.JPG') }}" alt="Image1">
                 <div class="text-overlay">Welcome to Sanskar</div>
             </div>
             <div class="slide">
-                <img src="image2.jpg" alt="Image 2">
+              <img src="{{ url_for('static', filename='haldwani1.jpg') }}" alt="Image2">
+              <div class="text-overlay">Welcome to Sanskar</div>
             </div>
             <div class="slide">
-                <img src="image3.jpg" alt="Image 3">
+                <img src="{{ url_for('static', filename='children6.JPG') }}" alt="Image2">
+                <div class="text-overlay">Welcome to Sanskar</div>
             </div>
         </div>
         <button class="prev">&lt;</button>
@@ -68,7 +69,7 @@
     <div class="center-container">
       <div class="picture-grid">
         <div class="image-container">
-          <img src="{{ url_for('static', filename='children5.JPG') }}" alt="Education">
+          <img src="{{ url_for('static', filename='20th oct3.JPG') }}" alt="Education">
           <p class="image-caption">Education</p>
         </div>
         <div class="image-container">
@@ -102,7 +103,7 @@
         <h2 class="section-title">Programs</h2>
         <div class="sliding-pictures">
             <!-- Add sliding images here -->
-            <img src="{{ url_for('static', filename='children4.JPG') }}" alt="children">
+            <img src="{{ url_for('static', filename='static\20th oct3.JPG') }}" alt="children">
             <img src="{{ url_for('static', filename='haldwani10.jpg') }}" alt="children">
             <img src="{{ url_for('static', filename='2oth oct2.JPG') }}" alt="children">
             <img src="{{ url_for('static', filename='20th oct 1.JPG') }}" alt="children">
@@ -216,6 +217,7 @@ body {
     margin: 0;
     background-color: #f0f0f0;
     }
+
     
     .slider-container {
     position: relative;
@@ -225,7 +227,7 @@ body {
     border: none; /* Remove border to match the banner style */
     border-radius: 0; /* Remove border radius */
     background-color: #fff;
-    height: 80vh; /* Adjust the height to make it look like a banner */
+    height: 100vh; /* Adjust the height to make it look like a banner */
     }
     
     .slider {
@@ -249,24 +251,32 @@ body {
     .slide img {
     max-width: 100%;
     max-height: 100%;
-    width: auto;
-    height: auto;
+    width: 100%;
+    height: 100%;
     display: block;
     margin: 0 auto; 
     overflow: hidden;
+    object-fit:cover;
     }
-    .text-overlay {
+   /* Text Overlay Styling */
+.text-overlay {
     position: absolute;
-    top: 50%;
+    top: 10%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 3em; /* Adjust the font size as needed */
+    font-size: 4em;
     font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    padding: 10px 20px;
+    border-radius: 8px;
     text-align: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Optional: adds a shadow for better readability */
-    z-index: 2; /* Ensure the text is above the image */
-    }
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional shadow for depth */
+    white-space: nowrap; /* Prevents text from wrapping */
+}
+
+/* Adjust the slider container to ensure proper positioning */
+
     
     button.prev, button.next {
     position: absolute;
@@ -561,6 +571,7 @@ body {
         font-size: 0.875rem; /* Smaller text size on very small screens */
       }
     }
+    
     
     /* Key Programs Section Styling */
     #key-programs {
@@ -1145,3 +1156,24 @@ body {
     }
     
 </style>
+<script>
+  let currentIndex = 0;
+  
+  const slides = document.querySelectorAll('.slide');
+  const totalSlides = slides.length;
+  
+  document.querySelector('.next').addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      updateSlider();
+  });
+  
+  document.querySelector('.prev').addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+      updateSlider();
+  });
+  
+  function updateSlider() {
+      const offset = -currentIndex * 100;
+      document.querySelector('.slider').style.transform = `translateX(${offset}%)`;
+  }
+  </script>
