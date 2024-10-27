@@ -63,39 +63,46 @@
         </div>
     </section>
 
- <!-- Key Programs Section -->
+<!-- Key Programs Section -->
 <section id="key-programs">
-    <h2>Our Key Programs</h2>
-    <div class="center-container">
+  <h2>Our Key Programs</h2>
+  <div class="center-container">
       <div class="picture-grid">
-        <div class="image-container">
-          <img src="{{ url_for('static', filename='20th oct3.JPG') }}" alt="Education">
-          <p class="image-caption">Education</p>
-        </div>
-        <div class="image-container">
-          <img src="WhatsApp Image 2024-08-27 at 12.12.02_cba6405f.jpg" alt="FOOD">
-          <p class="image-caption">FOOD</p>
-        </div>
-        <div class="image-container">
-          <img src="{{ url_for('static', filename='dog.jpg') }}" alt="Animal Welfare">
-          <p class="image-caption">Animal Welfare</p>
-        </div>
-        <div class="image-container">
-          <img src="WhatsApp Image 2024-08-27 at 12.13.08_fc1fc907.jpg" alt="Education Empowerment">
-          <p class="image-caption">Education Empowerment</p>
-        </div>
-        <div class="image-container">
-          <img src="WhatsApp Image 2024-08-27 at 12.12.46_9d951169.jpg" alt="Health Care">
-          <p class="image-caption">Health Care</p>
-        </div>
-        <div class="image-container">
-          <img src="WhatsApp Image 2024-08-27 at 12.12.25_c2483b68.jpg" alt="Animal Welfare">
-          <p class="image-caption">Animal Welfare</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  
+          <!-- Education Images -->
+          <div class="image-container">
+              <div class="image-image"><img src="{{ url_for('static', filename='20th oct3.JPG') }}" alt="Education"></div>
+              <div class="image-caption">Happy Faces</div>
+          </div>
+          <div class="image-container">
+              <div class="image-image"><img src="{{ url_for('static', filename='haldwani4.jpg') }}" alt="Education"></div> <!-- Replace with actual path -->
+              <div class="image-caption">Education</div>
+          </div>
+         
+          <!-- Food Images -->
+          <div class="image-container">
+              <div class="image-image"><img src="{{ url_for('static', filename='breeze foundation 4.JPG') }}" alt="Food"></div>
+              <div class="image-caption">Food</div>
+          </div>
+          <div class="image-container">
+              <div><img src="{{ url_for('static', filename='breeze foundation 1.JPG') }}" alt="Food"></div> <!-- Replace with actual path -->
+              <div class="image-caption">Fun Activities</div>
+          </div>
+          
+          <!-- Animal Welfare Images -->
+          <div class="image-container">
+              <div class="image-image"><img src="{{ url_for('static', filename='dog.jpg') }}" alt="Animal Welfare"></div>
+              <div class="image-caption">Animal Welfare</div>
+          </div>
+          <div class="image-container">
+              <div class="image-image"><img src="{{ url_for('static', filename='old age2.jpg') }}" alt="Animal Welfare"></div> <!-- Replace with actual path -->
+              <div class="image-caption">Aged people</div>
+          </div>
+         
+
+          
+  </div>
+</section>
+
 
 
     <!-- Key Programs Section -->
@@ -635,24 +642,24 @@ body {
       top: 0;
       left: 0;
       width: 100%;
-      height: 100%;
+      height: 87%;
       object-fit: cover;
-      border-radius: 10px;
+      border-radius: 0px 10px;
       transition: transform 0.5s ease;
     }
-    
+
+   
     .image-caption {
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      padding: 8px;
-      background-color: rgba(248, 247, 247, 0.6); /* Dark transparent caption background */
-      color: white;
-      text-align: center;
-      font-size: 1rem; /* Smaller font size for captions */
-      opacity: 0;
-      transition: opacity 0.5s ease;
+    position: relative; /* This is already correct */
+    width: 100%;
+    padding: 8px;
+    background-color: rgb(253, 251, 251); /* Background */
+    color: black; /* Change this for better visibility */
+    text-align: center;
+    font-size: 1rem; /* Font size for captions */
+    margin-top: 5px; /* Spacing between image and caption */
     }
+
     
     .image-container:hover img {
       transform: scale(1.05); /* Slight zoom effect on hover */
