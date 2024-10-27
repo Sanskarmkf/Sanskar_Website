@@ -19,15 +19,30 @@
             color: #333; /* Dark Gray Text */
         }
 
-        /* Announcement Bar Section */
-        .announcement-bar {
-            background-color:burlywood;            
-            color: white;
-            text-align: center;
-            padding: 10px;
-            font-size: 16px;
-            position: relative;
-        }
+        .top-bar {
+    position: fixed;
+    top: 0px; /* Place it below the announcement bar */
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #AD88C6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+  /* Announcement Bar Section */
+  .announcement-bar {
+    background-color: orange; /* IITM Red */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    position: fixed;
+    width: 100%; /* Ensure it spans full width */
+    top: 50px; 
+    z-index: 1001;
+    }
 
         .join-btn {
             background-color: #ffffff; /* White */
@@ -37,7 +52,7 @@
             border-radius: 5px;
             position: absolute;
             right: 20px;
-            top: 8px;
+            top: 2px;
             cursor: pointer;
             font-weight: bold;
         }

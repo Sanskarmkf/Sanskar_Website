@@ -8,7 +8,6 @@
 </head>
 <body>
 
-    <!-- Top Bar Section -->
     <div class="top-bar">
         <div class="logo">
             <img src="logo.png" alt="Logo" width="100">
@@ -18,15 +17,17 @@
               <li><a href="{{ url_for('home') }}">Home</a></li>
               <li><a href="{{ url_for('about') }}">About Us</a></li>
               <li><a href="{{ url_for('work') }}">Work</a></li>
+              <li><a href="{{ url_for('testimonials') }}">Testimonials</a></li>
               <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
               <li><a href="{{ url_for('contribute') }}">Contribute</a></li>
               <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                              
             </ul>
         </nav>
     </div>
 
-    <!-- Top Announcement Bar -->
-    <div class="announcement-bar">
+     <!-- Top Announcement Bar -->
+     <div class="announcement-bar">
         <p>Applications Open now for September 2024 Batch | Applications Close: Sep 15, 2024 |</p>
         <a href="{{ url_for('contact') }}"><button class="join-btn">Join Now</button></a>
     </div>
@@ -84,7 +85,30 @@
             margin: 0;
             background-color: #f0f0f0;
             }
-            
+            .top-bar {
+    position: fixed;
+    top: 0px; /* Place it below the announcement bar */
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #AD88C6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+  /* Announcement Bar Section */
+  .announcement-bar {
+    background-color: orange; /* IITM Red */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    position: fixed;
+    width: 100%; /* Ensure it spans full width */
+    top: 50px; 
+    z-index: 1001;
+    }
             .slider-container {
             position: relative;
             width: 100%;
@@ -166,15 +190,6 @@
             color: #333; /* Dark Gray Text */
             }
             
-            /* Announcement Bar Section */
-            .announcement-bar {
-            background-color: orange; /* IITM Red */
-            color: white;
-            text-align: center;
-            padding: 10px;
-            font-size: 16px;
-            position: relative;
-            }
             
             .join-btn {
             background-color: #ffffff; /* White */
