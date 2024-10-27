@@ -52,10 +52,10 @@
     <p>We also shared sweets with the teachers to appreciate their dedication. The smiles and gratitude from both students and staff made the day special. This event is part of our mission to equip and inspire young minds for a brighter future.</p>
 
     <div class="event-images">
-      <img src="haldwani1.jpg" alt="Haldwani Event Image 1">
-      <img src="haldwani2.jpg" alt="Haldwani Event Image 2">
-      <img src="haldwani3.jpg" alt="Haldwani Event Image 3">
-      <img src="haldwani4.jpg" alt="Haldwani Event Image 4">
+      <img src="{{ url_for('static', filename='haldwani4.jpg') }}" alt="Haldwani Event Image 1">
+      <img src="{{ url_for('static', filename='haldwani8.jpg') }}" alt="Haldwani Event Image 2">
+      <img src="{{ url_for('static', filename='haldwani11.jpg') }}" alt="Haldwani Event Image 3">
+      <img src="{{ url_for('static', filename='haldwani12.jpg') }}" alt="Haldwani Event Image 4">
       <!-- Add more images as needed -->
     </div>
   </section>
@@ -177,29 +177,43 @@ body {
     color: #555;
     margin: 10px 0;
   }
-  
-  .event-images {
+  /* Event Images Section */
+.event-images {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
     margin-top: 20px;
-  }
-  
-  .event-images img {
-    max-width: 100%;
-    height: auto;
+}
+
+.event-images img {
+    max-width: 300px; /* Set a maximum width for the images */
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain the aspect ratio */
+    flex-basis: calc(25% - 15px); /* Allow 4 images per row with gaps */
     border: 5px solid #d1e7dd; /* Light green border */
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s, box-shadow 0.3s;
-  }
-  
-  .event-images img:hover {
+}
+
+.event-images img:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-  }
-  
+}
+
+@media (max-width: 768px) {
+    .event-images img {
+        flex-basis: calc(50% - 15px); /* For smaller screens, 2 images per row */
+    }
+}
+
+@media (max-width: 480px) {
+    .event-images img {
+        flex-basis: 100%; /* For very small screens, 1 image per row */
+    }
+}
+
   .event-images img::before {
     content: '';
     position: absolute;
@@ -272,9 +286,5 @@ body {
     }
   
   
-  </STYLE>
 
-  
-  
-  </STYLE>
-
+</style>
