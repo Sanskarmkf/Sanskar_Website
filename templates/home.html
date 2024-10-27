@@ -168,7 +168,7 @@
 
     <!-- Additional Info Section -->
     
-    y>
+  
     <div class="container">
         <div class="description">
             <p>we have distributed necessities refreshment and education to early nearly 100 people Heart Will congratulation and Thanks to all the core members and members of Sanskar family for making this milestone possible special thanks to everyone for their presence and encouragement that continuous spreading positivity and making a difference together</p>
@@ -217,7 +217,18 @@ body {
     margin: 0;
     background-color: #f0f0f0;
     }
-
+    .top-bar {
+    position: fixed;
+    top: 0px; /* Place it below the announcement bar */
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #AD88C6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
     
     .slider-container {
     position: relative;
@@ -321,9 +332,11 @@ body {
     text-align: center;
     padding: 10px;
     font-size: 16px;
-    position: relative;
+    position: fixed;
+    width: 100%; /* Ensure it spans full width */
+    top: 50px; 
+    z-index: 1001;
     }
-    
     .join-btn {
     background-color: #ffffff; /* White */
     color: #b7282e; /* Red Text */
