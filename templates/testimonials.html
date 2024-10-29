@@ -33,6 +33,49 @@
         <p>Applications Open now for September 2024 Batch | Applications Close: Sep 15, 2024 |</p>
         <a href="{{ url_for('contact') }}"><button class="join-btn">Join Now</button></a>
     </div>
+
+    <!-- Testimonials Section -->
+    <div class="testimonial-section">
+        <h1>Customer Reviews</h1>
+        <p>What our customers are saying...</p>
+
+        <div class="testimonial-cards">
+            <!-- Testimonial Card 1 -->
+            <div class="testimonial-card">
+                <div class="testimonial-text">
+                    <p>This service is fantastic! I’m really happy with the results.</p>
+                </div>
+                <div class="user-info" style="background-color: #4CAF50;">
+                    <img src="user1.png" alt="User 1">
+                    <h3>Lance Jarvis</h3>
+                </div>
+            </div>
+
+            <!-- Testimonial Card 2 -->
+            <div class="testimonial-card">
+                <div class="testimonial-text">
+                    <p>The team was very supportive and resolved my issues quickly!</p>
+                </div>
+                <div class="user-info" style="background-color: #6A5ACD;">
+                    <img src="user2.png" alt="User 2">
+                    <h3>Ericka Lynda</h3>
+                </div>
+            </div>
+
+            <!-- Testimonial Card 3 -->
+            <div class="testimonial-card">
+                <div class="testimonial-text">
+                    <p>Amazing experience! Will definitely recommend to others.</p>
+                </div>
+                <div class="user-info" style="background-color: #2196F3;">
+                    <img src="user3.png" alt="User 3">
+                    <h3>Neil Wilford</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+     <!-- FontAwesome for icons -->
+     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <style>
   
         /* General Styling */
@@ -195,4 +238,69 @@
         .top-nav ul li a:hover {
             text-decoration: underline;
         }
+
+        .testimonial-section {
+    text-align: center;
+    margin-top: 100px;
+        }
+   
+
+.testimonial-section h1 {
+    font-size: 2em;
+    color: #6A5ACD;
+    margin-bottom: 5px;
+}
+
+.testimonial-section p {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.testimonial-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.testimonial-card {
+    width: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+}
+
+.testimonial-text {
+    background-color: white;
+    padding: 20px;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+.user-info {
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+.user-info img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 2px solid white;
+}
+
+.user-info h3 {
+    margin: 0;
+    font-size: 1em;
+    font-weight: bold;
+}
             </style>
