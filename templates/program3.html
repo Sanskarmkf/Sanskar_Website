@@ -45,7 +45,7 @@
 
  <!-- Education Initiatives Program Section -->
 <section class="event-section">
-    <h2>Education Initiatives: Celebrating Our Educators</h2>
+    <h2>"Labour Recognition" </h2>
     <p>Date: May 1, 2024</p>
     <p>
         Description:
@@ -54,11 +54,12 @@
     <p>Our initiative focuses on fostering a culture of appreciation and respect for educators, emphasizing their vital role in shaping future generations.</p>
   
     <div class="event-images">
-      <img src="program3_image1.jpg" alt="Education Initiatives Program Image 1">
-      <img src="program3_image2.jpg" alt="Education Initiatives Program Image 2">
-      <img src="program3_image3.jpg" alt="Education Initiatives Program Image 3">
-      <img src="program3_image4.jpg" alt="Education Initiatives Program Image 4">
-    </div>
+      <img src="{{ url_for('static', filename='labour day(acharya)1 .jpg') }}" alt="Education Initiatives Program Image 1">
+      <img src="{{ url_for('static', filename='labour day(acharya)2.jpg') }}" alt="Education Initiatives Program Image 2">
+      <img src="{{ url_for('static', filename='labour day(acharya)3.jpg') }}" alt="Education Initiatives Program Image 3">
+      <img src="{{ url_for('static', filename='labour day(acharya)4.jpg') }}" alt="Education Initiatives Program Image 4">
+  </div>
+  
 </section>
 
 
@@ -201,6 +202,7 @@ body {
   text-decoration: underline;
 }    
   .event-section {
+    margin-top: 80px;
     padding: 20px;
     background-color: #f8f9fa;
     border-radius: 10px;
@@ -224,23 +226,23 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
-  }
-  
-  .event-images img {
-    max-width: 100%;
-    height: auto;
+    gap: 15px; /* Adjust gap between images as needed */
+    margin-top: 30px;
+}
+
+.event-images img {
+    width:500px; /* Adjust width to control the image size */
+    height: 400px;
     border: 5px solid #d1e7dd; /* Light green border */
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s, box-shadow 0.3s;
-  }
-  
-  .event-images img:hover {
+}
+
+.event-images img:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-  }
+}
   
   .event-images img::before {
     content: '';
