@@ -85,5 +85,24 @@ def p2():
 def p3():
     return render_template('program3.html')
 
+@app.route('/p4')
+def p4():
+    return render_template('program4.html')
+
+# Route for the Education program page
+@app.route('/program1')
+def program1():
+    return render_template('program1.html')
+
+# Route for the Children Welfare program page
+@app.route('/program2')
+def program2():
+    return render_template('program2.html')
+
+# Route for the Volunteering program page
+@app.route('/program3')
+def program3():
+    return render_template('program3.html')
+
 if __name__ == '__main__':
     app.run(debug=True)

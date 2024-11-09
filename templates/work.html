@@ -55,19 +55,19 @@
   <div class="work-container">
     <h2>Our Work Revolves Around</h2>
     <div class="work-cards">
-      <a href="program1.html" class="work-card">
+      <a href="{{ url_for('program1') }}" class="work-card">
         <div class="icon-container">
           <i class="fa-solid fa-book"></i>
         </div>
         <h3>Education</h3>
       </a>
-      <a href="program2.html" class="work-card">
+      <a href="{{ url_for('program2') }}" class="work-card">
         <div class="icon-container">
           <i class="fa-solid fa-fire"></i>
         </div>
         <h3>Children Welfare</h3>
       </a>
-      <a href="program3.html" class="work-card">
+      <a href="{{ url_for('program3') }}" class="work-card">
         <div class="icon-container">
           <i class="fa-solid fa-hands-helping"></i>
         </div>
@@ -78,6 +78,7 @@
 </section>
 
 <!-- Our Programs Section -->
+<!-- Our Programs Section -->
 <section class="our-programs">
   <div class="program-container">
     <h2>Our Programs</h2>
@@ -86,55 +87,54 @@
 </section>
 
 <div class="program-section">
-    <!-- Program 1 -->
-    <div class="program">
-        <div class="program-content">
-            <h3>Haldwani Event </h3>
-            <p>On November 20, 2023, we supported over 70 underprivileged students in Haldwani with educational supplies and treats. This initiative aims to inspire and equip young minds for a brighter future. The smiles of the children made the day unforgettable.</p>
-            <a href="{{ url_for('p1') }}" class="know-more">Learn More</a>
-        </div>
-        <div class="program-image">
-            <img src="{{ url_for('static', filename='haldwani4.jpg') }}" alt="Program 1 Image">
-        </div>
+  <!-- Program 1 -->
+  <div class="program">
+    <div class="program-content">
+      <h3>Haldwani Event</h3>
+      <p>On November 20, 2023, we supported over 70 underprivileged students in Haldwani with educational supplies and treats. This initiative aims to inspire and equip young minds for a brighter future. The smiles of the children made the day unforgettable.</p>
+      <a href="{{ url_for('p1') }}" class="know-more">Learn More</a>
     </div>
-
-    <!-- Program 2 (reverse layout) -->
-    <div class="program reverse">
-        <div class="program-content">
-            <h3>Children Welfare</h3>
-            <p>On February 18, 2023, we spent a joyful day at Sri Saibaba Old Age & Orphan Children’s Home in Bengaluru. We distributed snacks and created happy memories, ensuring every child felt loved. This visit reinforced our commitment to uplifting vulnerable communities.</p>
-            <a href="{{ url_for('p2') }}" class="know-more">Learn More</a>
-
-        </div>
-        <div class="program-image">
-            <img src="{{ url_for('static', filename='breeze foundation 1.JPG') }}" alt="Program 2 Image">
-        </div>
+    <div class="program-image">
+      <img src="{{ url_for('static', filename='haldwani4.jpg') }}" alt="Program 1 Image">
     </div>
+  </div>
 
-    <!-- Program 3 -->
-    <div class="program">
-        <div class="program-content">
-            <h3>Education Initiatives</h3>
-            <p>On May 1, 2024, we celebrated Labor Day by appreciating the staff at Acharya Institute of Technology. We distributed fruits and essentials as a gesture of gratitude for their hard work. This act highlighted the importance of recognizing those who support our community.</p>
-            <a href="{{ url_for('p3') }}" class="know-more">Learn More</a>
-        </div>
-        <div class="program-image">
-            <img src="{{ url_for('static', filename='haldwani5.jpg') }}" alt="Program 3 Image">
-        </div>
+  <!-- Program 2 -->
+  <div class="program">
+    <div class="program-content">
+      <h3>Children Welfare</h3>
+      <p>On February 18, 2023, we spent a joyful day at Sri Saibaba Old Age & Orphan Children’s Home in Bengaluru. We distributed snacks and created happy memories, ensuring every child felt loved. This visit reinforced our commitment to uplifting vulnerable communities.</p>
+      <a href="{{ url_for('p2') }}" class="know-more">Learn More</a>
     </div>
-  </div> 
-    <!-- Program 4 (reverse layout)
-    <div class="program reverse">
-        <div class="program-content">
-            <h3>Healthcare Access</h3>
-            <p>Providing essential healthcare services to underserved areas...</p>
-            <a href="program4.html" class="know-more">Learn More</a>
-        </div>
-        <div class="program-image">
-            <img src="image4.jpg" alt="Program 4 Image">
-        </div>
-    </div> -->
+    <div class="program-image">
+      <img src="{{ url_for('static', filename='children4.JPG') }}" alt="Program 2 Image">
+    </div>
+  </div>
 
+  <!-- Program 3 -->
+  <div class="program">
+    <div class="program-content">
+      <h3>Education Initiatives</h3>
+      <p>On May 1, 2024, we celebrated Labor Day by appreciating the staff at Acharya Institute of Technology. We distributed fruits and essentials as a gesture of gratitude for their hard work. This act highlighted the importance of recognizing those who support our community.</p>
+      <a href="{{ url_for('p3') }}" class="know-more">Learn More</a>
+    </div>
+    <div class="program-image">
+      <img src="{{ url_for('static', filename='haldwani5.jpg') }}" alt="Program 3 Image">
+    </div>
+  </div>
+
+  <!-- Program 4 -->
+  <div class="program">
+    <div class="program-content">
+      <h3>Breeze Foundation</h3>
+      <p>On February 18, 2023, we spent a joyful day at Sri Saibaba Old Age & Orphan Children’s Home in Bengaluru. We distributed snacks and created happy memories, ensuring every child felt loved. This visit reinforced our commitment to uplifting vulnerable communities.</p>
+      <a href="{{ url_for('p4') }}" class="know-more">Learn More</a>
+    </div>
+    <div class="program-image">
+      <img src="{{ url_for('static', filename='breeze foundation 1.JPG') }}" alt="Program 4 Image">
+    </div>
+  </div>
+</div>
 
 <!-- Footer Section -->
 <footer>
@@ -422,8 +422,49 @@ body {
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-.program.reverse {
+.program .reverse {
   flex-direction: row-reverse;
+}
+
+.program-content {
+  flex: 1;
+  padding: 20px;
+  text-align: left;
+}
+
+.program h3 {
+  font-size: 28px;
+  color: #2d2d2d;
+}
+
+/* Our Programs Section */
+.program-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 50px;
+  padding: 20px;
+}
+
+@media (min-width: 768px) {
+  .program-section {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Program Layout */
+.program {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.program:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 .program-content {
@@ -449,29 +490,27 @@ body {
   padding: 10px 20px;
   background-color: #ff7f50;
   color: #fff;
-  border-radius: 25px;
   text-decoration: none;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
+  border-radius: 5px;
+  transition: background-color 0.3s;
 }
 
 .know-more:hover {
-  background-color: #ff6347;
+  background-color: #ff5733;
 }
 
 .program-image {
   flex: 1;
-  padding: 20px;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .program-image img {
-  width: 100%;
-  max-width: 500px;
-  height: auto;
-  border-radius: 10px;
-  transition: transform 0.4s ease;
+  max-width: 100%;
+  border-radius: 15px;
 }
+
 
 .program:hover {
   transform: translateY(-10px);
@@ -595,4 +634,3 @@ footer {
 }
   
 </STYLE>
-/*
