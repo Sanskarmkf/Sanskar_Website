@@ -13,7 +13,7 @@
     <!-- Top Bar Section -->
     <div class="top-bar">
         <div class="logo">
-            <img src="logo.png" alt="Logo" width="100">
+            <img src="{{ url_for('static', filename='LOGO.png') }}" alt="Logo" width="100">
         </div>
         <nav class="top-nav">
             <ul>
@@ -31,35 +31,51 @@
 
      <!-- Top Announcement Bar -->
      <div class="announcement-bar">
-        <p>Applications Open now for September 2024 Batch | Applications Close: Sep 15, 2024 |</p>
+        <p>Become a part of the change – Join our mission and make a difference together!</p>
         <a href="{{ url_for('contact') }}"><button class="join-btn">Join Now</button></a>
     </div>
     
     <!-- Banner Section -->
-    <div class="slider-container">
-        <div class="slider">
-            <div class="slide">
-              <img src="{{ url_for('static', filename='20th oct3.JPG') }}" alt="Image1">
-                <div class="text-overlay">Welcome to Sanskar</div>
-            </div>
-            <div class="slide">
-              <img src="{{ url_for('static', filename='haldwani1.jpg') }}" alt="Image2">
-              <div class="text-overlay">Welcome to Sanskar</div>
-            </div>
-            <div class="slide">
-                <img src="{{ url_for('static', filename='children6.JPG') }}" alt="Image2">
-                <div class="text-overlay">Welcome to Sanskar</div>
-            </div>
-        </div>
-        <button class="prev">&lt;</button>
-        <button class="next">&gt;</button>
-    </div>
+<div class="slider-container">
+  <div class="slider">
+      <!-- Slide 1 -->
+      <div class="slide">
+          <img src="{{ url_for('static', filename='haldwani1.jpg') }}" alt="Image1">
+          <div class="text-overlay">
+              <p class="tagline">SANSKAR</p>
+              <p class="tagline-sub">Helping Hands, Heartfelt Changes</p>
+          </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="slide">
+          <img src="{{ url_for('static', filename='breezefound1.jpg') }}" alt="Image2">
+          <div class="text-overlay">
+            
+          </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="slide">
+          <img src="{{ url_for('static', filename='children6.JPG') }}" alt="Image3">
+          <div class="text-overlay">
+            
+              
+          </div>
+      </div>
+  </div>
+
+  <button class="prev">&lt;</button>
+  <button class="next">&gt;</button>
+</div>
+
 
     <!-- Mission Statement Section -->
     <section class="mission-statement">
         <div class="content-wrapper">
             <h2>Our Vision</h2>
-            <p>Your mission statement will appear here.</p>
+            <p>Our vision is to ensure everyone enjoys access to essentials, opportunities
+              for growth, smiles, happiness, and quality education worldwide.</p>
         </div>
     </section>
 
@@ -114,7 +130,7 @@
             <img src="{{ url_for('static', filename='haldwani10.jpg') }}" alt="children">
             <img src="{{ url_for('static', filename='2oth oct2.JPG') }}" alt="children">
             <img src="{{ url_for('static', filename='20th oct 1.JPG') }}" alt="children">
-            <img src="WhatsApp Image 2024-08-27 at 12.12.46_9d951169.jpg" alt="Education 3">
+            <img src="{{ url_for('static', filename='IMG_3909.JPG') }}" alt="Education 3">
         </div>
     </div>
    
@@ -124,20 +140,27 @@
         <!-- Achievement 1 -->
         <div class="achievement-card">
           <div class="achievement-image">
-            <img src="achievement1.jpg" alt="Achievement 1">
+            <img src="{{ url_for('static', filename='haldwani11.jpg') }}"alt="Achievement 1">
           </div>
           <div class="achievement-info">
             <h3>Achievement 1</h3>
             <p class="achievement-date">Sep. 15th</p>
-            <p class="achievement-description">Description for achievement 1 goes here. You can summarize the key points.</p>
+            <p class="achievement-description">Sanskar, initiated by engineering students Madhav Kumar Choudhary and Shubham Kokila from Acharya College, works through initiatives like MKOnlineClasses, the Data Science Club, and Sanskar to support societal welfare. With members across India, Sanskar actively aids underprivileged children, offering education and medical fundraising, while members contribute monthly to uplift communities and spread positivity.
+
+
+
+
+
+
+            </p>
             <div class="achievement-meta">
               <!-- <span class="comments">21 <i class="fa fa-comment"></i></span> -->
-              <a href="#" class="learn-more">Learn More...</a>
+              <a href="{{ url_for('achievement') }}" class="learn-more">Learn More...</a>
             </div>
           </div>
         </div>
       
-        <!-- Achievement 2 -->
+        <!-- Achievement 2 
         <div class="achievement-card">
             
           <div class="achievement-image">
@@ -148,13 +171,13 @@
             <p class="achievement-date">Oct. 1st</p>
             <p class="achievement-description">Description for achievement 2 goes here. Highlight the success points.</p>
             <div class="achievement-meta">
-              <!-- <span class="comments">30 <i class="fa fa-comment"></i></span> -->
+              <!-- <span class="comments">30 <i class="fa fa-comment"></i></span> 
                <a href="#" class="learn-more">Learn More...</a> 
             </div>
           </div>
         </div>
       
-        <!-- Achievement 3 -->
+        Achievement 3 
         <div class="achievement-card">
           <div class="achievement-image">
             <img src="achievement3.jpg" alt="Achievement 3">
@@ -164,7 +187,7 @@
             <p class="achievement-date">Nov. 10th</p>
             <p class="achievement-description">Description for achievement 3 goes here. Highlight key milestones.</p>
             <div class="achievement-meta">
-              <!-- <span class="comments">18 <i class="fa fa-comment"></i></span> -->
+              <!-- <span class="comments">18 <i class="fa fa-comment"></i></span> 
               <a href="#" class="learn-more">Learn More...</a>
             </div>
           </div>
@@ -173,7 +196,7 @@
       
     
 
-    <!-- Additional Info Section -->
+     Additional Info Section -->
     
   
     <div class="container">
@@ -184,33 +207,38 @@
         <div class="video-container">
             <!-- Custom Thumbnail -->
             <div class="video-thumbnail" onclick="playVideo()">
-                <img src="home_f/home.s/achievement3.jpg" alt="Custom Video Thumbnail">
+              <a href="https://www.youtube.com/watch?v=hIJ0mAD5V_o" target="_blank">
+                <img src="{{ url_for('static', filename='labour day(acharya)13.jpg') }}" alt="Custom Video Thumbnail">
+    
+            </a>
+            
             </div>
 
             <!-- YouTube Video -->
-            <iframe id="youtubeVideo" src="https://www.youtube.com/embed/hIJ0mAD5V_o" title="YouTube video player" allowfullscreen></iframe>
+          
         </div>
     </div>
     <!-- Footer Section -->
     <footer>
-        <div class="footer-content">
-            <div class="footer-section contact-info">
-                <h4>Contact Us</h4>
-                <p>Email: example@example.com</p>
-                <p>Phone: +91-1234567890</p>
-            </div>
-            <div class="footer-section social-links">
-                <h4>Follow Us</h4>
-                <a href="https://facebook.com">Facebook</a>
-                <a href="https://instagram.com">Instagram</a>
-                <a href="https://linkedin.com">LinkedIn</a>
-            </div>
-            <div class="footer-section copyright">
-                <p>&copy; 2024 Your Organization. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
-   
+      <div class="footer-content">
+          <div class="contact-us">
+              <h3>Contact Us</h3>
+              <p>Email: example@example.com</p>
+              <p>Phone: +91-1234567890</p>
+          </div>
+          <div class="follow-us">
+              <h3>Follow Us</h3>
+              <ul>
+                  <li><a href="#">Facebook</a></li>
+                  <li><a href="#">Instagram</a></li>
+                  <li><a href="#">LinkedIn</a></li>
+              </ul>
+          </div>
+          <div class="copyright">
+              <p>© 2024 Your Organization. All Rights Reserved.</p>
+          </div>
+      </div>
+  </footer>
     <script src="script.js"></script>
 
     
@@ -235,27 +263,23 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
-}
-    
-    .slider-container {
+}.slider-container {
     position: relative;
     width: 100%;
     max-width: 100%;
     overflow: hidden;
-    border: none; /* Remove border to match the banner style */
-    border-radius: 0; /* Remove border radius */
     background-color: #fff;
-    height: 100vh; 
-    top: 80px;/* Adjust the height to make it look like a banner */
-    }
-    
-    .slider {
+    height: 115vh; 
+    top: 80px;
+}
+
+.slider {
     display: flex;
     transition: transform 0.5s ease-in-out;
     height: 100%;
-    }
-    
-    .slide {
+}
+
+.slide {
     min-width: 100%;
     box-sizing: border-box;
     display: flex;
@@ -265,9 +289,9 @@ body {
     width: 100%;
     height: auto;
     object-fit: cover;
-    }
-    
-    .slide img {
+}
+
+.slide img {
     max-width: 100%;
     max-height: 100%;
     width: 100%;
@@ -275,24 +299,82 @@ body {
     display: block;
     margin: 0 auto; 
     overflow: hidden;
-    object-fit:cover;
-    }
+    object-fit: cover;
+    opacity: 0.8; /* Add this to make the image semi-transparent */
+}
+
    /* Text Overlay Styling */
+
+/* Overlay Text Styling */
+.text-overlay {
+    position: relative;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-family: Arial, sans-serif;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+.tagline {
+    font-size: 3em;
+    font-weight: bold;
+    animation: slideIn 1s ease-out forwards; /* Slide in tagline */
+}
+
+.tagline-sub {
+    font-size: 1.5em; /* Adjusted to 2em */
+    margin-top: 15px;
+    color: white;
+    animation: slideIn 2s ease-out forwards;
+ 
+}
+
+/* Sliding Animation */
+@keyframes slideIn {
+    0% {
+        transform: translate(-100%, 0); /* Start from the left */
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0, 0); /* End at the normal position */
+        opacity: 1;
+    }
+}
+
+
+
+
+
+/* Sliding Animation */
+@keyframes slideIn {
+    0% {
+        transform: translate(-80%, -40%); /* Start from the left */
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-25%, -25%); /* End at the center */
+        opacity: 1;
+    }
+}
+
+
+/* Text Overlay with Animation */
 .text-overlay {
     position: absolute;
-    top: 10%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
-    font-size: 4em;
+    color: whitesmoke;
+    font-size: 3em;
     font-weight: bold;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
     padding: 10px 20px;
-    border-radius: 8px;
+    border-radius: 5px;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional shadow for depth */
     white-space: nowrap; /* Prevents text from wrapping */
+    animation: slideIn 1s ease-out forwards; /* Apply the sliding animation */
 }
+
+
 
 /* Adjust the slider container to ensure proper positioning */
 
@@ -378,7 +460,7 @@ body {
     .impact-container {
     display: flex;
     justify-content: center;
-    gap: 50px; /* Adjust gap between the boxes */
+    gap: 10px; /* Adjust gap between the boxes */
     flex-wrap: wrap; /* Allows the items to wrap on smaller screens */
     }
     
@@ -416,9 +498,11 @@ body {
     }
     
     .top-bar .logo img {
-    width: 120px;
-    }
-    
+    width: 55px;      /* Increase the width of the logo */
+    margin-top: -20px; /* Move the logo slightly up */
+    padding: 5px;     /* Adjust padding around the logo */
+}
+
     .top-nav ul {
     list-style: none;
     display: flex;
@@ -514,85 +598,7 @@ body {
     .search-bar button:hover {
     background-color: #8a1f23; /* Darker Red */
     }
-    
-    /* Mission Statement Section Styling */
-    .mission-statement {
-      position: relative;
-      padding: 60px 20px; /* Padding around the content */
-      background: #eeebeb; /* Light background color */
-      color: #333; /* Dark text color */
-      text-align: center; /* Center align text */
-      
-      overflow: hidden; /* Hide any overflowing content */
-    }
-    
-    .content-wrapper {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 30px;
-      background: #fff; /* White background for content box */
-      border-radius: 10px; /* Rounded corners for content box */
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    }
-    
-    .mission-statement h2 {
-      font-size: 2.5rem; /* Large heading */
-      margin-bottom: 20px;
-      font-weight: bold;
-      color: #333; /* Dark color for the heading */
-    }
-    
-    .mission-statement p {
-      font-size: 1.2rem; /* Slightly larger text for readability */
-      line-height: 1.6; /* Line spacing for better readability */
-      color: #020202; /* Darker grey color for the paragraph */
-      margin: 0 auto; /* Center align text block */
-      padding: 0 20px; /* Padding on sides */
-    }
-    
-    /* Decorative elements */
-    .mission-statement::before,
-    .mission-statement::after {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 50px;
-      background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%); /* Radial gradient effect */
-      z-index: 0;
-    }
-    
-    .mission-statement::before {
-      top: 0;
-      left: 0;
-    }
-    
-    .mission-statement::after {
-      bottom: 0;
-      left: 0;
-      transform: rotate(180deg); /* Flip gradient for bottom */
-    }
-    
-    /* Media queries for responsiveness */
-    @media (max-width: 768px) {
-      .mission-statement h2 {
-        font-size: 2rem; /* Responsive heading size */
-      }
-    
-      .mission-statement p {
-        font-size: 1rem; /* Responsive text size */
-      }
-    }
-    
-    @media (max-width: 480px) {
-      .mission-statement h2 {
-        font-size: 1.75rem; /* Smaller heading size on very small screens */
-      }
-    
-      .mission-statement p {
-        font-size: 0.875rem; /* Smaller text size on very small screens */
-      }
-    }
-    
+   
     
     /* Key Programs Section Styling */
     #key-programs {
@@ -622,7 +628,7 @@ body {
     .picture-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr); /* 3 images per row */
-      grid-gap: 100px; /* Spacing between images */
+      grid-gap: 50px; /* Spacing between images */
       margin-bottom: 40px;
     }
     
@@ -694,7 +700,9 @@ body {
       background-size: 400% 400%;
       animation: gradientBG 10s ease infinite; /* Animated background gradient */
     }
-    
+    .section-title{
+      font-style: fantasy;
+    }
     /* Gradient animation for the background */
     @keyframes gradientBG {
       0% {
@@ -713,8 +721,8 @@ body {
     .education-section::after {
       content: '';
       position: absolute;
-      width: 150px;
-      height: 150px;
+      width: 200px;
+      height: 200px;
       background: rgba(91, 89, 89, 0.15);
       border-radius: 50%;
       animation: floatShapes 6s ease-in-out infinite;
@@ -748,12 +756,14 @@ body {
     
     .section-title {
       font-size: 3rem;
-      margin-bottom: 30px;
+      margin-bottom: 50px;
       color: #0c0c0c;
       position: relative;
       z-index: 1;
       letter-spacing: 2px;
-    }
+      margin-bottom: 20px; /* Adjust margin for spacing */
+}
+    
     
     /* Sliding container with enhanced shadow and border */
     .sliding-pictures {
@@ -806,10 +816,88 @@ body {
         transform: translateX(0);
       }
     }
+    /* Mission Statement Section Styling */
+.mission-statement {
+  position: relative;
+  padding: 60px 20px; /* Padding around the content */
+  background: #eeebeb; /* Light background color */
+  color: #333; /* Dark text color */
+  text-align: center; /* Center align text */
+  overflow: hidden; /* Hide any overflowing content */
+}
+
+.content-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px;
+  background: #fff; /* White background for content box */
+  border-radius: 10px; /* Rounded corners for content box */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.mission-statement h2 {
+  font-size: 2.5rem; /* Large heading */
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #333; /* Dark color for the heading */
+}
+
+.mission-statement p {
+  font-size: 1.2rem; /* Slightly larger text for readability */
+  line-height: 1.6; /* Line spacing for better readability */
+  color: #020202; /* Darker grey color for the paragraph */
+  margin: 0 auto; /* Center align text block */
+  padding: 0 10px; /* Padding on sides */
+}
+
+/* Decorative elements */
+.mission-statement::before,
+.mission-statement::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%); /* Radial gradient effect */
+  z-index: 0;
+}
+
+.mission-statement::before {
+  top: 0;
+  left: 0;
+}
+
+.mission-statement::after {
+  bottom: 0;
+  left: 0;
+  transform: rotate(180deg); /* Flip gradient for bottom */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .mission-statement h2 {
+    font-size: 2rem; /* Responsive heading size */
+  }
+
+  .mission-statement p {
+    font-size: 1rem; /* Responsive text size */
+  }
+}
+
+@media (max-width: 480px) {
+  .mission-statement h2 {
+    font-size: 1.75rem; /* Smaller heading size on very small screens */
+  }
+
+  .mission-statement p {
+    font-size: 0.875rem; /* Smaller text size on very small screens */
+  }
+}
+
     
     .sliding-track {
       animation: slide 9s infinite;
     }
+
     .achievement-section-overlap {
       display: flex;
       flex-direction: column;
@@ -880,69 +968,51 @@ body {
       }
     }
     .ourachievements {
-      display: flex;
-      justify-content: center;
-      font-size: xx-large;
-      padding: 40px;
-      color: #000;
-      font-family: fantasy;
-    }
-    
-    .achievements-container {
-      margin: 20px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around; /* Space around cards */
-      gap: 30px;
-    }
-    
-    .achievement-card {
-      background-color: white;
-      border-radius: 20px; /* Smoother card corners */
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      width: 300px; /* Fixed width to ensure consistent layout */
-      transition: transform 0.3s ease;
-      overflow: hidden; /* Ensure content fits within rounded corners */
-    }
-    
-    .achievement-card:hover {
-      transform: translateY(-5px);
-    }
-    
-    .achievement-image img {
-      width: 100%;
-      height: 200px; /* Adjust height for consistent image size */
-      object-fit: cover; /* Ensure image scales properly */
-      border-radius: 20px 20px 0 0;
-    }
-    
-    .achievement-info {
-      padding: 20px; /* More padding for better readability */
-      text-align: left;
-    }
-    
-    .achievement-info h3 {
-      font-size: 1.2em;
-      margin: 10px 0;
-    }
-    
-    .achievement-date {
-      color: #888;
-      font-size: 0.9em;
-      margin-bottom: 10px;
-    }
-    
-    .achievement-description {
-      color: #555;
-      font-size: 0.9em;
-      margin-bottom: 20px;
-    }
-    
-    .achievement-meta {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+    display: flex;
+    justify-content: space-between; /* Space between achievements */
+    padding: 40px;
+    color: #000;
+    font-family: fantasy;
+    font-size: 40px;
+}
+
+.achievements-container {
+    display: flex;
+    flex-direction: column; /* Stack achievements vertically */
+    align-items: flex-start; /* Align achievements to the left */
+    gap: 40px;
+}
+
+.achievement-card {
+    display: flex; /* Make card a flex container */
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Adjust width as needed */
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    height: 200px; 
+}
+
+.achievement-image {
+    flex: 0 0 400px; /* Fixed width for image */
+    margin-right: 20px;
+}
+
+.achievement-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.achievement-info {
+    flex: 1; /* Flexible content for info */
+    padding: 20px;
+    text-align: left;
+}
+
+/* ... other styles for achievement-info remain the same ... */
     
     .comments {
       color: #f25f5c;
@@ -1024,40 +1094,7 @@ body {
     background-color: #8a1f23; /* Darker Red */
     }
     
-    /* Footer Section */
-    footer {
-    background-color: #333333; /* Dark Gray */
-    padding: 40px;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    }
-    
-    .footer-content {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 1200px;
-    flex-wrap: wrap;
-    }
-    
-    .footer-section {
-    flex: 1;
-    padding: 20px;
-    }
-    
-    .footer-section h4 {
-    margin-bottom: 20px;
-    font-size: 20px;
-    color: #ffffff;
-    }
-    
-    .footer-section p, .footer-section a {
-    color: #dddddd;
-    font-size: 16px;
-    text-decoration: none;
-    }
+   
     .sliding-pictures {
         display: flex;
         overflow: hidden;
@@ -1071,19 +1108,44 @@ body {
         width: 100%;
         animation: slide 7s infinite linear;
     }
-    
-    .footer-section a:hover {
-    color: #ffffff;
-    text-decoration: underline;
-    }
-    
-    .footer-section .copyright {
+    footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
     text-align: center;
-    width: 100%;
-    margin-top: 20px;
-    font-size: 14px;
-    color: #888888;
-    }
+    width: 100%; /* Sets the width to 100% of its container */
+    margin-top: -50px;
+    
+}
+
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-us, .follow-us, .copyright {
+    flex-basis: 33.33%;
+}
+
+.contact-us p, .follow-us ul li {
+    margin: 5px 0;
+}
+
+.follow-us ul {
+    list-style: none;
+    padding: 0;
+}
+
+.follow-us ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+  
+    
     /*vide0*/
     /* Container styling for text and video */
     .container {
@@ -1154,28 +1216,8 @@ body {
     flex-direction: column;
     align-items: center;
     }
-    
-    .footer-content {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    }
-    
-    .footer-section {
-    margin-bottom: 20px;
-    }
-    }
-    @keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
-    }
-    
-    @keyframes slide {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
-    }
-    
+  }
+  
 </style>
 <script>
   let currentIndex = 0;

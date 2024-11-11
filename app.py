@@ -72,6 +72,11 @@ def gallery():
 def contribute():
     return render_template('contribute.html')
 
+@app.route('/achievement')
+def achievement():
+    return render_template('achievement.html')
+
+
 
 @app.route('/p1')
 def p1():
