@@ -40,31 +40,33 @@
   <div class="slider">
       <!-- Slide 1 -->
       <div class="slide">
-          <img src="{{ url_for('static', filename='haldwani1.jpg') }}" alt="Image1">
-          <div class="text-overlay">
-              <p class="tagline">SANSKAR</p>
-              <p class="tagline-sub">Helping Hands, Heartfelt Changes</p>
-          </div>
+        <img src="{{ url_for('static', filename='haldwani1.jpg') }}" alt="Image1">
+        <div class="text-overlay">
+            <p class="tagline">SANSKAR</p>
+            <p class="tagline-sub">Helping Hands, Heartfelt Changes</p>
+        </div>
       </div>
-
       <!-- Slide 2 -->
       <div class="slide">
           <img src="{{ url_for('static', filename='breezefound1.jpg') }}" alt="Image2">
+          
           <div class="text-overlay">
-            
+            <p class="tagline">SANSKAR</p>
+            <p class="tagline-sub">Helping Hands, Heartfelt Changes</p>
           </div>
       </div>
+      
 
       <!-- Slide 3 -->
       <div class="slide">
           <img src="{{ url_for('static', filename='children6.JPG') }}" alt="Image3">
           <div class="text-overlay">
-            
+            <p class="tagline">SANSKAR</p>
+            <p class="tagline-sub">Helping Hands, Heartfelt Changes</p>
               
           </div>
-      </div>
-  </div>
-
+       </div>
+    </div>
   <button class="prev">&lt;</button>
   <button class="next">&gt;</button>
 </div>
@@ -263,7 +265,8 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
-}.slider-container {
+}
+.slider-container {
     position: relative;
     width: 100%;
     max-width: 100%;
@@ -289,6 +292,7 @@ body {
     width: 100%;
     height: auto;
     object-fit: cover;
+    position: relative;
 }
 
 .slide img {
@@ -306,14 +310,26 @@ body {
    /* Text Overlay Styling */
 
 /* Overlay Text Styling */
-.text-overlay {
-    position: relative;
+/* .text-overlay {
+    position: absolute;
     top: 50%;
     left: 10%;
     transform: translateY(-50%);
     color: #fff;
     font-family: Arial, sans-serif;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+} */
+
+.text-overlay {
+    position: absolute; /* Position overlay absolutely within .slide */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the overlay */
+    color: #fff;
+    font-family: Arial, sans-serif;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+    z-index: 1; /* Ensure it displays above the image */
+    text-align: center; /* Center align text */
 }
 .tagline {
     font-size: 3em;
