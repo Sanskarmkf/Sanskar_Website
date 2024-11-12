@@ -17,29 +17,32 @@
   
 </head>
 <body>
-  <div class="top-bar">
-    <div class="logo">
-        <img src="logo.png" alt="Logo" width="100">
+     <!-- Top Bar Section -->
+     <div class="top-bar">
+      <div class="logo">
+          <img src="logo.png" alt="Logo" width="100">
+      </div>
+      <nav class="top-nav">
+          <ul>
+              <li><a href="{{ url_for('home') }}">Home</a></li>
+              <li><a href="{{ url_for('about') }}">About Us</a></li>
+              <li><a href="{{ url_for('work') }}">Work</a></li>
+              <li><a href="{{ url_for('testimonials') }}">Testimonials</a></li>
+              <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+              <li><a href="{{ url_for('contribute') }}">Contribute</a></li>
+              <li><a href="{{ url_for('contact') }}">Contact</a></li>
+              
+              
+          </ul>
+      </nav>
     </div>
-    <nav class="top-nav">
-        <ul>
-          <li><a href="{{ url_for('home') }}">Home</a></li>
-          <li><a href="{{ url_for('about') }}">About Us</a></li>
-          <li><a href="{{ url_for('work') }}">Work</a></li>
-          <li><a href="{{ url_for('testimonials') }}">Testimonials</a></li>
-          <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
-          <li><a href="{{ url_for('contribute') }}">Contribute</a></li>
-          <li><a href="{{ url_for('contact') }}">Contact</a></li>
-                          
-        </ul>
-    </nav>
-</div>
-
- <!-- Top Announcement Bar -->
- <div class="announcement-bar">
-    <p>Applications Open now for September 2024 Batch | Applications Close: Sep 15, 2024 |</p>
-    <a href="{{ url_for('contact') }}"><button class="join-btn">Join Now</button></a>
-</div>
+  
+    <!-- Top Announcement Bar -->
+    <div class="announcement-bar">
+      <p>Applications Open now for September 2024 Batch | Applications Close: Sep 15, 2024 |</p>
+      <a href="{{ url_for('contact') }}"><button class="join-btn">Join Now</button></a>
+    </div>
+  
   
   <!-- Haldwani Event Section -->
   <section class="event-section">
@@ -51,12 +54,13 @@
     <p>We also shared sweets with the teachers to appreciate their dedication. The smiles and gratitude from both students and staff made the day special. This event is part of our mission to equip and inspire young minds for a brighter future.</p>
 
     <div class="event-images">
-      <img src="haldwani1.jpg" alt="Haldwani Event Image 1">
-      <img src="haldwani2.jpg" alt="Haldwani Event Image 2">
-      <img src="haldwani3.jpg" alt="Haldwani Event Image 3">
-      <img src="haldwani4.jpg" alt="Haldwani Event Image 4">
-      <!-- Add more images as needed -->
-    </div>
+      <img src="{{ url_for('static', filename='haldwani1.jpg') }}" alt="Haldwani Event Image 1">
+      <img src="{{ url_for('static', filename='haldwani6.jpg') }}" alt="Haldwani Event Image 2">
+      <img src="{{ url_for('static', filename='haldwani5.jpg') }}" alt="Haldwani Event Image 3">
+      <img src="{{ url_for('static', filename='haldwani9.jpg') }}" alt="Haldwani Event Image 4">
+      <!-- Add more images using url_for as needed -->
+  </div>
+  
   </section>
 
 
@@ -95,14 +99,13 @@ body {
   background-color: #ffffff; /* White Background */
   color: #333; /* Dark Gray Text */
 }
-
 .top-bar {
     position: fixed;
     top: 0px; /* Place it below the announcement bar */
     left: 0;
     width: 100%;
     z-index: 1000;
-    background-color: #AD88C6;
+    background-color:#333333;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -121,7 +124,37 @@ body {
     z-index: 1001;
     }
 
-
+/* Top Bar Section */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333333; /* Dark Gray */
+    padding: 20px 40px;
+    }
+    
+    .top-bar .logo img {
+    width: 120px;
+    }
+    
+    .top-nav ul {
+    list-style: none;
+    display: flex;
+    }
+    
+    .top-nav ul li {
+    margin-left: 30px;
+    }
+    
+    .top-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    }
+    
+    .top-nav ul li a:hover {
+    text-decoration: underline;
+    }
 .join-btn {
   background-color: #ffffff; 
   color: #b7282e; 
@@ -130,7 +163,7 @@ body {
   border-radius: 5px;
   position: absolute;
   right: 20px;
-  top: 8px;
+  top: 3px;
   cursor: pointer;
   font-weight: bold;
  
@@ -166,6 +199,7 @@ body {
   text-decoration: underline;
 }    
   .event-section {
+    margin-top:80px;
     padding: 20px;
     background-color: #f8f9fa;
     border-radius: 10px;
@@ -189,23 +223,24 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
-  }
-  
-  .event-images img {
-    max-width: 100%;
-    height: auto;
+    gap: 15px; /* Adjust gap between images as needed */
+    margin-top: 30px;
+}
+
+.event-images img {
+    width:500px; /* Adjust width to control the image size */
+    height: 400px;
     border: 5px solid #d1e7dd; /* Light green border */
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s, box-shadow 0.3s;
-  }
-  
-  .event-images img:hover {
+}
+
+.event-images img:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-  }
+}
+
   
   .event-images img::before {
     content: '';
