@@ -76,6 +76,27 @@
             </form>
         </div>
     </div>
+     <!-- Footer Section -->
+     <footer>
+        <div class="footer-content">
+            <div class="contact-us">
+                <h3>Contact Us</h3>
+                <p>Email: sanskarmkf@gmail.com</p>
+                <p>Phone: +91-1234567890</p>
+            </div>
+            <div class="follow-us">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="https://www.instagram.com/sanskar.mkf?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">Instagram</a></li>
+                    <li><a href="https://www.linkedin.com/company/sanskarfoundation/">LinkedIn</a></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
 
@@ -330,4 +351,41 @@ body {
 .contact-form button:hover {
     background-color: rgb(255, 119, 0);
 }
+footer {
+    background-color:grey;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    width: 100%; /* Sets the width to 100% of its container */
+    margin-top: -50px;
+    
+}
+
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-us, .follow-us, .copyright {
+    flex-basis: 33.33%;
+}
+
+.contact-us p, .follow-us ul li {
+    margin: 5px 0;
+}
+
+.follow-us ul {
+    list-style: none;
+    padding: 0;
+}
+
+.follow-us ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+  
 </style>

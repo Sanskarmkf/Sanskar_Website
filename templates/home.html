@@ -41,7 +41,7 @@
   <div class="slider">
       <!-- Slide 1 -->
       <div class="slide">
-        <img src="{{ url_for('static', filename='haldwani1.jpg') }}" alt="Image1">
+        <img src="{{ url_for('static', filename='breezefound1.jpg') }}" alt="Image1">
         <div class="text-overlay">
            <!--- <p class="tagline">SANSKAR</p>
             <p class="tagline-sub">Helping Hands, Heartfelt Changes</p>-->
@@ -49,7 +49,7 @@
       </div>
       <!-- Slide 2 -->
       <div class="slide">
-          <img src="{{ url_for('static', filename='breezefound1.jpg') }}" alt="Image2">
+          <img src="{{ url_for('static', filename='haldwani1.jpg') }}" alt="Image2">
           
         <!---  <div class="text-overlay">
             <p class="tagline"></p>
@@ -152,8 +152,8 @@
           <div class="achievement-image">
             <img src="{{ url_for('static', filename='haldwani11.jpg') }}"alt="Achievement 1">
           </div>
-          <div class="achievement-info">
-            <h3>Achievement</h3>
+          <div class="achievement-info"><h3>A NEW BEGINNING| EDUCATIONAL DRIVE IN HALDWANI
+            </h3>
             <p class="achievement-date">Sep. 15th</p>
             <p class="achievement-description">Sanskar, a student-led initiative, uplifts communities across India through education, medical aid, and member contributions. Projects like MKOnlineClasses and the Data Science Club provide essential resources to underprivileged children, fostering positive change and spreading hope.</p>
             <div class="achievement-meta">
@@ -162,13 +162,6 @@
             </div>
           </div>
         </div>
-      
-  
-    
-
-    
-    
-  
     <div class="container">
         <div class="description">
             <p>we have distributed necessities refreshment and education to early nearly 100 people Heart Will congratulation and Thanks to all the core members and members of Sanskar family for making this milestone possible special thanks to everyone for their presence and encouragement that continuous spreading positivity and making a difference together</p>
@@ -179,12 +172,10 @@
             <div class="video-thumbnail" onclick="playVideo()">
               <a href="https://www.youtube.com/watch?v=hIJ0mAD5V_o" target="_blank">
                 <img src="{{ url_for('static', filename='labour day(acharya)13.jpg') }}" alt="Custom Video Thumbnail">
-    
+                <img class="youtube-icon" src="{{ url_for('static', filename='youtube.png') }}" alt="YouTube Icon">
             </a>
-            
-            </div>
-
-            <!-- YouTube Video -->
+          </div>
+          
           
         </div>
     </div>
@@ -272,91 +263,12 @@ body {
     margin: 0 auto; 
     overflow: hidden;
     object-fit: cover;
-    opacity: 0.8; /* Add this to make the image semi-transparent */
-}
-
-   /* Text Overlay Styling */
-
-/* Overlay Text Styling */
-/* .text-overlay {
-    position: absolute;
-    top: 50%;
-    left: 10%;
-    transform: translateY(-50%);
-    color: #fff;
-    font-family: Arial, sans-serif;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
-} */
-
-.text-overlay {
-    position: absolute; /* Position overlay absolutely within .slide */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Center the overlay */
-    color: #fff;
-    font-family: Arial, sans-serif;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
-    z-index: 1; /* Ensure it displays above the image */
-    text-align: center; /* Center align text */
-}
-.tagline {
-    font-size: 3em;
-    font-weight: bold;
-    animation: slideIn 1s ease-out forwards; /* Slide in tagline */
-}
-
-.tagline-sub {
-    font-size: 1.5em; /* Adjusted to 2em */
-    margin-top: 15px;
-    color: white;
-    animation: slideIn 2s ease-out forwards;
- 
-}
-
-/* Sliding Animation */
-@keyframes slideIn {
-    0% {
-        transform: translate(-100%, 0); /* Start from the left */
-        opacity: 0;
-    }
-    100% {
-        transform: translate(0, 0); /* End at the normal position */
-        opacity: 1;
-    }
-}
-
-
-
-
-
-/* Sliding Animation */
-@keyframes slideIn {
-    0% {
-        transform: translate(-80%, -40%); /* Start from the left */
-        opacity: 0;
-    }
-    100% {
-        transform: translate(-25%, -25%); /* End at the center */
-        opacity: 1;
-    }
+    opacity: 1.0; /* Add this to make the image semi-transparent */
 }
 
 
 /* Text Overlay with Animation */
-.text-overlay {
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 3em;
-    font-weight: bold;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-align: center;
-    white-space: nowrap; /* Prevents text from wrapping */
-    animation: slideIn 1s ease-out forwards; /* Apply the sliding animation */
-}
+
 .sanskar-statement {
   padding: 20px;
   background-color: white;
@@ -1194,32 +1106,43 @@ body {
       line-height: 1.6;
     }
     
-    /* Styling for the video container */
-    .video-container {
-      width: 600px; /* Adjust this as needed */
-      height: 315px;
-      position: relative;
-      background-color: #333;
-    }
-    
-    /* The custom thumbnail */
-    .video-thumbnail {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      background-color: #000;
-      cursor: pointer;
-    }
-    
-    .video-thumbnail img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    
-   
+  /* Styling for the video container */
+.video-container {
+  width: 600px; /* Adjust this as needed */
+  height: 315px;
+  position: relative;
+  background-color: #333;
+}
+
+/* The custom thumbnail */
+.video-thumbnail {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: #000;
+  cursor: pointer;
+}
+
+/* Thumbnail image styling */
+.video-thumbnail img {
+  width: 100%; /* Make sure the thumbnail image is responsive */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure the image covers the entire container */
+  display: block; /* Remove any inline spacing */
+}
+
+/* YouTube icon styling */
+.youtube-icon {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Align to exact center */
+  width: -2000px; /* Adjusted smaller size for the YouTube icon */
+  height: 40px;
+  pointer-events: none; /* Allow clicks to pass through the icon */
+  opacity: 0.9;
+}
+
     
     /* Media Queries for Responsiveness */
     @media (max-width: 768px) {

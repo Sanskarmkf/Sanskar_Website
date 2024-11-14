@@ -103,20 +103,32 @@ body {
   color: #333; /* Dark Gray Text */
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #ffffff; /* White Background */
+  color: #333; /* Dark Gray Text */
+}
 .top-bar {
     position: fixed;
     top: 0px; /* Place it below the announcement bar */
     left: 0;
     width: 100%;
     z-index: 1000;
-    background-color: #333333;
+    background-color:#333333;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
 }
-  /* Announcement Bar Section */
-  .announcement-bar {
+
+    /* Announcement Bar Section */
+    .announcement-bar {
     background-color: orange; /* IITM Red */
     color: white;
     text-align: center;
@@ -127,8 +139,69 @@ body {
     top: 58px; 
     z-index: 1001;
     }
-/* Top Bar Section */
-.top-bar {
+    .join-btn {
+    background-color: #ffffff; /* White */
+    color: #b7282e; /* Red Text */
+    border: 1px solid #b7282e;
+    padding: 6px 15px;
+    border-radius: 5px;
+    position: absolute;
+    right: 20px;
+    top: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    }
+    
+    .join-btn:hover {
+    background-color: #b7282e;
+    color: #fff;
+    }
+    .impact-section {
+    text-align: center;
+    background-color: #f8f8f8; /* Optional: Background color for the section */
+    padding: 50px 0;
+    }
+    
+    .impact-section h2 {
+    font-size: 36px;
+    color: #000; /* Adjust the color as needed */
+    margin-bottom: 30px;
+    font-weight: bold;
+    }
+    
+    .impact-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Adjust gap between the boxes */
+    flex-wrap: wrap; /* Allows the items to wrap on smaller screens */
+    }
+    
+    .impact-box {
+    width: 200px; /* Adjust box width */
+    text-align: center;
+    }
+    
+    .impact-box h3 {
+    font-size: 48px;
+    color: #7fd320; /* Green color as in the image */
+    margin: 0;
+    }
+    
+    .impact-title {
+    font-size: 24px;
+    color: #f4f6f3; /* Green color as in the image */
+    margin: 10px 0;
+    font-weight: bold;
+    }
+    
+    .impact-box p {
+    font-size: 14px;
+    color: #000; /* Adjust text color as needed */
+    margin: 5px 0;
+    }
+    
+    /* Top Bar Section */
+    .top-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -142,7 +215,7 @@ body {
     padding: 8px;     /* Adjust padding around the logo */
     margin-left: -30px;
 }
-    
+
     .top-nav ul {
     list-style: none;
     display: flex;
@@ -158,51 +231,15 @@ body {
     font-size: 16px;
     }
     
-    .top-nav ul li a:hover {
-    text-decoration: underline;
-    }
-.join-btn {
-  background-color: #ffffff; 
-  color: #b7282e; 
-  border: 1px solid #b7282e;
-  padding: 8px 15px;
-  border-radius: 5px;
-  position: absolute;
-  right: 20px;
-  top: 3px;
-  cursor: pointer;
-  font-weight: bold;
- 
-}
-
-.join-btn:hover {
-  background-color: #b7282e;
-  color: #fff;
-}
-
-
-.top-bar .logo img {
-  width: 120px;
-}
-
-.top-nav ul {
-  list-style: none;
-  display: flex;
-}
-
-.top-nav ul li {
-  margin-left: 30px;
-}
-
-.top-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 16px;
-}
-
-.top-nav ul li a:hover {
-  text-decoration: underline;
-}    
+  .event-section {
+    margin-top:80px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+   
   .event-section {
     margin-top: 80px;
     padding: 20px;
@@ -317,6 +354,42 @@ body {
     color: #888888;
     }
   
+    footer {
+    background-color:grey;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    width: 100%; /* Sets the width to 100% of its container */
+    margin-top: -50px;
+    
+}
+
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-us, .follow-us, .copyright {
+    flex-basis: 33.33%;
+}
+
+.contact-us p, .follow-us ul li {
+    margin: 5px 0;
+}
+
+.follow-us ul {
+    list-style: none;
+    padding: 0;
+}
+
+.follow-us ul li a {
+    color: #fff;
+    text-decoration: none;
+}
   
   </STYLE>
 
