@@ -19,7 +19,7 @@
      <!-- Top Bar Section -->
      <div class="top-bar">
       <div class="logo">
-          <img src="logo.png" alt="Logo" width="100">
+        <img src="{{ url_for('static', filename='LOGO.png') }}" alt="Logo" width="100">
       </div>
       <nav class="top-nav">
           <ul>
@@ -38,7 +38,7 @@
   
     <!-- Top Announcement Bar -->
     <div class="announcement-bar">
-      <p>Applications Open now for September 2024 Batch | Applications Close: Sep 15, 2024 |</p>
+      <p>Become a part of the change – Join our mission and make a difference together!</p>
       <a href="{{ url_for('contact') }}"><button class="join-btn">Join Now</button></a>
     </div>
   
@@ -124,7 +124,7 @@ body {
     font-size: 16px;
     position: fixed;
     width: 100%; /* Ensure it spans full width */
-    top: 50px; 
+    top: 58px; 
     z-index: 1001;
     }
 /* Top Bar Section */
@@ -135,11 +135,12 @@ body {
     background-color: #333333; /* Dark Gray */
     padding: 20px 40px;
     }
-    
     .top-bar .logo img {
-    width: 120px;
-    }
-    
+    width: 55px;      /* Increase the width of the logo */
+    margin-top: -20px; /* Move the logo slightly up */
+    padding: 8px;     /* Adjust padding around the logo */
+    margin-left: -30px;
+}
     .top-nav ul {
     list-style: none;
     display: flex;

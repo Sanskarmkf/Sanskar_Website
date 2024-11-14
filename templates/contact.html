@@ -10,7 +10,7 @@
 
     <div class="top-bar">
         <div class="logo">
-            <img src="logo.png" alt="Logo" width="100">
+            <img src="{{ url_for('static', filename='LOGO.png') }}" alt="Logo" width="100">
         </div>
         <nav class="top-nav">
             <ul>
@@ -106,7 +106,7 @@
     font-size: 16px;
     position: fixed;
     width: 100%; /* Ensure it spans full width */
-    top: 50px; 
+    top: 58px; 
     z-index: 1001;
     }
             .slider-container {
@@ -215,11 +215,12 @@
             background-color: #333333; /* Dark Gray */
             padding: 20px 40px;
         }
-
         .top-bar .logo img {
-            width: 120px;
-        }
-
+    width: 55px;      /* Increase the width of the logo */
+    margin-top: -20px; /* Move the logo slightly up */
+    padding: 8px;     /* Adjust padding around the logo */
+    margin-left: -30px;
+}
         .top-nav ul {
             list-style: none;
             display: flex;
