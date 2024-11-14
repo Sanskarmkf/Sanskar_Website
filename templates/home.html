@@ -683,133 +683,41 @@ body {
     }
     
     
-    /* Section styling with animated gradient background */
-    .education-section {
-     
-      padding: 60px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-      background: linear-gradient(135deg, #f2f1ef, #e8eceb, #f5eeee);
-      background-size: 400% 400%;
-      animation: gradientBG 10s ease infinite; /* Animated background gradient */
-    }
-    
-    /* Gradient animation for the background */
-    @keyframes gradientBG {
-      0% {
-        background-position: 0% 50%;
-      }
-      50% {
-        background-position: 100% 50%;
-      }
-      100% {
-        background-position: 0% 50%;
-      }
-    }
-    
-    /* Floating geometric shapes as background */
-    .education-section::before,
-    .education-section::after {
-      content: '';
-      position: absolute;
-      width: 150px;
-      height: 150px;
-      background: rgba(91, 89, 89, 0.15);
-      border-radius: 50%;
-      animation: floatShapes 6s ease-in-out infinite;
-      z-index: 0;
-    }
-    
-    .education-section::before {
-      top: -50px;
-      left: -50px;
-      animation-delay: 2s;
-    }
-    
-    .education-section::after {
-      bottom: -50px;
-      right: -50px;
-      animation-delay: 4s;
-    }
-    
-    /* Floating animation for background shapes */
-    @keyframes floatShapes {
-      0% {
-        transform: translateY(0);
-      }
-      50% {
-        transform: translateY(-20px);
-      }
-      100% {
-        transform: translateY(0);
-      }
-    }
-    
-    .section-title {
-      font-size: 3rem;
-      margin-bottom: 30px;
-      color: #0c0c0c;
-      position: relative;
-      z-index: 1;
-      letter-spacing: 2px;
-    }
-    
-    /* Sliding container with enhanced shadow and border */
-    .sliding-pictures {
-      position: relative;
-      width: 85%;
-      margin: 0 auto;
-      overflow: hidden;
-      border-radius: 20px;
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3); /* Stronger shadow for depth */
-      border: 5px solid rgba(255, 255, 255, 0.5);
-      z-index: 1;
-    }
-    
-    /* Wrapper for images to enable sliding effect */
-    .sliding-track {
-      display: flex;
-      transition: transform 1s ease-in-out;
-      width: 300%;
-    }
-    
-    /* Image styling */
-    .sliding-track img {
-      width: 100%;
-      flex: 0 0 33.33%;
-      transition: transform 0.5s ease;
-      filter: grayscale(20%);
-      object-fit: cover;
-      border-radius: 15px;
-    }
-    
-    /* Zoom and filter effect on hover */
-    .sliding-track img:hover {
-      filter: none;
-      transform: scale(1.08); /* Enhanced zoom on hover */
-      transition: transform 0.5s ease, filter 0.5s ease;
-    }
-    
-    /* Sliding animation */
-    @keyframes slide {
-      0% {
-        transform: translateX(0);
-      }
-      33% {
-        transform: translateX(-33.33%);
-      }
-      66% {
-        transform: translateX(-66.66%);
-      }
-      100% {
-        transform: translateX(0);
-      }
-    }
-    
-    .sliding-track {
-      animation: slide 9s infinite;
-    }
+   /* Sliding container with enhanced shadow and border */
+.sliding-pictures {
+  position: relative;
+  width: 85%;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3); /* Stronger shadow for depth */
+  border: 5px solid rgba(255, 255, 255, 0.5);
+  z-index: 1;
+}
+
+/* Wrapper for images to enable sliding effect */
+.sliding-track {
+  display: flex;
+  transition: transform 1s ease-in-out;
+  gap: 0; /* Remove any space between items */
+  width: calc(100% * 3); /* Adjust for the number of images */
+}
+
+/* Image styling */
+.sliding-track img {
+  flex: 0 0 33.33%; /* Each image takes up a third of the track */
+  object-fit: cover;
+  border-radius: 15px;
+  transition: transform 0.5s ease;
+  filter: grayscale(20%);
+}
+
+/* Remove margin or padding around images */
+.sliding-track img {
+  margin: 0; /* Ensure no extra space around images */
+  padding: 0;
+}
+
     .achievement-section-overlap {
       display: flex;
       flex-direction: column;
