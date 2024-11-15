@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Work</title>
+ <!-- FontAwesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- Import Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Nerko+One&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+  <!-- Link to external stylesheet -->
+  <link href="styles.css" rel="stylesheet">
+  <link href="program.css" rel="stylesheet">
+</head>
+<body>
+
+     <!-- Top Bar Section -->
+     <div class="top-bar">
+      <div class="logo">
+        <img src="{{ url_for('static', filename='LOGO.png') }}" alt="Logo" width="100">
+      </div>
+      <nav class="top-nav">
+          <ul>
+              <li><a href="{{ url_for('home') }}">Home</a></li>
+              <li><a href="{{ url_for('about') }}">About Us</a></li>
+              <li><a href="{{ url_for('work') }}">Our Work</a></li>
+              <li><a href="{{ url_for('testimonials') }}">Testimonials</a></li>
+              <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+              <li><a href="{{ url_for('contribute') }}">Contribute</a></li>
+              <li><a href="{{ url_for('contact') }}">Contact</a></li>
+              
+              
+          </ul>
+      </nav>
+    </div>
+  
+    <!-- Top Announcement Bar -->
+    <div class="announcement-bar">
+      <p>Become a part of the change – Join our mission and make a difference together!</p>
+      <a href="{{ url_for('contact') }}"><button class="join-btn">Join Now</button></a>
+    </div>
+  
+
+<!-- Children Welfare Program Section -->
+<section class="event-section">
+    <h2>Breeze Foundation: Bringing smiles</h2>
+    <p>Date: February 18, 2023</p>
+    <p>
+        Description:
+        On this day, we spent a joyful day at Sri Saibaba Old Age & Orphan Children’s Home in Bengaluru. We distributed snacks and created happy memories, ensuring every child felt loved. This visit reinforced our commitment to uplifting vulnerable communities.</p>
+    
+    <p>Our goal is to provide support and joy to children in need, and the smiles we received made it all worthwhile. This program emphasizes our dedication to fostering a sense of belonging and care within our community.</p>
+  
+    <div class="event-images">
+      <img src="{{ url_for('static', filename='breeze foundation 3.JPG') }}" alt="Children Welfare Program Image 1">
+      <img src="{{ url_for('static', filename='breeze foundation 5.JPG') }}" alt="Children Welfare Program Image 2">
+      <img src="{{ url_for('static', filename='breeze foundation 6.JPG') }}" alt="Children Welfare Program Image 3">
+      <img src="{{ url_for('static', filename='breeze foundation 1.JPG') }}" alt="Children Welfare Program Image 4">
+      <!-- Add more images using url_for as needed -->
+  </div>
+  
+  </section>
+  
+
+
+
+ <!-- Footer Section -->
+ <footer>
+  <div class="footer-content">
+      <div class="contact-us">
+          <h3>Contact Us</h3>
+          <p>Email: sanskarmkf@gmail.com</p>
+          <p>Phone: +91-1234567890</p>
+      </div>
+      <div class="follow-us">
+          <h3>Follow Us</h3>
+          <ul>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="https://www.instagram.com/sanskar.mkf?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">Instagram</a></li>
+              <li><a href="https://www.linkedin.com/company/sanskarfoundation/">LinkedIn</a></li>
+          </ul>
+      </div>
+      <div class="copyright">
+          
+      </div>
+  </div>
+</footer>
+  
+  
+  </body>
+  </html>
+  <STYLE>
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #ffffff; /* White Background */
+  color: #333; /* Dark Gray Text */
+}
+.top-bar {
+    position: fixed;
+    top: 0px; /* Place it below the announcement bar */
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color:#333333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+    /* Announcement Bar Section */
+    .announcement-bar {
+    background-color: orange; /* IITM Red */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    position: fixed;
+    width: 100%; /* Ensure it spans full width */
+    top: 58px; 
+    z-index: 1001;
+    }
+    .join-btn {
+    background-color: #ffffff; /* White */
+    color: #b7282e; /* Red Text */
+    border: 1px solid #b7282e;
+    padding: 6px 15px;
+    border-radius: 5px;
+    position: absolute;
+    right: 20px;
+    top: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    }
+    
+    .join-btn:hover {
+    background-color: #b7282e;
+    color: #fff;
+    }
+    .impact-section {
+    text-align: center;
+    background-color: #f8f8f8; /* Optional: Background color for the section */
+    padding: 50px 0;
+    }
+    
+    .impact-section h2 {
+    font-size: 36px;
+    color: #000; /* Adjust the color as needed */
+    margin-bottom: 30px;
+    font-weight: bold;
+    }
+    
+    .impact-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Adjust gap between the boxes */
+    flex-wrap: wrap; /* Allows the items to wrap on smaller screens */
+    }
+    
+    .impact-box {
+    width: 200px; /* Adjust box width */
+    text-align: center;
+    }
+    
+    .impact-box h3 {
+    font-size: 48px;
+    color: #7fd320; /* Green color as in the image */
+    margin: 0;
+    }
+    
+    .impact-title {
+    font-size: 24px;
+    color: #f4f6f3; /* Green color as in the image */
+    margin: 10px 0;
+    font-weight: bold;
+    }
+    
+    .impact-box p {
+    font-size: 14px;
+    color: #000; /* Adjust text color as needed */
+    margin: 5px 0;
+    }
+    
+    /* Top Bar Section */
+    .top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333333; /* Dark Gray */
+    padding: 20px 40px;
+    }
+    
+    .top-bar .logo img {
+    width: 55px;      /* Increase the width of the logo */
+    margin-top: -20px; /* Move the logo slightly up */
+    padding: 8px;     /* Adjust padding around the logo */
+    margin-left: -30px;
+}
+
+    .top-nav ul {
+    list-style: none;
+    display: flex;
+    }
+    
+    .top-nav ul li {
+    margin-left: 30px;
+    }
+    
+    .top-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    }
+    
+  .event-section {
+    margin-top:80px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+    
+  .event-section {
+    margin-top: 80px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .event-section h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .event-section p {
+    font-size: 1.1em;
+    color: #555;
+    margin: 10px 0;
+  }
+  
+  .event-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px; /* Adjust gap between images as needed */
+    margin-top: 30px;
+}
+
+.event-images img {
+    width:500px; /* Adjust width to control the image size */
+    height: 400px;
+    border: 5px solid #d1e7dd; /* Light green border */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.event-images img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+  
+  .event-images img::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
+    background: linear-gradient(45deg, rgba(255, 204, 204, 0.4), rgba(204, 255, 255, 0.4));
+    z-index: -1; /* Place behind the image */
+  }
+  footer {
+    background-color: #333333; /* Dark Gray */
+    padding: 40px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    
+    .footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    }
+    
+    .footer-section {
+    flex: 1;
+    padding: 20px;
+    }
+    
+    .footer-section h4 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #ffffff;
+    }
+    
+    .footer-section p, .footer-section a {
+    color: #dddddd;
+    font-size: 16px;
+    text-decoration: none;
+    }
+    .sliding-pictures {
+        display: flex;
+        overflow: hidden;
+        margin-bottom: 20px;
+        height: 400px;
+        background-color: #f1f1f1;
+        border-radius: 8px;
+    }
+    
+    .sliding-pictures img {
+        width: 100%;
+        animation: slide 7s infinite linear;
+    }
+    
+    .footer-section a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+    }
+    
+    .footer-section .copyright {
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #888888;
+    }
+    footer {
+    background-color:grey;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    width: 100%; /* Sets the width to 100% of its container */
+    margin-top: -50px;
+    
+}
+
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-us, .follow-us, .copyright {
+    flex-basis: 33.33%;
+}
+
+.contact-us p, .follow-us ul li {
+    margin: 5px 0;
+}
+
+.follow-us ul {
+    list-style: none;
+    padding: 0;
+}
+
+.follow-us ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+  
+  
+  </STYLE>
+
+    
+    

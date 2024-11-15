@@ -19,15 +19,30 @@
             color: #333; /* Dark Gray Text */
         }
 
-        /* Announcement Bar Section */
-        .announcement-bar {
-            background-color:burlywood;            
-            color: white;
-            text-align: center;
-            padding: 10px;
-            font-size: 16px;
-            position: relative;
-        }
+        .top-bar {
+    position: fixed;
+    top: 0px; /* Place it below the announcement bar */
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #AD88C6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+  /* Announcement Bar Section */
+  .announcement-bar {
+    background-color: orange; /* IITM Red */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    position: fixed;
+    width: 100%; /* Ensure it spans full width */
+    top: 58px; 
+    z-index: 1001;
+    }
 
         .join-btn {
             background-color: #ffffff; /* White */
@@ -37,7 +52,7 @@
             border-radius: 5px;
             position: absolute;
             right: 20px;
-            top: 8px;
+            top: 2px;
             cursor: pointer;
             font-weight: bold;
         }
@@ -57,8 +72,11 @@
         }
 
         .top-bar .logo img {
-            width: 120px;
-        }
+    width: 55px;      /* Increase the width of the logo */
+    margin-top: -20px; /* Move the logo slightly up */
+    padding: 8px;     /* Adjust padding around the logo */
+    margin-left: -30px;
+}
 
         .top-nav ul {
             list-style: none;
@@ -407,6 +425,271 @@
         .footer-section a:hover {
             text-decoration: underline;
         }
+        .founders {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.founders-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.founder-card {
+    background-color: #f0e4ff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    max-width: 250px;
+    text-align: center;
+}
+
+.founder-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 2px solid #ccc;
+}
+
+.founder-card h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+
+.founder-title {
+    color: #6a5acd;
+    font-weight: bold;
+}
+
+.founder-quote {
+    font-size: 14px;
+    color: #333;
+    margin: 10px 0 15px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-icons a {
+    color: #333;
+    font-size: 18px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #6a5acd;
+}
+.mentors {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.mentors-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.mentor-card {
+    background-color: #e0f7fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    max-width: 250px;
+    text-align: center;
+}
+
+.mentor-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 2px solid #ccc;
+}
+
+.mentor-card h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+
+.mentor-title {
+    color: #00796b;
+    font-weight: bold;
+}
+
+.mentor-quote {
+    font-size: 14px;
+    color: #333;
+    margin: 10px 0 15px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-icons a {
+    color: #333;
+    font-size: 18px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #00796b;
+}
+.happiness-team {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.happiness-team-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.team-member-card {
+    background-color: #fce4ec;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    max-width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 2px solid #ccc;
+}
+
+.team-member-card h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+
+.team-title {
+    color: #d81b60;
+    font-weight: bold;
+}
+
+.team-quote {
+    font-size: 14px;
+    color: #333;
+    margin: 10px 0 15px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-icons a {
+    color: #333;
+    font-size: 18px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #d81b60;
+}
+
+/* Hover effect for scaling the card */
+.team-member-card:hover {
+    transform: scale(1.05); /* Scales the card up by 5% */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhances the shadow on hover */
+}
+.happiness-team {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.happiness-team-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.team-member-card {
+    background-color: #fce4ec;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    max-width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 2px solid #ccc;
+}
+
+.team-member-card h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+
+.team-title {
+    color: #d81b60;
+    font-weight: bold;
+}
+
+.team-quote {
+    font-size: 14px;
+    color: #333;
+    margin: 10px 0 15px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-icons a {
+    color: #333;
+    font-size: 18px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #d81b60;
+}
+
+/* Hover effect for scaling the card */
+.team-member-card:hover {
+    transform: scale(1.05); /* Scales the card up by 5% */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhances the shadow on hover */
+}
+
+
+
+        
     </style>
 </head>
 <body>
@@ -414,27 +697,28 @@
     <!-- Top Bar Section -->
     <div class="top-bar">
         <div class="logo">
-            <img src="logo.png" alt="Logo" width="100">
+            <img src="{{ url_for('static', filename='LOGO.png') }}" alt="Logo" width="100">
         </div>
         <nav class="top-nav">
             <ul>
                 <li><a href="{{ url_for('home') }}">Home</a></li>
               <li><a href="{{ url_for('about') }}">About Us</a></li>
-              <li><a href="{{ url_for('work') }}">Work</a></li>
+              <li><a href="{{ url_for('work') }}">Our Work</a></li>
               <li><a href="{{ url_for('testimonials') }}">Testimonials</a></li>
+              <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+              <li><a href="{{ url_for('contribute') }}">Contribute</a></li>
+              <li><a href="{{ url_for('contact') }}">Contact</a></li>
               
                 
-                <li><a href="#">Contribute</a></li>
-                <li><a href="#">Contact</a></li>
-                
+              
             </ul>
         </nav>
     </div>
 
     <!-- Top Announcement Bar -->
     <div class="announcement-bar">
-        <p>Applications Open now for September 2024 Batch | Applications Close: Sep 15, 2024 |</p>
-        <button class="join-btn">Join Now</button>
+        <p>Become a part of the change – Join our mission and make a difference together!</p>
+        <a href="{{ url_for('contact') }}"><button class="join-btn">Join Now</button></a>
     </div>
     <!-- Background Photo Section -->
 <section class="background-photo">
@@ -449,24 +733,146 @@
     <section class="founders">
         <h2>Our Founders</h2>
         <div class="founders-grid">
-            <div class="founder">
+            <div class="founder-card">
                 <img src="founder1.jpg" alt="Founder 1">
-                <p>Madhav Kumar Choudhary</p>
+                <h3>Madhav Kumar Choudhary</h3>
+                <p class="founder-title">Founder</p>
                 <p class="founder-quote">"Empowering individuals through compassion and commitment."</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-google"></i></a>
+                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                </div>
             </div>
-            <div class="founder">
+            <div class="founder-card">
                 <img src="cofounder1.jpg" alt="Co-Founder 1">
-                <p>Shubham Kokila</p>
+                <h3>Shubham Kokila</h3>
+                <p class="founder-title">Co-Founder</p>
                 <p class="founder-quote">"Striving for a fair and just society for all."</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-google"></i></a>
+                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                </div>
             </div>
             <!-- Add more founders as needed -->
         </div>
     </section>
-    <!-- Our Team Section -->
+    
+<section class="mentors">
+    <h2>Our Mentors</h2>
+    <div class="mentors-grid">
+        <div class="mentor-card">
+            <img src="mentor1.jpg" alt="Mentor 1">
+            <h3>Sneha</h3>
+            <p class="mentor-title">Senior Mentor</p>
+            <p class="mentor-quote">"Guiding the next generation with experience and wisdom."</p>
+            <div class="social-icons">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-google"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="mentor-card">
+            <img src="mentor2.jpg" alt="Mentor 2">
+            <h3>Himani Kokila</h3>
+            <p class="mentor-title">Technical Mentor</p>
+            <p class="mentor-quote">"Empowering innovation through mentorship and support."</p>
+            <div class="social-icons">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-google"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+            </div>
+        </div>
+        </div>
+        </section>
+        <!-- Add more mentors as needed -->
+        <section class="happiness-team">
+            <h2>Happiness Manager Team</h2>
+            <div class="happiness-team-grid">
+                <div class="team-member-card">
+                    <img src="isha.jpg" alt="Isha Rathore">
+                    <h3>Isha Rathore</h3>
+                    <p class="team-title">Team Lead</p>
+                    <p class="team-quote">"Inspiring happiness and fostering team spirit."</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-google"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="team-member-card">
+                    <img src="bhavana.jpg" alt="Bhavana">
+                    <h3>Bhavana</h3>
+                    <p class="team-title">Team Member</p>
+                    <p class="team-quote">"Creating a positive and supportive environment."</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-google"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </div>
+    <section class="happiness-team">
+        <h2>Happiness Manager Team</h2>
+        <div class="happiness-team-grid">
+            <div class="team-member-card">
+                <img src="saumya.jpg" alt="Saumya">
+                <h3>Saumya</h3>
+                <p class="team-title">Team Lead</p>
+                <p class="team-quote">"Leading with empathy and fostering happiness within the team."</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-google"></i></a>
+                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="team-member-card">
+                <img src="aman.jpg" alt="Aman Raj">
+                <h3>Aman Raj</h3>
+                <p class="team-title">Team Member</p>
+                <p class="team-quote">"Encouraging teamwork and keeping spirits high."</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-google"></i></a>
+                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="team-member-card">
+                <img src="rishitha.jpg" alt="Rishitha Kulkarni">
+                <h3>Rishitha Kulkarni</h3>
+                <p class="team-title">Team Member</p>
+                <p class="team-quote">"Spreading joy and creating a positive team atmosphere."</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-google"></i></a>
+                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    </section>
+    
+</section>
+
+    <!-- Our Team Section -
     <section class="our-team">
         <h2>Our Team</h2>
         <div class="team-grid">
-            <!-- Operations -->
+            <!-- Operations --
             <div class="team-member">
                 <h2>Operations</h2>
                 <img src="operations.jpg" alt="Operations" class="team-photo">
@@ -486,24 +892,9 @@
 
 
             <!-- Web Development -->
-            <div class="team-member">
-                <h2>Web Dev</h2>
-                <img src="webdev.jpg" alt="Web Development" class="team-photo">
-                <p>The Web Development team builds and maintains the digital platforms of our organization.</p>
-                <div class="team-grid-member">
-                    <div class="member">
-                        <img src="team3.jpg" alt="Team Member 3">
-                        <p>Member Name 3</p>
-                    </div>
-                    <div class="member">
-                        <img src="team4.jpg" alt="Team Member 4">
-                        <p>Member Name 4</p>
-                    </div>
-                    <!-- Add more members as needed -->
-                </div>
-            </div>
+          
 
-            <!-- Finance -->
+            <!-- Finance 
             <div class="team-member">
                 <h2>Finance</h2>
                 <img src="finance.jpg" alt="Finance" class="team-photo">
@@ -521,7 +912,7 @@
                 </div>
             </div>
 
-            <!-- Happiness -->
+            <!-- Happiness --
             <div class="team-member">
                 <h2>Happiness</h2>
                 <img src="happiness.jpg" alt="Happiness" class="team-photo">

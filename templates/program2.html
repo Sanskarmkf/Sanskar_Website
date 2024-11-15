@@ -16,29 +16,32 @@
 </head>
 <body>
 
-  <!-- Top Bar Section -->
-  <div class="top-bar">
-    <div class="logo">
-        <img src="logo.png" alt="Logo" width="100">
+     <!-- Top Bar Section -->
+     <div class="top-bar">
+      <div class="logo">
+        <img src="{{ url_for('static', filename='LOGO.png') }}" alt="Logo" width="100">
+      </div>
+      <nav class="top-nav">
+          <ul>
+              <li><a href="{{ url_for('home') }}">Home</a></li>
+              <li><a href="{{ url_for('about') }}">About Us</a></li>
+              <li><a href="{{ url_for('work') }}">Our Work</a></li>
+              <li><a href="{{ url_for('testimonials') }}">Testimonials</a></li>
+              <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+              <li><a href="{{ url_for('contribute') }}">Contribute</a></li>
+              <li><a href="{{ url_for('contact') }}">Contact</a></li>
+              
+              
+          </ul>
+      </nav>
     </div>
-    <nav class="top-nav">
-        <ul>
-          <li><a href="{{ url_for('home') }}">Home</a></li>
-          <li><a href="{{ url_for('about') }}">About Us</a></li>
-          <li><a href="{{ url_for('work') }}">Work</a></li>
-          <li><a href="{{ url_for('testimonials') }}">Testimonials</a></li>
-            <li><a href="#">Contribute</a></li>
-            <li><a href="#">Contact</a></li>
-            
-        </ul>
-    </nav>
-  </div>
-
-  <!-- Top Announcement Bar -->
-  <div class="announcement-bar">
-    <p>Applications Open now for September 2024 Batch | Applications Close: Sep 15, 2024 |</p>
-    <button class="join-btn">Join Now</button>
-  </div>
+  
+    <!-- Top Announcement Bar -->
+    <div class="announcement-bar">
+      <p>Become a part of the change – Join our mission and make a difference together!</p>
+      <a href="{{ url_for('contact') }}"><button class="join-btn">Join Now</button></a>
+    </div>
+  
 
 <!-- Children Welfare Program Section -->
 <section class="event-section">
@@ -51,12 +54,13 @@
     <p>Our goal is to provide support and joy to children in need, and the smiles we received made it all worthwhile. This program emphasizes our dedication to fostering a sense of belonging and care within our community.</p>
   
     <div class="event-images">
-      <img src="program2_image1.jpg" alt="Children Welfare Program Image 1">
-      <img src="program2_image2.jpg" alt="Children Welfare Program Image 2">
-      <img src="program2_image3.jpg" alt="Children Welfare Program Image 3">
-      <img src="program2_image4.jpg" alt="Children Welfare Program Image 4">
-      <!-- Add more images as needed -->
-    </div>
+      <img src="{{ url_for('static', filename='children3.JPG') }}" alt="Children Welfare Program Image 1">
+      <img src="{{ url_for('static', filename='children4.JPG') }}" alt="Children Welfare Program Image 2">
+      <img src="{{ url_for('static', filename='children6.JPG') }}" alt="Children Welfare Program Image 3">
+      <img src="{{ url_for('static', filename='children10.JPG') }}" alt="Children Welfare Program Image 4">
+      <!-- Add more images using url_for as needed -->
+  </div>
+  
   </section>
   
 
@@ -99,68 +103,145 @@ body {
   color: #333; /* Dark Gray Text */
 }
 
-/* Announcement Bar Section */
-.announcement-bar {
-  background-color: orange; 
-  color: white;
-  text-align: center;
-  padding: 12px;
-  font-size: 15px;
-  position: relative;
-  height: 45px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.join-btn {
-  background-color: #ffffff; 
-  color: #b7282e; 
-  border: 1px solid #b7282e;
-  padding: 8px 15px;
-  border-radius: 5px;
-  position: absolute;
-  right: 20px;
-  top: 8px;
-  cursor: pointer;
-  font-weight: bold;
- 
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #ffffff; /* White Background */
+  color: #333; /* Dark Gray Text */
 }
-
-.join-btn:hover {
-  background-color: #b7282e;
-  color: #fff;
-}
-
-/* Top Bar Section */
 .top-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #333333; /* Dark Gray */
-  padding: 20px 40px;
+    position: fixed;
+    top: 0px; /* Place it below the announcement bar */
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color:#333333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
 }
 
-.top-bar .logo img {
-  width: 120px;
+    /* Announcement Bar Section */
+    .announcement-bar {
+    background-color: orange; /* IITM Red */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    position: fixed;
+    width: 100%; /* Ensure it spans full width */
+    top: 58px; 
+    z-index: 1001;
+    }
+    .join-btn {
+    background-color: #ffffff; /* White */
+    color: #b7282e; /* Red Text */
+    border: 1px solid #b7282e;
+    padding: 6px 15px;
+    border-radius: 5px;
+    position: absolute;
+    right: 20px;
+    top: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    }
+    
+    .join-btn:hover {
+    background-color: #b7282e;
+    color: #fff;
+    }
+    .impact-section {
+    text-align: center;
+    background-color: #f8f8f8; /* Optional: Background color for the section */
+    padding: 50px 0;
+    }
+    
+    .impact-section h2 {
+    font-size: 36px;
+    color: #000; /* Adjust the color as needed */
+    margin-bottom: 30px;
+    font-weight: bold;
+    }
+    
+    .impact-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Adjust gap between the boxes */
+    flex-wrap: wrap; /* Allows the items to wrap on smaller screens */
+    }
+    
+    .impact-box {
+    width: 200px; /* Adjust box width */
+    text-align: center;
+    }
+    
+    .impact-box h3 {
+    font-size: 48px;
+    color: #7fd320; /* Green color as in the image */
+    margin: 0;
+    }
+    
+    .impact-title {
+    font-size: 24px;
+    color: #f4f6f3; /* Green color as in the image */
+    margin: 10px 0;
+    font-weight: bold;
+    }
+    
+    .impact-box p {
+    font-size: 14px;
+    color: #000; /* Adjust text color as needed */
+    margin: 5px 0;
+    }
+    
+    /* Top Bar Section */
+    .top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333333; /* Dark Gray */
+    padding: 20px 40px;
+    }
+    
+    .top-bar .logo img {
+    width: 55px;      /* Increase the width of the logo */
+    margin-top: -20px; /* Move the logo slightly up */
+    padding: 8px;     /* Adjust padding around the logo */
+    margin-left: -30px;
 }
 
-.top-nav ul {
-  list-style: none;
-  display: flex;
-}
-
-.top-nav ul li {
-  margin-left: 30px;
-}
-
-.top-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 16px;
-}
-
-.top-nav ul li a:hover {
-  text-decoration: underline;
-}    
+    .top-nav ul {
+    list-style: none;
+    display: flex;
+    }
+    
+    .top-nav ul li {
+    margin-left: 30px;
+    }
+    
+    .top-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    }
+    
   .event-section {
+    margin-top:80px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+   
+  .event-section {
+    margin-top: 80px;
     padding: 20px;
     background-color: #f8f9fa;
     border-radius: 10px;
@@ -184,23 +265,23 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
-  }
-  
-  .event-images img {
-    max-width: 100%;
-    height: auto;
+    gap: 15px; /* Adjust gap between images as needed */
+    margin-top: 30px;
+}
+
+.event-images img {
+    width:500px; /* Adjust width to control the image size */
+    height: 400px;
     border: 5px solid #d1e7dd; /* Light green border */
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s, box-shadow 0.3s;
-  }
-  
-  .event-images img:hover {
+}
+
+.event-images img:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-  }
+}
   
   .event-images img::before {
     content: '';
@@ -273,6 +354,42 @@ body {
     color: #888888;
     }
   
+    footer {
+    background-color:grey;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    width: 100%; /* Sets the width to 100% of its container */
+    margin-top: -50px;
+    
+}
+
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-us, .follow-us, .copyright {
+    flex-basis: 33.33%;
+}
+
+.contact-us p, .follow-us ul li {
+    margin: 5px 0;
+}
+
+.follow-us ul {
+    list-style: none;
+    padding: 0;
+}
+
+.follow-us ul li a {
+    color: #fff;
+    text-decoration: none;
+}
   
   </STYLE>
 
