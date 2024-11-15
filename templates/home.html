@@ -166,40 +166,54 @@
         <div class="description">
             <p>we have distributed necessities refreshment and education to early nearly 100 people Heart Will congratulation and Thanks to all the core members and members of Sanskar family for making this milestone possible special thanks to everyone for their presence and encouragement that continuous spreading positivity and making a difference together</p>
         </div>
-
         <div class="video-container">
             <!-- Custom Thumbnail -->
             <div class="video-thumbnail" onclick="playVideo()">
               <a href="https://www.youtube.com/watch?v=hIJ0mAD5V_o" target="_blank">
-                <img src="{{ url_for('static', filename='labour day(acharya)13.jpg') }}" alt="Custom Video Thumbnail">
-                <img class="youtube-icon" src="{{ url_for('static', filename='youtube.png') }}" alt="YouTube Icon">
-            </a>
+                <img src="{{ url_for('static', filename='labour day(acharya)13.jpg') }}" alt="Video Thumbnail">
+                <div class="youtube-icon"></div>
+      
           </div>
           
           
         </div>
     </div>
-    <!-- Footer Section -->
     <footer>
-      <div class="footer-content">
-          <div class="contact-us">
-              <h3>Contact Us</h3>
-              <p>Email: sanskarmkf@gmail.com</p>
-              <p>Phone: +91-1234567890</p>
+      <div class="footer-container">
+          <div class="footer-section about">
+              <img src="{{ url_for('static', filename='LOGO.png') }}" alt="Nitya Foundation Logo" class="logo">
+              <h2>Sanskar</h2>
+              <p>Nitya Foundation was established on dat.</p>
+              <div class="social-icons">
+                  <a href="#"><i class="fa fa-facebook"></i></a>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                  <a href="#"><i class="fa fa-instagram"></i></a>
+                  <a href="#"><i class="fa fa-linkedin"></i></a>
+              </div>
           </div>
-          <div class="follow-us">
-              <h3>Follow Us</h3>
+          <div class="footer-section centers">
+              <h3>Centers</h3>
               <ul>
-                  <li><a href="#">Facebook</a></li>
-                  <li><a href="https://www.instagram.com/sanskar.mkf?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">Instagram</a></li>
-                  <li><a href="https://www.linkedin.com/company/sanskarfoundation/">LinkedIn</a></li>
+                  <li>Bihar</li>
+                  <li>Delhi</li>
+                  <li>Jharkhand</li>
+                  <li>Maharashtra</li>
+                  <li>Uttar Pradesh</li>
               </ul>
           </div>
-          <div class="copyright">
-              
+         
+          <div class="footer-section follow-us">
+              <h3>Follow us on</h3>
+              <ul>
+                  <li><i class="fa fa-phone"></i> +919818885691</li>
+                  <li><i class="fa fa-envelope"></i> info@nityango.org</li>
+                  <li><i class="fa fa-map-marker"></i> H-28, Om Complex, 1st Floor, Laxmi Nagar Delhi - 110092</li>
+              </ul>
           </div>
       </div>
   </footer>
+ 
+
     <script src="script.js"></script>
 
     
@@ -231,7 +245,7 @@ body {
     max-width: 100%;
     overflow: hidden;
     background-color: #fff;
-    height: 115vh; 
+    height: 105vh; 
     top: 80px;
 }
 
@@ -460,23 +474,10 @@ body {
     position: relative;
     }
     
-    /*body, html {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    height: 100%;
-    }*/
-    .banner-content{
     
+    .banner-content{
     color: white;
     }
-    /*  text-align: center;
-    
-    height: 20%;
-    
-    padding: 20px;
-    }
-    */
     .banner h1 {
     font-size: 6em;
     margin: 0;
@@ -899,6 +900,7 @@ body {
     color: #000;
     font-family: fantasy;
     font-size: 40px;
+    
 }
 .achievements-container {
     display: flex;
@@ -907,6 +909,7 @@ body {
     gap: 40px;
     padding: 20px; /* Optional padding for container */
     width: 100%; /* Full width of the container */
+    
 }
 
 .achievement-card {
@@ -918,6 +921,7 @@ body {
     height: 300px; /* Increased height */
     transition: transform 0.3s ease;
     overflow: hidden;
+    margin-bottom: 0;
 }
 
 .achievement-image {
@@ -1040,44 +1044,8 @@ body {
         width: 100%;
         animation: slide 7s infinite linear;
     }
-    footer {
-    background-color:grey;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    width: 100%; /* Sets the width to 100% of its container */
-    margin-top: -50px;
-    
-}
+   
 
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.contact-us, .follow-us, .copyright {
-    flex-basis: 33.33%;
-}
-
-.contact-us p, .follow-us ul li {
-    margin: 5px 0;
-}
-
-.follow-us ul {
-    list-style: none;
-    padding: 0;
-}
-
-.follow-us ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-  
-    
     /*vide0*/
     /* Container styling for text and video */
     .container {
@@ -1088,6 +1056,7 @@ body {
       padding: 20px;
       color: black;
       width:100%;
+      
     }
     
     /* Styling for the description text */
@@ -1106,42 +1075,48 @@ body {
       line-height: 1.6;
     }
     
-  /* Styling for the video container */
-.video-container {
-  width: 600px; /* Adjust this as needed */
-  height: 315px;
+    .video-container {
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 16 / 9;
   position: relative;
   background-color: #333;
+  overflow: hidden;
+  margin-bottom: 0;
 }
 
-/* The custom thumbnail */
 .video-thumbnail {
   width: 100%;
   height: 100%;
   position: relative;
   background-color: #000;
   cursor: pointer;
+  overflow: hidden;
+  text-decoration: none; /* Remove link styling */
 }
 
 /* Thumbnail image styling */
 .video-thumbnail img {
-  width: 100%; /* Make sure the thumbnail image is responsive */
-  height: auto; /* Maintain aspect ratio */
-  object-fit: cover; /* Ensure the image covers the entire container */
-  display: block; /* Remove any inline spacing */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 /* YouTube icon styling */
 .youtube-icon {
+  width: 50px;
+  height: 50px;
+  background-image: url('static/image.png'); /* Replace with the path to your YouTube icon */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   position: absolute;
-  top: 50%; /* Center vertically */
-  left: 50%; /* Center horizontally */
-  transform: translate(-50%, -50%); /* Align to exact center */
-  width: -2000px; /* Adjusted smaller size for the YouTube icon */
-  height: 40px;
-  pointer-events: none; /* Allow clicks to pass through the icon */
-  opacity: 0.9;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
+
 
     
     /* Media Queries for Responsiveness */
@@ -1152,6 +1127,95 @@ body {
     }
   }
   
+  /* General Styles */
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+footer {
+    background-color:lightgrey;
+    color:black;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px 20px; /* Increased top padding */
+    padding-top: 20px; /* Adjust as needed */
+}
+footer {
+    margin-top: 0;
+}
+
+
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+}
+
+.footer-section h2 {
+    color: #ff6600;
+    font-family: Arial, sans-serif;
+}
+
+.footer-section h3 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: #ff6600;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.social-icons a:hover {
+    color: #fff;
+}
+
+.logo {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+/* Icons */
+.fa {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+/* Full-width Footer Styling */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+
+
 </style>
 <script>
   let currentIndex = 0;

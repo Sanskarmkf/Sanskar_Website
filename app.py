@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request  # Added request import
 import pandas as pd
 import os
+from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
 # Path to the Excel file
@@ -10,6 +11,8 @@ EXCEL_FILE = os.path.join('data', 'contacts.xlsx')
 if not os.path.exists(EXCEL_FILE):
     df = pd.DataFrame(columns=['Name', 'Email', 'Phone', 'Address', 'Description'])
     df.to_excel(EXCEL_FILE, index=False)
+
+    
 
 @app.route('/contact')
 def contact():
@@ -42,6 +45,66 @@ def submit():
 
     return "Form submitted successfully!"
 
+# Path to the Excel file
+EXCEL_FILE = os.path.join('data', 'payment.xlsx')
+
+# Configure upload folder for payment screenshots
+UPLOAD_FOLDER = 'static/uploads'
+ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
+
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+
+# Check if the Excel file exists, create it if it doesn't
+if not os.path.exists(EXCEL_FILE):
+    df = pd.DataFrame(columns=['Name', 'Email', 'Phone', 'Address', 'Payment Screenshot'])
+    df.to_excel(EXCEL_FILE, index=False)
+
+# Function to check allowed file extensions
+def allowed_file(filename):
+    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
+# Alternative route and view function for the "Submit" form
+@app.route('/contribute', methods=['GET'])
+def contribute():
+    return render_template('contribute.html')
+
+@app.route('/process_payment', methods=['POST'])  # Alternative route for submission
+def process_payment():  # Alternative function name
+    # Extract form data
+    name = request.form['name']
+    email = request.form['email']
+    phone = request.form['phone']
+    address = request.form['address']
+
+    # Handle the file upload (payment screenshot)
+    if 'payment-screenshot' not in request.files:
+        return "No file uploaded", 400
+    
+    file = request.files['payment-screenshot']
+    if file and allowed_file(file.filename):
+        filename = secure_filename(file.filename)
+        file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+        file.save(file_path)
+    else:
+        return "Invalid file format. Only image files are allowed.", 400
+
+    # Prepare the data to add to the Excel file
+    new_entry = pd.DataFrame({
+        'Name': [name],
+        'Email': [email],
+        'Phone': [phone],
+        'Address': [address],
+        'Payment Screenshot': [file_path]
+    })
+
+    # Load the existing data from the Excel file
+    df = pd.read_excel(EXCEL_FILE)
+
+    # Append the new entry and save it back to the Excel file
+    df = pd.concat([df, new_entry], ignore_index=True)
+    df.to_excel(EXCEL_FILE, index=False)
+
+    return "Form submitted successfully! Payment data saved."
 
 
 # Route for the home page
@@ -66,11 +129,6 @@ def testimonials():
 @app.route('/gallery')
 def gallery():
     return render_template('gallery.html')
-
-
-@app.route('/contribute')
-def contribute():
-    return render_template('contribute.html')
 
 @app.route('/achievement')
 def achievement():

@@ -37,8 +37,9 @@
         <p>Become a part of the change – Join our mission and make a difference together!</p>
         <a href="{{ url_for('contact') }}"><button class="join-btn">Join Now</button></a>
     </div>
+    <div class="container">
     <div class="helping-hand">
-        <h1>Be the Hope They Deserve: Donate Today</h1>
+        <h1> Donate Today</h1>
         <div class="donate-card">
             <img src="{{ url_for('static', filename='QR CODE.jpg') }}" alt="QR Code for Donation" class="qr-code">
             <p class="scan-text">SCAN TO DONATE</p>
@@ -47,6 +48,31 @@
             <div class="underline"></div>
         </div>
     </div>
+    <div class="contact-form">
+        <h1>Fill Out Your Details After Donating</h1>
+        <form action="{{ url_for('process_payment') }}" method="post" enctype="multipart/form-data">
+            <label for="name">Name:</label>
+            <input type="text" name="name" required>
+        
+            <label for="email">Email:</label>
+            <input type="email" name="email" required>
+        
+            <label for="phone">Phone:</label>
+            <input type="text" name="phone" required>
+
+            <label for="address">Address:</label>
+<input type="text" name="address" id="address" required>
+
+        
+            <label for="payment-screenshot">Upload Payment Screenshot:</label>
+            <input type="file" name="payment-screenshot" id="payment-screenshot" accept="image/*" required>
+        
+            <button type="submit">Submit</button>
+        </form>
+        
+    </div>
+</div>
+</div>
      <!-- Footer Section -->
      <footer>
         <div class="footer-content">
@@ -76,80 +102,7 @@
             background-color: #f0f0f0;
             }
             
-            .slider-container {
-            position: relative;
-            width: 100%;
-            max-width: 100%;
-            overflow: hidden;
-            border: none; /* Remove border to match the banner style */
-            border-radius: 0; /* Remove border radius */
-            background-color: #fff;
-            height: 80vh; /* Adjust the height to make it look like a banner */
-            }
-            
-            .slider {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-            height: 100%;
-            }
-            
-            .slide {
-            min-width: 100%;
-            box-sizing: border-box;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-            }
-            
-            .slide img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Ensure the image covers the entire slide */
-            object-position: center; /* Focus on the central part of the image */
-            }
-            .text-overlay {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: white;
-            font-size: 3em; /* Adjust the font size as needed */
-            font-weight: bold;
-            text-align: center;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Optional: adds a shadow for better readability */
-            z-index: 2; /* Ensure the text is above the image */
-            }
-            
-            button.prev, button.next {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(0, 0, 0, 0.5);
-            border: none;
-            color: white;
-            padding: 10px;
-            cursor: pointer;
-            border-radius: 50%;
-            z-index: 10; /* Ensure buttons are above the images */
-            }
-            
-            button.prev {
-            left: 10px;
-            }
-            
-            button.next {
-            right: 10px;
-            }
-            
-            button.prev:hover, button.next:hover {
-            background-color: rgba(0, 0, 0, 0.7);
-            }
-            * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            }
+         
             
             body {
             font-family: 'Arial', sans-serif;
@@ -245,7 +198,7 @@ body, html {
 .helping-hand {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     justify-content: center;
     background-color:white; /* Navy blue background */
     color: black;
@@ -259,16 +212,19 @@ body, html {
     font-size: 50px;
     color :#333333;
     font-weight: bold;
+    text-align: left;
+    margin-left: 90px;
 }
 
 .donate-card {
     background-color: lightsalmon; 
-    padding: 30px;
+    padding: 50px;
     border-radius: 15px;
-    width: 650px;
-    height: 550px;
+    width: 550px;
+    height: 500px;
     display: flex;
     flex-direction: column;
+    margin-left: 25px;
     align-items: center;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
     margin-top: 50px;
@@ -303,6 +259,91 @@ body, html {
     background-color:grey; /* Teal color for the underline */
     margin-top: 10px;
     border-radius: 2px;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;;
+    
+}
+
+.contact-info {
+    width: 45%;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.contact-info h2 {
+    font-size: 24px;
+    margin-top:50px
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-item {
+    margin-bottom: 20px;
+}
+
+.contact-item i {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #007bff;
+}
+
+.contact-item h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.contact-item p {
+    font-size: 16px;
+}
+
+.contact-form {
+    width: 45%;
+    margin-top: 120px;
+    padding:40px
+}
+.contact-form h1 {
+    margin-bottom: 22px; /* Adjust the value as needed */
+    font-size: 40px; 
+}
+
+.contact-form h2 {
+    font-size: 100px;
+    margin-bottom: 20px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.contact-form button {
+    padding: 10px;
+    background-color: hsl(27, 100%, 50%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.contact-form button:hover {
+    background-color: rgb(255, 119, 0);
 }
 footer {
     background-color:grey;
