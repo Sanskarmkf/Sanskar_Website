@@ -180,38 +180,33 @@
     </div>
     <footer>
       <div class="footer-container">
+          <!-- About Section -->
           <div class="footer-section about">
               <img src="{{ url_for('static', filename='LOGO.png') }}" alt="Nitya Foundation Logo" class="logo">
               <h2>Sanskar</h2>
-              <p>Nitya Foundation was established on dat.</p>
-              <div class="social-icons">
-                  <a href="#"><i class="fa fa-facebook"></i></a>
-                  <a href="#"><i class="fa fa-twitter"></i></a>
-                  <a href="#"><i class="fa fa-instagram"></i></a>
-                  <a href="#"><i class="fa fa-linkedin"></i></a>
-              </div>
+              <p></p>
+              <p class="description">One line description about Sanskar Foundation.</p>
           </div>
-          <div class="footer-section centers">
-              <h3>Centers</h3>
-              <ul>
-                  <li>Bihar</li>
-                  <li>Delhi</li>
-                  <li>Jharkhand</li>
-                  <li>Maharashtra</li>
-                  <li>Uttar Pradesh</li>
-              </ul>
-          </div>
-         
+  
+          <!-- Follow Us Section -->
           <div class="footer-section follow-us">
               <h3>Follow us on</h3>
               <ul>
-                  <li><i class="fa fa-phone"></i> +919818885691</li>
-                  <li><i class="fa fa-envelope"></i> info@nityango.org</li>
-                  <li><i class="fa fa-map-marker"></i> H-28, Om Complex, 1st Floor, Laxmi Nagar Delhi - 110092</li>
+                  <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
+                  <li><a href="https://www.linkedin.com" target="_blank">LinkedIn</a></li>
               </ul>
+          </div>
+  
+          <!-- Contact Section -->
+          <div class="footer-section contact">
+              <h3>Contact</h3>
+              <p><i class="fa fa-phone"></i> +919818885691</p>
+              <p><i class="fa fa-envelope"></i> info@nityango.org</p>
+              <p><i class="fa fa-map-marker"></i> H-28, Om Complex, 1st Floor, Laxmi Nagar, Delhi - 110092</p>
           </div>
       </div>
   </footer>
+  
  
 
     <script src="script.js"></script>
@@ -966,9 +961,7 @@ body {
       font-weight: bold;
     }
     
-    .learn-more:hover {
-      text-decoration: underline;
-    }
+   
     
     
     
@@ -1082,7 +1075,8 @@ body {
   position: relative;
   background-color: #333;
   overflow: hidden;
-  margin-bottom: 0;
+  
+  
 }
 
 .video-thumbnail {
@@ -1112,7 +1106,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -1135,41 +1129,35 @@ body {
 }
 
 footer {
-    background-color:lightgrey;
-    color:black;
-    padding: 20px 0;
+    background-color: lightgrey;
+    color: black;
+    padding: 10px 0;
     width: 100%;
 }
 
 .footer-container {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px 20px; /* Increased top padding */
-    padding-top: 20px; /* Adjust as needed */
+    height: 250px;
 }
-footer {
-    margin-top: 0;
-}
-
-
 
 .footer-section {
     flex: 1;
-    min-width: 250px;
+    min-width: 280px;
     margin: 10px;
+    margin-bottom: 0;
+  
 }
 
 .footer-section h2 {
     color: #ff6600;
     font-family: Arial, sans-serif;
+    text-decoration: none; /* Removes underline for h2 */
 }
 
 .footer-section h3 {
     font-weight: bold;
     margin-bottom: 10px;
+    text-decoration: none; /* Removes underline for h3 */
 }
 
 .footer-section ul {
@@ -1181,18 +1169,15 @@ footer {
     margin: 5px 0;
 }
 
-.social-icons {
-    margin-top: 10px;
+/* Styling for links in the footer */
+.footer-section ul li a {
+    color: black; /* Sets link color to black */
+    text-decoration: none; /* Removes underline for links */
 }
 
-.social-icons a {
-    color: #ff6600;
-    margin-right: 10px;
-    font-size: 20px;
-}
-
-.social-icons a:hover {
-    color: #fff;
+.footer-section ul li a:hover {
+    color: #ff6600; /* Optional: change color on hover */
+   
 }
 
 .logo {
@@ -1214,7 +1199,11 @@ footer {
     width: 100%;
 }
 
-
+/* Specific styling for text below "Sanskar" */
+.footer-section p {
+    color: black; /* Ensures it appears in black */
+    text-decoration: none; /* Ensures no underline for text */
+}
 
 </style>
 <script>

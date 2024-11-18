@@ -55,6 +55,55 @@
        
         </div>
     </section>
+    <section class="testimonials">
+        <div class="testimonial-container">
+            <div class="testimonial">
+                <p>New India Conclave is a first of its kind initiative that recognizes young rural talent that is making a difference and contributing to nation building. We are delighted to partner with Y4D Foundation</p>
+                <div class="testimonial-author">
+                    <img src="{{ url_for('static', filename='hod sir .png') }}" alt="Puneet Dalmia">
+                    <span>Puneet Dalmia (Dalmia Group)</span>
+                </div>
+            </div>
+            <div class="testimonial">
+                <p>I am solutions oriented person and is thus enthused to support a positive initiatives of Y4D Foundation. Y4D is young dynamic and enthusiastic team.</p>
+                <div class="testimonial-author">
+                    <img src="path/to/image2.jpg" alt="Akshay Kumar">
+                    <span>Akshay Kumar (Actor)</span>
+                </div>
+            </div>
+        </div>
+       
+        </div>
+    </section>
+    <footer>
+        <div class="footer-container">
+            <!-- About Section -->
+            <div class="footer-section about">
+                <img src="{{ url_for('static', filename='LOGO.png') }}" alt="Nitya Foundation Logo" class="logo">
+                <h2>Sanskar</h2>
+                <p></p>
+                <p class="description">One line description about Sanskar Foundation.</p>
+            </div>
+    
+            <!-- Follow Us Section -->
+            <div class="footer-section follow-us">
+                <h3>Follow us on</h3>
+                <ul>
+                    <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
+                    <li><a href="https://www.linkedin.com" target="_blank">LinkedIn</a></li>
+                </ul>
+            </div>
+    
+            <!-- Contact Section -->
+            <div class="footer-section contact">
+                <h3>Contact</h3>
+                <p><i class="fa fa-phone"></i> +919818885691</p>
+                <p><i class="fa fa-envelope"></i> info@nityango.org</p>
+                <p><i class="fa fa-map-marker"></i> H-28, Om Complex, 1st Floor, Laxmi Nagar, Delhi - 110092</p>
+            </div>
+        </div>
+    </footer>
+    
 </body>
 </html>
             
@@ -208,6 +257,7 @@ body {
     justify-content: center;
     gap: 50px;
     margin-top: 40px;
+    height:300px;
 }
 
 .testimonial {
@@ -235,46 +285,86 @@ body {
 }
 
 .testimonial-author img {
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     object-fit: cover;
 }
 
 footer {
-    background-color:grey;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    width: 100%; /* Sets the width to 100% of its container */
-    margin-top: -50px;
+    background-color: lightgrey;
+    color: black;
+    padding: 0px 0;
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    height: 250px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 280px;
+    margin: 10px;
+    margin-bottom: 0;
+  
+}
+
+.footer-section h2 {
+    color: #ff6600;
+    font-family: Arial, sans-serif;
+    text-decoration: none; /* Removes underline for h2 */
+}
+
+.footer-section h3 {
+    font-weight: bold;
+    margin-bottom: 10px;
     
 }
 
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.contact-us, .follow-us, .copyright {
-    flex-basis: 33.33%;
-}
-
-.contact-us p, .follow-us ul li {
-    margin: 5px 0;
-}
-
-.follow-us ul {
-    list-style: none;
+.footer-section ul {
+    list-style-type: none;
     padding: 0;
 }
 
-.follow-us ul li a {
-    color: #fff;
-    text-decoration: none;
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+/* Styling for links in the footer */
+.footer-section ul li a {
+    color: black; /* Sets link color to black */
+    text-decoration: none; /* Removes underline for links */
+}
+
+.footer-section ul li a:hover {
+    color: #ff6600; /* Optional: change color on hover */
+   
+}
+
+.logo {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+/* Icons */
+.fa {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+/* Full-width Footer Styling */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Specific styling for text below "Sanskar" */
+.footer-section p {
+    color: black; /* Ensures it appears in black */
+    text-decoration: none; /* Ensures no underline for text */
 }
   
