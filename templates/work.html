@@ -92,7 +92,7 @@
     <div class="program-content">
       <h3>Haldwani Event</h3>
       <p>On November 20, 2023, we supported over 70 underprivileged students in Haldwani with educational supplies and treats. This initiative aims to inspire and equip young minds for a brighter future. The smiles of the children made the day unforgettable.</p>
-      <a href="{{ url_for('p1') }}" class="know-more">Learn More</a>
+      <a href="{{ url_for('p1') }}" class="know-more">View More</a>
     </div>
     <div class="program-image">
       <img src="{{ url_for('static', filename='haldwani4.jpg') }}" alt="Program 1 Image">
@@ -104,7 +104,7 @@
     <div class="program-content">
       <h3>Children Welfare</h3>
       <p>On February 18, 2023, we spent a joyful day at Sri Saibaba Old Age & Orphan Children’s Home in Bengaluru. We distributed snacks and created happy memories, ensuring every child felt loved. This visit reinforced our commitment to uplifting vulnerable communities.</p>
-      <a href="{{ url_for('p2') }}" class="know-more">Learn More</a>
+      <a href="{{ url_for('p2') }}" class="know-more">View More</a>
     </div>
     <div class="program-image">
       <img src="{{ url_for('static', filename='children4.JPG') }}" alt="Program 2 Image">
@@ -116,7 +116,7 @@
     <div class="program-content">
       <h3>Education Initiatives</h3>
       <p>On May 1, 2024, we celebrated Labor Day by appreciating the staff at Acharya Institute of Technology. We distributed fruits and essentials as a gesture of gratitude for their hard work. This act highlighted the importance of recognizing those who support our community.</p>
-      <a href="{{ url_for('p3') }}" class="know-more">Learn More</a>
+      <a href="{{ url_for('p3') }}" class="know-more">View More</a>
     </div>
     <div class="program-image">
       <img src="{{ url_for('static', filename='haldwani5.jpg') }}" alt="Program 3 Image">
@@ -128,7 +128,7 @@
     <div class="program-content">
       <h3>Breeze Foundation</h3>
       <p>On February 18, 2023, we spent a joyful day at Sri Saibaba Old Age & Orphan Children’s Home in Bengaluru. We distributed snacks and created happy memories, ensuring every child felt loved. This visit reinforced our commitment to uplifting vulnerable communities.</p>
-      <a href="{{ url_for('p4') }}" class="know-more">Learn More</a>
+      <a href="{{ url_for('p4') }}" class="know-more">View More</a>
     </div>
     <div class="program-image">
       <img src="{{ url_for('static', filename='breeze foundation 1.JPG') }}" alt="Program 4 Image">
@@ -139,22 +139,29 @@
  <!-- Footer Section -->
  <footer>
   <div class="footer-content">
-      <div class="contact-us">
-          <h3>Contact Us</h3>
-          <p>Email: sanskarmkf@gmail.com</p>
-          <p>Phone: +91-1234567890</p>
+    <div class="footer-section about">
+      <h4>SANSKAR</h4>
+      <p>Together we can bring changes in the society,</p>
+<p>also sometimes the small happiness is the key</p>
+<p>to a reason for the bigger happiness.</p>
       </div>
-      <div class="follow-us">
-          <h3>Follow Us</h3>
-          <ul>
-              <li><a href="#">Facebook</a></li>
-              <li><a href="https://www.instagram.com/sanskar.mkf?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">Instagram</a></li>
-              <li><a href="https://www.linkedin.com/company/sanskarfoundation/">LinkedIn</a></li>
-          </ul>
-      </div>
-      <div class="copyright">
-          
-      </div>
+    <div class="footer-section links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a
+            href="https://www.instagram.com/sanskar.mkf?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+            target="_blank" rel="noopener noreferrer">Instagram</a></li>
+        <li><a href="https://www.linkedin.com/company/sanskarfoundation/" target="_blank"
+            rel="noopener noreferrer">LinkedIn</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+      </ul>
+
+    </div>
+    <div class="footer-section contact">
+      <h4>Contact</h4>
+      <p>Phone: +919818885691</p>
+      <p>Email: <a href="mailto:sanskarmkf@gmail.com">sanskarmkf@gmail.com</a></p>
+    </div>
   </div>
 </footer>
 
@@ -263,7 +270,7 @@ body {
   position: relative;
   width: 100%;
   height: 650px;
-  background-image: url('hero.jpg'); 
+  background-image: url("{{ url_for('static', filename='haldwani2.jpg') }}"); 
   background-size: cover;
   background-position: center center;
   display: flex;
@@ -278,7 +285,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(16, 16, 16, 0.7); 
+  background-color: rgba(0, 0, 0, 0.6); 
   z-index: 1;
 }
 
@@ -574,68 +581,86 @@ body {
 }
 /* Footer Section */
 footer {
-  background-color: #333333; /* Dark Gray */
-  padding: 40px;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    background-color: #333333; /* Dark Gray */
+    color: white;
+    padding: 40px 20px;
+    width: 100%;
+    box-sizing: border-box; /* Prevent padding from affecting the layout */
+    text-align: center; /* Center text on smaller screens */
+    border-top: 5px solid coral; /* Add a decorative border to the top */
 }
 
 .footer-content {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 1200px;
-  flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items at the top for consistency */
+    flex-wrap: wrap;
+    gap: 30px; /* More space between sections */
 }
 
 .footer-section {
-  flex: 1;
-  padding: 20px;
+    flex: 1 1 25%; /* Sections will take 25% of the space on larger screens */
+    min-width: 200px; /* Ensure sections don’t shrink too much on smaller screens */
+    margin-bottom: 20px;
 }
 
 .footer-section h4 {
-  margin-bottom: 20px;
-  font-size: 20px;
-  color: #ffffff;
+    color: coral; /* Stand out with a vibrant color */
+    margin-bottom: 15px;
+    font-size: 1.4em; /* Slightly larger font size for better readability */
+    text-transform: uppercase; /* Add a professional touch */
 }
 
-.footer-section p, .footer-section a {
-  color: #dddddd;
-  font-size: 16px;
-  text-decoration: none;
+.footer-section p,
+.footer-section a {
+    color: #ccc; /* Softer white for better contrast */
+    text-decoration: none;
+    line-height: 1.8; /* More spacing for readability */
+    font-size: 0.95em; /* Ensure smaller text doesn’t dominate */
 }
 
 .footer-section a:hover {
-  color: #ffffff;
-  text-decoration: underline;
+    color: coral; /* Make hover color consistent */
+    text-decoration: underline; /* Add hover underline for clarity */
 }
 
-.footer-section .copyright {
-  text-align: center;
-  width: 100%;
-  margin-top: 20px;
-  font-size: 14px;
-  color: #888888;
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; /* Standardize spacing for lists */
 }
 
-/* Media Queries for Responsiveness */
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #ddd;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    color: coral;
+}
+
+footer a {
+    transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+footer a:hover {
+    color: coral;
+}
+
 @media (max-width: 768px) {
-  .info-row {
-      flex-direction: column;
-      align-items: center;
-  }
+    .footer-content {
+        flex-direction: column; /* Stack sections vertically on smaller screens */
+        text-align: center;
+    }
 
-  .footer-content {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-  }
-
-  .footer-section {
-      margin-bottom: 20px;
-  }
+    .footer-section {
+        flex: 1 1 100%; /* Ensure sections take full width */
+    }
 }
+
   
 </STYLE>

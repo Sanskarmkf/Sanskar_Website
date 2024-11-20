@@ -78,33 +78,34 @@
     </div>
      <!-- Footer Section -->
      <footer>
-        <div class="footer-container">
-            <!-- About Section -->
-            <div class="footer-section about">
-                <img src="{{ url_for('static', filename='LOGO.png') }}" alt="Nitya Foundation Logo" class="logo">
-                <h2>Sanskar</h2>
-                <p></p>
-                <p class="description">One line description about Sanskar Foundation.</p>
+        <div class="footer-content">
+          <div class="footer-section about">
+            <h4>SANSKAR</h4>
+            <p>Together we can bring changes in the society,</p>
+      <p>also sometimes the small happiness is the key</p>
+      <p>to a reason for the bigger happiness.</p>
             </div>
-    
-            <!-- Follow Us Section -->
-            <div class="footer-section follow-us">
-                <h3>Follow us on</h3>
-                <ul>
-                    <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
-                    <li><a href="https://www.linkedin.com" target="_blank">LinkedIn</a></li>
-                </ul>
-            </div>
-    
-            <!-- Contact Section -->
-            <div class="footer-section contact">
-                <h3>Contact</h3>
-                <p><i class="fa fa-phone"></i> +919818885691</p>
-                <p><i class="fa fa-envelope"></i> info@nityango.org</p>
-                <p><i class="fa fa-map-marker"></i> H-28, Om Complex, 1st Floor, Laxmi Nagar, Delhi - 110092</p>
-            </div>
+          <div class="footer-section links">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a
+                  href="https://www.instagram.com/sanskar.mkf?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                  target="_blank" rel="noopener noreferrer">Instagram</a></li>
+              <li><a href="https://www.linkedin.com/company/sanskarfoundation/" target="_blank"
+                  rel="noopener noreferrer">LinkedIn</a></li>
+              <li><a href="/contact">Contact Us</a></li>
+            </ul>
+  
+          </div>
+          <div class="footer-section contact">
+            <h4>Contact</h4>
+            <p>Phone: +919818885691</p>
+            <p>Email: <a href="mailto:sanskarmkf@gmail.com">sanskarmkf@gmail.com</a></p>
+          </div>
         </div>
-    </footer>
+      </footer>
+    
+            
     
 </body>
 </html>
@@ -363,80 +364,85 @@ body {
 
 
 footer {
-    background-color: lightgrey;
-    color: black;
-    padding: 10px 0;
+    background-color: #333333; /* Dark Gray */
+    color: white;
+    padding: 40px 20px;
     width: 100%;
+    box-sizing: border-box; /* Prevent padding from affecting the layout */
+    text-align: center; /* Center text on smaller screens */
+    border-top: 5px solid coral; /* Add a decorative border to the top */
 }
 
-.footer-container {
+.footer-content {
     display: flex;
-    height: 250px;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items at the top for consistency */
+    flex-wrap: wrap;
+    gap: 30px; /* More space between sections */
 }
 
 .footer-section {
-    flex: 1;
-    min-width: 280px;
-    margin: 10px;
-    margin-bottom: 0;
-  
+    flex: 1 1 25%; /* Sections will take 25% of the space on larger screens */
+    min-width: 200px; /* Ensure sections don’t shrink too much on smaller screens */
+    margin-bottom: 20px;
 }
 
-.footer-section h2 {
-    color: #ff6600;
-    font-family: Arial, sans-serif;
-    text-decoration: none; /* Removes underline for h2 */
+.footer-section h4 {
+    color: coral; /* Stand out with a vibrant color */
+    margin-bottom: 15px;
+    font-size: 1.4em; /* Slightly larger font size for better readability */
+    text-transform: uppercase; /* Add a professional touch */
 }
 
-.footer-section h3 {
-    font-weight: bold;
-    margin-bottom: 10px;
-    text-decoration: none; /* Removes underline for h3 */
+.footer-section p,
+.footer-section a {
+    color: #ccc; /* Softer white for better contrast */
+    text-decoration: none;
+    line-height: 1.8; /* More spacing for readability */
+    font-size: 0.95em; /* Ensure smaller text doesn’t dominate */
+}
+
+.footer-section a:hover {
+    color: coral; /* Make hover color consistent */
+    text-decoration: underline; /* Add hover underline for clarity */
 }
 
 .footer-section ul {
     list-style-type: none;
     padding: 0;
+    margin: 0; /* Standardize spacing for lists */
 }
 
 .footer-section ul li {
-    margin: 5px 0;
-}
-
-/* Styling for links in the footer */
-.footer-section ul li a {
-    color: black; /* Sets link color to black */
-    text-decoration: none; /* Removes underline for links */
-}
-
-.footer-section ul li a:hover {
-    color: #ff6600; /* Optional: change color on hover */
-   
-}
-
-.logo {
-    width: 80px;
     margin-bottom: 10px;
 }
 
-/* Icons */
-.fa {
-    margin-right: 8px;
-    font-size: 18px;
+.footer-section ul li a {
+    color: #ddd;
+    text-decoration: none;
 }
 
-/* Full-width Footer Styling */
-footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+.footer-section ul li a:hover {
+    color: coral;
 }
 
-/* Specific styling for text below "Sanskar" */
-.footer-section p {
-    color: black; /* Ensures it appears in black */
-    text-decoration: none; /* Ensures no underline for text */
+footer a {
+    transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+footer a:hover {
+    color: coral;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Stack sections vertically on smaller screens */
+        text-align: center;
+    }
+
+    .footer-section {
+        flex: 1 1 100%; /* Ensure sections take full width */
+    }
 }
   
 </style>

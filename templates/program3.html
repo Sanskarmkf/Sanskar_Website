@@ -45,11 +45,9 @@
 <section class="event-section">
     <h2>"Labour Recognition" </h2>
     <p>Date: May 1, 2024</p>
-    <p>
-        Description:
-        On this day, we celebrated Labor Day by appreciating the staff at Acharya Institute of Technology. We distributed fruits and essentials as a gesture of gratitude for their hard work. This act highlighted the importance of recognizing those who support our community.</p>
-    
-    <p>Our initiative focuses on fostering a culture of appreciation and respect for educators, emphasizing their vital role in shaping future generations.</p>
+    <p> On this day, we celebrated Labor Day by appreciating the staff at Acharya Institute of Technology. We distributed fruits and essentials as a gesture of gratitude for their hard work.
+       This act highlighted the importance of recognizing those who support our community.Our initiative focuses on fostering a culture of appreciation and respect for educators, emphasizing
+       their vital role in shaping future generations.</p>
   
     <div class="event-images">
       <img src="{{ url_for('static', filename='labour day(acharya)1 .jpg') }}" alt="Education Initiatives Program Image 1">
@@ -66,24 +64,34 @@
 
 
   <!-- Footer Section -->
-<footer>
+  <footer>
     <div class="footer-content">
-        <div class="footer-section contact-info">
-            <h4>Contact Us</h4>
-            <p>Email: example@example.com</p>
-            <p>Phone: +91-1234567890</p>
+      <div class="footer-section about">
+        <h4>SANSKAR</h4>
+        <p>Together we can bring changes in the society,</p>
+  <p>also sometimes the small happiness is the key</p>
+  <p>to a reason for the bigger happiness.</p>
         </div>
-        <div class="footer-section social-links">
-            <h4>Follow Us</h4>
-            <a href="https://facebook.com">Facebook</a>
-            <a href="https://instagram.com">Instagram</a>
-            <a href="https://linkedin.com">LinkedIn</a>
-        </div>
-        <div class="footer-section copyright">
-            <p>&copy; 2024 Your Organization. All Rights Reserved.</p>
-        </div>
+      <div class="footer-section links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a
+              href="https://www.instagram.com/sanskar.mkf?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+              target="_blank" rel="noopener noreferrer">Instagram</a></li>
+          <li><a href="https://www.linkedin.com/company/sanskarfoundation/" target="_blank"
+              rel="noopener noreferrer">LinkedIn</a></li>
+          <li><a href="/contact">Contact Us</a></li>
+        </ul>
+
+      </div>
+      <div class="footer-section contact">
+        <h4>Contact</h4>
+        <p>Phone: +919818885691</p>
+        <p>Email: <a href="mailto:sanskarmkf@gmail.com">sanskarmkf@gmail.com</a></p>
+      </div>
     </div>
   </footer>
+
   
   
   
@@ -282,98 +290,84 @@ body {
   }
   footer {
     background-color: #333333; /* Dark Gray */
-    padding: 40px;
     color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    }
-    
-    .footer-content {
-    display: flex;
-    justify-content: space-between;
+    padding: 40px 20px;
     width: 100%;
-    max-width: 1200px;
-    flex-wrap: wrap;
-    }
-    
-    .footer-section {
-    flex: 1;
-    padding: 20px;
-    }
-    
-    .footer-section h4 {
-    margin-bottom: 20px;
-    font-size: 20px;
-    color: #ffffff;
-    }
-    
-    .footer-section p, .footer-section a {
-    color: #dddddd;
-    font-size: 16px;
-    text-decoration: none;
-    }
-    .sliding-pictures {
-        display: flex;
-        overflow: hidden;
-        margin-bottom: 20px;
-        height: 400px;
-        background-color: #f1f1f1;
-        border-radius: 8px;
-    }
-    
-    .sliding-pictures img {
-        width: 100%;
-        animation: slide 7s infinite linear;
-    }
-    
-    .footer-section a:hover {
-    color: #ffffff;
-    text-decoration: underline;
-    }
-    
-    .footer-section .copyright {
-    text-align: center;
-    width: 100%;
-    margin-top: 20px;
-    font-size: 14px;
-    color: #888888;
-    }
-    footer {
-    background-color:grey;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    width: 100%; /* Sets the width to 100% of its container */
-    margin-top: -50px;
-    
+    box-sizing: border-box; /* Prevent padding from affecting the layout */
+    text-align: center; /* Center text on smaller screens */
+    border-top: 5px solid coral; /* Add a decorative border to the top */
 }
-
 
 .footer-content {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
+    align-items: flex-start; /* Align items at the top for consistency */
+    flex-wrap: wrap;
+    gap: 30px; /* More space between sections */
 }
 
-.contact-us, .follow-us, .copyright {
-    flex-basis: 33.33%;
+.footer-section {
+    flex: 1 1 25%; /* Sections will take 25% of the space on larger screens */
+    min-width: 200px; /* Ensure sections don’t shrink too much on smaller screens */
+    margin-bottom: 20px;
 }
 
-.contact-us p, .follow-us ul li {
-    margin: 5px 0;
+.footer-section h4 {
+    color: coral; /* Stand out with a vibrant color */
+    margin-bottom: 15px;
+    font-size: 1.4em; /* Slightly larger font size for better readability */
+    text-transform: uppercase; /* Add a professional touch */
 }
 
-.follow-us ul {
-    list-style: none;
-    padding: 0;
-}
-
-.follow-us ul li a {
-    color: #fff;
+.footer-section p,
+.footer-section a {
+    color: #ccc; /* Softer white for better contrast */
     text-decoration: none;
+    line-height: 1.8; /* More spacing for readability */
+    font-size: 0.95em; /* Ensure smaller text doesn’t dominate */
+}
+
+.footer-section a:hover {
+    color: coral; /* Make hover color consistent */
+    text-decoration: underline; /* Add hover underline for clarity */
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; /* Standardize spacing for lists */
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #ddd;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    color: coral;
+}
+
+footer a {
+    transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+footer a:hover {
+    color: coral;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Stack sections vertically on smaller screens */
+        text-align: center;
+    }
+
+    .footer-section {
+        flex: 1 1 100%; /* Ensure sections take full width */
+    }
 }
   
   
