@@ -13,8 +13,11 @@
 
 
     <div class="top-bar">
-        <div class="logo">
-            <img src="{{ url_for('static', filename='LOGO.png') }}" alt="Logo" width="100">
+        <div class="logo-text">
+          <div class="logo">
+            <img src="{{ url_for('static', filename='logo1.png') }}" alt="Logo" width="100">
+          </div>
+          <span class="logo-text-content">SANSKAR</span>
         </div>
         <nav class="top-nav">
             <ul>
@@ -181,25 +184,54 @@
         background-color: #b7282e;
         color: #fff;
     }
+    
+  .top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333333;
+    /* Dark Gray */
+    padding: 20px 40px;
+  }
 
-    .top-bar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #333333;
-        /* Dark Gray */
-        padding: 20px 40px;
-    }
+  .logo-text {
+    display: flex;
+    align-items: center;
+  }
 
-    .top-bar .logo img {
-        width: 55px;
-        /* Increase the width of the logo */
-        margin-top: -20px;
-        /* Move the logo slightly up */
-        padding: 8px;
-        /* Adjust padding around the logo */
-        margin-left: -30px;
-    }
+  .logo img {
+    width: 65px;
+    /* Adjust the size of the logo */
+    margin-top: -15px;
+    /* Move the logo slightly up */
+    padding: 8px;
+    /* Adjust padding around the logo */
+    margin-left: -30px;
+  }
+
+  .logo-text-content {
+    color: white;
+    font-size: 30px;
+    /* Adjust font size for text */
+    font-weight: bold;
+    margin-left: -1px;
+    /* Space between the logo and the text */
+    font-family: Arial, sans-serif;
+    /* Optional: Choose a font */
+    margin-top: -20px;
+    font-style: italic;
+  }
+
+  .top-bar .logo img {
+    width: 55px;
+    /* Increase the width of the logo */
+    margin-top: -20px;
+    /* Move the logo slightly up */
+    padding: 8px;
+    /* Adjust padding around the logo */
+    margin-left: -30px;
+  }
+
 
     .top-nav ul {
         list-style: none;
