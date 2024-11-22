@@ -27,7 +27,6 @@
       <nav class="top-nav">
           <ul>
               <li><a href="{{ url_for('home') }}">Home</a></li>
-              <li><a href="{{ url_for('about') }}">About Us</a></li>
               <li><a href="{{ url_for('work') }}">Our Work</a></li>
               <li><a href="{{ url_for('testimonials') }}">Testimonials</a></li>
               <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
@@ -48,15 +47,24 @@
 
 <!-- Children Welfare Program Section -->
 <section class="event-section">
+  <div class="event-content">
     <h2>Bringing Smiles to Young Hearts</h2>
-    <p>Date: october 19, 2024</p>
-    <p>We are deeply grateful to the Breeze Foundation for enabling us to organize .A Visit to the Serve Needy Orphanage, Bengaluru*, where we aimed to instill social values, provide career guidance, and create awareness about drug usage and environmental cleanliness. Despite challenges like overcrowding, resource shortages, and language barriers, our day was filled with meaningful activities such as a drawing competition to inspire creativity, counseling sessions to guide the children’s future aspirations, and fun games that brought smiles to their faces. The event concluded with a warm dinner, leaving the children feeling cared for and valued. This enriching experience reinforced our commitment to supporting underprivileged children and motivated us to continue similar initiatives to bring positivity and hope to their lives. .</p>
-  
+    <p><strong>Date:</strong> October 19, 2024</p>
+    <p>We are profoundly thankful to the Breeze Foundation for making it possible to organize A Visit to the Serve Needy Orphanage, Bengaluru. This event aimed to foster social values, provide career guidance, and raise awareness about critical issues like drug usage and environmental cleanliness. Despite challenges such as overcrowding, limited resources, and language barriers, the day unfolded as a meaningful experience. Activities like a drawing competition inspired the children’s creativity, while counseling sessions helped them envision and plan for their future aspirations. Fun games brought joy and laughter, creating moments of connection and positivity that resonated deeply with the children.
+    </p>
+    <p>The visit concluded with a warm dinner, leaving the children feeling appreciated and valued, and reminding us of the impact such small gestures can have on their lives. Beyond just addressing their immediate needs, this initiative was about giving them hope and motivation to dream big. The experience underscored the importance of consistent efforts to support underprivileged children, inspiring us to continue organizing similar events. Through these initiatives, we aim to bring light, positivity, and encouragement into their lives, empowering them to believe in brighter futures and stronger communities.
+
+
+
+    </p>
+  </div>
     <div class="event-images">
       <img src="{{ url_for('static', filename='breeze foundation 3.JPG') }}" alt="Children Welfare Program Image 1">
-      <img src="{{ url_for('static', filename='breeze foundation 5.JPG') }}" alt="Children Welfare Program Image 2">
-      <img src="{{ url_for('static', filename='breeze foundation 6.JPG') }}" alt="Children Welfare Program Image 3">
-      <img src="{{ url_for('static', filename='breeze foundation 1.JPG') }}" alt="Children Welfare Program Image 4">
+      <img src="{{ url_for('static', filename='brzee4.JPG') }}" alt="Children Welfare Program Image 2">
+      <img src="{{ url_for('static', filename='Brzee20.JPG') }}" alt="Children Welfare Program Image 3">
+      <img src="{{ url_for('static', filename='brzee2.JPG') }}" alt="Children Welfare Program Image 4">
+      <img src="{{ url_for('static', filename='brzee5.JPG') }}" alt="Children Welfare Program Image 4">
+      <img src="{{ url_for('static', filename='breeze foundation 2.JPG') }}" alt="Children Welfare Program Image 4">
       <!-- Add more images using url_for as needed -->
   </div>
   
@@ -231,7 +239,7 @@ body {
     font-family: Arial, sans-serif;
     /* Optional: Choose a font */
     margin-top: -20px;
-    font-style: italic;
+    font-family: 'Playfair Display', serif; /* A popular serif font */
   }
 
   .top-bar .logo img {
@@ -259,69 +267,63 @@ body {
     font-size: 16px;
     }
     
-  .event-section {
-    margin-top:80px;
-    padding: 20px;
-    background-color: #f8f9fa;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-    
-  .event-section {
-    margin-top: 80px;
-    padding: 20px;
-    background-color: #f8f9fa;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-  
-  .event-section h2 {
-    font-size: 2em;
-    color: #333;
-    margin-bottom: 15px;
-  }
-  
-  .event-section p {
-    font-size: 1.1em;
-    color: #555;
-    margin: 10px 0;
-  }
-  
-  .event-images {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px; /* Adjust gap between images as needed */
-    margin-top: 30px;
+     
+    .event-section {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5em;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 2em auto;
+  max-width: 1200px;
+  gap: 1.5em;
+}
+
+.event-content {
+  flex: 1 1 100%;
+  text-align: left;
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+
+.event-content h2 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+  color: #444;
+  text-align: center;
+}
+
+.event-content p {
+  line-height: 1.8;
+  margin-bottom: 1.5em;
+  color: #555;
+  text-align: center;
+}
+
+.event-images {
+  flex: 1 1 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5em;
 }
 
 .event-images img {
-    width:400px; /* Adjust width to control the image size */
-    height: 300px;
-    border: 5px solid #d1e7dd; /* Light green border */
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s, box-shadow 0.3s;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .event-images img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
+
   
-  .event-images img::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 10px;
-    background: linear-gradient(45deg, rgba(255, 204, 204, 0.4), rgba(204, 255, 255, 0.4));
-    z-index: -1; /* Place behind the image */
-  }
+  
+  
+  
   footer {
     background-color: #333333; /* Dark Gray */
     color: white;

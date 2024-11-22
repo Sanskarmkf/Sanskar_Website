@@ -27,7 +27,6 @@
       <nav class="top-nav">
           <ul>
               <li><a href="{{ url_for('home') }}">Home</a></li>
-              <li><a href="{{ url_for('about') }}">About Us</a></li>
               <li><a href="{{ url_for('work') }}">Our Work</a></li>
               <li><a href="{{ url_for('testimonials') }}">Testimonials</a></li>
               <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
@@ -45,18 +44,31 @@
   
 
  <!-- Education Initiatives Program Section -->
-<section class="event-section">
-    <h2>"Labour Recognition" </h2>
-    <p>Date: May 1, 2024</p>
-    <p> On this day, we celebrated Labor Day by appreciating the staff at Acharya Institute of Technology. We distributed fruits and essentials as a gesture of gratitude for their hard work.
-       This act highlighted the importance of recognizing those who support our community.Our initiative focuses on fostering a culture of appreciation and respect for educators, emphasizing
-       their vital role in shaping future generations.</p>
-  
+ <section class="event-section">
+  <div class="event-content">
+    <h2>Labour Recognition</h2>
+    <p><strong>Date:</strong> May 1, 2024</p>
+    <p>On May 1, 2024, the Sanskar Foundation celebrated Labor Day with heartfelt gratitude by honoring the dedicated staff at Acharya Institute of Technology. Recognizing their tireless efforts, the team distributed fruits and essential items as tokens of appreciation. This thoughtful gesture was a small way of expressing thanks for their invaluable contributions to maintaining the smooth functioning of the institution. The event was marked by warm interactions, smiles, and a sense of community, making it a memorable day for everyone involved. It was a meaningful reminder that every role, no matter how behind-the-scenes, is vital to the progress and success of an organization.
+    </p>
+    <p>
+      Labor Day holds significant importance as it celebrates the backbone of any community—the hardworking individuals who keep systems running efficiently. Through this initiative, the Sanskar Foundation aimed to emphasize the value of recognizing and respecting those whose work often goes unnoticed. By fostering an atmosphere of gratitude and acknowledgment, the foundation not only uplifted spirits but also reinforced the importance of mutual respect and appreciation in building a stronger, more inclusive community.
+
+
+
+
+
+
+
+    </p>
+  </div>
+   <div class="event-images">
     <div class="event-images">
       <img src="{{ url_for('static', filename='labour day(acharya)1 .jpg') }}" alt="Education Initiatives Program Image 1">
-      <img src="{{ url_for('static', filename='labour day(acharya)2.jpg') }}" alt="Education Initiatives Program Image 2">
+      <img src="{{ url_for('static', filename='labour day(acharya)15.jpg') }}" alt="Education Initiatives Program Image 2">
       <img src="{{ url_for('static', filename='labour day(acharya)3.jpg') }}" alt="Education Initiatives Program Image 3">
-      <img src="{{ url_for('static', filename='labour day(acharya)4.jpg') }}" alt="Education Initiatives Program Image 4">
+      <img src="{{ url_for('static', filename='labour day(acharya)11.jpg') }}" alt="Education Initiatives Program Image 4">
+      <img src="{{ url_for('static', filename='labour day(acharya)16.jpg') }}" alt="Education Initiatives Program Image 4">
+      <img src="{{ url_for('static', filename='labour day(acharya)15.jpg') }}" alt="Education Initiatives Program Image 4">
   </div>
   
 </section>
@@ -233,7 +245,7 @@ body {
     font-family: Arial, sans-serif;
     /* Optional: Choose a font */
     margin-top: -20px;
-    font-style: italic;
+    font-family: 'Playfair Display', serif; /* A popular serif font */
   }
 
   .top-bar .logo img {
@@ -261,68 +273,59 @@ body {
     font-size: 16px;
     }
     
-  .event-section {
-    margin-top:80px;
-    padding: 20px;
-    background-color: #f8f9fa;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-   .event-section {
-    margin-top: 80px;
-    padding: 20px;
-    background-color: #f8f9fa;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-  
-  .event-section h2 {
-    font-size: 2em;
-    color: #333;
-    margin-bottom: 15px;
-  }
-  
-  .event-section p {
-    font-size: 1.1em;
-    color: #555;
-    margin: 10px 0;
-  }
-  
-  .event-images {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px; /* Adjust gap between images as needed */
-    margin-top: 30px;
+    .event-section {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5em;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 2em auto;
+  max-width: 1200px;
+  gap: 1.5em;
+}
+
+.event-content {
+  flex: 1 1 100%;
+  text-align: left;
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+
+.event-content h2 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+  color: #444;
+  text-align: center;
+}
+
+.event-content p {
+  line-height: 1.8;
+  margin-bottom: 1.5em;
+  color: #555;
+  text-align: center;
+}
+.event-images {
+  flex: 1 1 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5em;
 }
 
 .event-images img {
-    width:500px; /* Adjust width to control the image size */
-    height: 400px;
-    border: 5px solid #d1e7dd; /* Light green border */
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s, box-shadow 0.3s;
+  width: 100%;
+  max-height:800 px; /* Adjust this value to control the height */
+  object-fit: cover; /* Ensures the image maintains its aspect ratio while fitting within the dimensions */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+
 .event-images img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
-  
-  .event-images img::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 10px;
-    background: linear-gradient(45deg, rgba(255, 204, 204, 0.4), rgba(204, 255, 255, 0.4));
-    z-index: -1; /* Place behind the image */
-  }
   footer {
     background-color: #333333; /* Dark Gray */
     color: white;

@@ -22,7 +22,6 @@
         <nav class="top-nav">
             <ul>
                 <li><a href="{{ url_for('home') }}">Home</a></li>
-                <li><a href="{{ url_for('about') }}">About Us</a></li>
                 <li><a href="{{ url_for('work') }}">Our Work</a></li>
                 <li><a href="{{ url_for('testimonials') }}">Testimonials</a></li>
                 <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
@@ -217,7 +216,7 @@
     font-family: Arial, sans-serif;
     /* Optional: Choose a font */
     margin-top: -20px;
-    font-style: italic;
+    font-family: 'Playfair Display', serif; /* A popular serif font */
   }
 
   .top-bar .logo img {
@@ -276,6 +275,7 @@
         display: inline-block;
         padding: 0 20px;
         transition: color 0.3s ease, transform 0.3s ease;
+        font-family: 'Playfair Display', serif; /* A popular serif font */
     }
 
     .heading::before,

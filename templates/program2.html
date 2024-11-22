@@ -27,7 +27,6 @@
       <nav class="top-nav">
         <ul>
             <li><a href="{{ url_for('home') }}">Home</a></li>
-            <li><a href="{{ url_for('about') }}">About Us</a></li>
             <li><a href="{{ url_for('work') }}">Our Work</a></li>
             <li><a href="{{ url_for('testimonials') }}">Testimonials</a></li>
             <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
@@ -47,17 +46,32 @@
   
 
 <!-- Children Welfare Program Section -->
-<section class="event-section">
-    <h2>Children Welfare: Uplifting Lives</h2>
-    <p>Date: February 18, 2023</p>
-    <p>On this day, we spent a joyful day at Sri Saibaba Old Age & Orphan Children’s Home in Bengaluru. We distributed snacks and created happy memories, ensuring every child felt loved. This visit reinforced our commitment to uplifting vulnerable communities.
-      Our goal is to provide support and joy to children in need, and the smiles we received made it all worthwhile. This program emphasizes our dedication to fostering a sense of belonging and care within our community.</p>
-  
-    <div class="event-images">
-      <img src="{{ url_for('static', filename='children3.JPG') }}" alt="Children Welfare Program Image 1">
-      <img src="{{ url_for('static', filename='children5.JPG') }}" alt="Children Welfare Program Image 2">
-      <img src="{{ url_for('static', filename='children6.JPG') }}" alt="Children Welfare Program Image 3">
-      <img src="{{ url_for('static', filename='children2.JPG') }}" alt="Children Welfare Program Image 4">
+
+  <!-- Haldwani Event Section -->
+  <section class="event-section">
+    <div class="event-content">
+      <h2>Moments of Happiness</h2>
+      <p><strong>Date:</strong> February 18, 2023</p>
+      <p>On February 18, 2023, the Sanskar Foundation spent a delightful day at Sri Saibaba Old Age & Orphan Children’s Home in Bengaluru, bringing joy and comfort to the children. The team distributed snacks, engaged in heartfelt interactions, and created cheerful memories to ensure that each child felt valued and loved. The visit was a day filled with smiles, laughter, and positivity, leaving a lasting impact on the children and reinforcing the importance of compassion in transforming lives.
+      </p>
+      <p>
+        More than just a charitable act, this visit symbolized the Sanskar Foundation’s dedication to uplifting vulnerable communities. Spending time with the children offered valuable insights into their challenges and highlighted the importance of emotional connection alongside material support. Such initiatives remind us that small gestures of kindness can inspire hope and happiness, encouraging the foundation to continue its mission of creating a brighter, more inclusive future for every child
+
+
+
+
+
+
+
+      </p>
+    </div>
+     <div class="event-images">
+      <img src="{{ url_for('static', filename='children4.JPG') }}" alt="Children Welfare Program Image 1">
+      <img src="{{ url_for('static', filename='children7.JPG') }}" alt="Children Welfare Program Image 2">
+      <img src="{{ url_for('static', filename='IMG_3985.JPG') }}" alt="Children Welfare Program Image 3">
+      <img src="{{ url_for('static', filename='IMG_3960.JPG') }}" alt="Children Welfare Program Image 4">
+      <img src="{{ url_for('static', filename='IMG_3971.JPG') }}" alt="Children Welfare Program Image 5">
+      <img src="{{ url_for('static', filename='IMG_3919.JPG') }}" alt="Children Welfare Program Image 6">
       <!-- Add more images using url_for as needed -->
   </div>
   
@@ -245,7 +259,7 @@ body {
     font-family: Arial, sans-serif;
     /* Optional: Choose a font */
     margin-top: -20px;
-    font-style: italic;
+    font-family: 'Playfair Display', serif; /* A popular serif font */
   }
 
   .top-bar .logo img {
@@ -272,70 +286,61 @@ body {
     text-decoration: none;
     font-size: 16px;
     }
-    
-  .event-section {
-    margin-top:80px;
-    padding: 20px;
-    background-color: #f8f9fa;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-   
-  .event-section {
-    margin-top: 80px;
-    padding: 20px;
-    background-color: #f8f9fa;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-  
-  .event-section h2 {
-    font-size: 2em;
-    color: #333;
-    margin-bottom: 15px;
-  }
-  
-  .event-section p {
-    font-size: 1.1em;
-    color: #555;
-    margin: 10px 0;
-  }
-  
-  .event-images {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px; /* Adjust gap between images as needed */
-    margin-top: 30px;
+     
+    .event-section {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5em;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 2em auto;
+  max-width: 1200px;
+  gap: 1.5em;
+}
+
+.event-content {
+  flex: 1 1 100%;
+  text-align: left;
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+
+.event-content h2 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+  color: #444;
+  text-align: center;
+}
+
+.event-content p {
+  line-height: 1.8;
+  margin-bottom: 1.5em;
+  color: #555;
+  text-align: center;
+}
+.event-images {
+  flex: 1 1 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5em;
 }
 
 .event-images img {
-    width:450px; /* Adjust width to control the image size */
-    height: 350px;
-    border: 5px solid #d1e7dd; /* Light green border */
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s, box-shadow 0.3s;
+  width: 100%;
+  max-height: 400px; /* Adjust this value to control the height */
+  object-fit: cover; /* Ensures the image maintains its aspect ratio while fitting within the dimensions */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+
 .event-images img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
-  
-  .event-images img::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 10px;
-    background: linear-gradient(45deg, rgba(255, 204, 204, 0.4), rgba(204, 255, 255, 0.4));
-    z-index: -1; /* Place behind the image */
-  }
+
   footer {
     background-color: #333333; /* Dark Gray */
     color: white;

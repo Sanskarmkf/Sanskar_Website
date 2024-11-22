@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Organization</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
 
@@ -41,9 +42,14 @@
             <h2>Our Contacts</h2>
             <div class="contact-details">
                 <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <h3>Our Location</h3>
-                    <p>BANGALORE, Karnataka</p>
+                    <i class="fab fa-instagram"></i> <!-- Instagram icon -->
+                    <h3>Instagram</h3>
+                    <a href="https://www.instagram.com/sanskar.mkf?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Follow us on Instagram</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i> <!-- LinkedIn icon -->
+                    <h3>LinkedIn</h3>
+                    <a href="https://www.linkedin.com/company/sanskarfoundation/" target="_blank">Connect with us on LinkedIn</a>
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-phone"></i>
@@ -277,7 +283,7 @@
     font-family: Arial, sans-serif;
     /* Optional: Choose a font */
     margin-top: -20px;
-    font-style: italic;
+    font-family: 'Playfair Display', serif; /* A popular serif font */
   }
 
   .top-bar .logo img {
@@ -333,8 +339,9 @@ body {
 }
 
 .contact-info h2 {
-    font-size: 24px;
+    font-size: 33px;
     margin-bottom: 20px;
+    font-family: 'Playfair Display', serif; /* A popular serif font */
 }
 
 .contact-details {
@@ -368,6 +375,7 @@ body {
 .contact-form h2 {
     font-size: 24px;
     margin-bottom: 20px;
+    font-family: 'Playfair Display', serif; /* A popular serif font */
 }
 
 .contact-form form {
@@ -384,6 +392,9 @@ body {
     border-radius: 5px;
     width: 100%;
 }
+.contact-form h1{
+    font-family: 'Playfair Display', serif; /* A popular serif font */
+}
 
 .contact-form button {
     padding: 10px;
@@ -397,6 +408,29 @@ body {
 
 .contact-form button:hover {
     background-color: rgb(255, 119, 0);
+}
+
+
+.contact-item i {
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+.contact-item .fa-instagram {
+    color: #E4405F; /* Instagram's color */
+}
+
+.contact-item .fa-linkedin {
+    color: #0A66C2; /* LinkedIn's color */
+}
+
+.contact-item a {
+    color: #000;
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
 }
 
 
