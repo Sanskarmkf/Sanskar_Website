@@ -132,9 +132,8 @@ def gallery():
     return render_template('gallery.html')
 
 @app.route('/achievement')
-def achievement():
-    
-    return send_from_directory('static/pdfs', 'Achievement Highlight[1].pdf')
+def achievement():   
+    return render_template('achievement.html')
 
 
 @app.route('/p1')
