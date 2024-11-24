@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Your Organization</title>
-    <link rel="stylesheet" href="styles.css">
     <style>
         /* General Styling */
         * {
@@ -15,38 +15,46 @@
 
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #ffffff; /* White Background */
-            color: #333; /* Dark Gray Text */
+            background-color: #ffffff;
+            /* White Background */
+            color: #333;
+            /* Dark Gray Text */
         }
 
         .top-bar {
-    position: fixed;
-    top: 0px; /* Place it below the announcement bar */
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    background-color: #AD88C6;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-}
-  /* Announcement Bar Section */
-  .announcement-bar {
-    background-color: orange; /* IITM Red */
-    color: white;
-    text-align: center;
-    padding: 10px;
-    font-size: 16px;
-    position: fixed;
-    width: 100%; /* Ensure it spans full width */
-    top: 58px; 
-    z-index: 1001;
-    }
+            position: fixed;
+            top: 0px;
+            /* Place it below the announcement bar */
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: #AD88C6;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+        }
+
+        /* Announcement Bar Section */
+        .announcement-bar {
+            background-color: orange;
+            /* IITM Red */
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 16px;
+            position: fixed;
+            width: 100%;
+            /* Ensure it spans full width */
+            top: 58px;
+            z-index: 1001;
+        }
 
         .join-btn {
-            background-color: #ffffff; /* White */
-            color: #b7282e; /* Red Text */
+            background-color: #ffffff;
+            /* White */
+            color: #b7282e;
+            /* Red Text */
             border: 1px solid #b7282e;
             padding: 8px 15px;
             border-radius: 5px;
@@ -67,16 +75,20 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: #333333; /* Dark Gray */
+            background-color: #333333;
+            /* Dark Gray */
             padding: 20px 40px;
         }
 
         .top-bar .logo img {
-    width: 55px;      /* Increase the width of the logo */
-    margin-top: -20px; /* Move the logo slightly up */
-    padding: 8px;     /* Adjust padding around the logo */
-    margin-left: -30px;
-}
+            width: 55px;
+            /* Increase the width of the logo */
+            margin-top: -20px;
+            /* Move the logo slightly up */
+            padding: 8px;
+            /* Adjust padding around the logo */
+            margin-left: -30px;
+        }
 
         .top-nav ul {
             list-style: none;
@@ -96,38 +108,43 @@
         .top-nav ul li a:hover {
             text-decoration: underline;
         }
-	/* Background Photo Section */
-.background-photo {
-    position: relative;
-    width: 100%;
-    height: 400px; /* Adjust height as needed */
-    background-image: url('background-photo.jpg'); /* Replace with your background image */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white; /* Text color for overlay */
-}
 
-.photo-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.5); /* Optional: Semi-transparent background for text */
-    border-radius: 10px;
-}
-  
+        /* Background Photo Section */
+        .background-photo {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            /* Adjust height as needed */
+            background-image: url('background-photo.jpg');
+            /* Replace with your background image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            /* Text color for overlay */
+        }
+
+        .photo-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            /* Optional: Semi-transparent background for text */
+            border-radius: 10px;
+        }
 
 
-.photo-overlay h2 {
-    font-size: 36px;
-    margin: 0;
-}
+
+        .photo-overlay h2 {
+            font-size: 36px;
+            margin: 0;
+        }
 
 
 
@@ -143,7 +160,8 @@
 
         .founders h2 {
             font-size: 36px;
-            color: #333333; /* Dark Gray */
+            color: #333333;
+            /* Dark Gray */
         }
 
         .founders-grid {
@@ -166,91 +184,94 @@
             font-weight: bold;
             color: #333;
         }
+
         /* Founders Section - Text Box Styling */
         .founder-quote {
-    font-style: italic;
-    color: #666; /* Lighter Gray for emphasis */
-    margin-top: 10px;
-}
+            font-style: italic;
+            color: #666;
+            /* Lighter Gray for emphasis */
+            margin-top: 10px;
+        }
 
-/* Our Team Section */
-.our-team {
-    padding: 40px 20px;
-    background-color: #f4f4f4;
-    margin: 20px auto;
-    max-width: 1200px;
-    border-radius: 10px;
-}
+        /* Our Team Section */
+        .our-team {
+            padding: 40px 20px;
+            background-color: #f4f4f4;
+            margin: 20px auto;
+            max-width: 1200px;
+            border-radius: 10px;
+        }
 
-.our-team h2 {
-    text-align: center;
-    font-size: 36px;
-    color: #333;
-    margin-bottom: 30px;
-}
+        .our-team h2 {
+            text-align: center;
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 30px;
+        }
 
-.team-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-}
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
 
-.team-member {
-    text-align: center;
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-}
+        .team-member {
+            text-align: center;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+        }
 
-.team-member h2 {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 10px;
-}
+        .team-member h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+        }
 
-.team-photo {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid #ddd;
-    margin-bottom: 15px;
-}
+        .team-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #ddd;
+            margin-bottom: 15px;
+        }
 
-.team-member p {
-    font-size: 16px;
-    color: #666;
-}
+        .team-member p {
+            font-size: 16px;
+            color: #666;
+        }
 
-/* Team Grid for Members */
-.team-grid-member {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two members in a row */
-    gap: 20px;
-    margin-top: 20px;
-}
+        /* Team Grid for Members */
+        .team-grid-member {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            /* Two members in a row */
+            gap: 20px;
+            margin-top: 20px;
+        }
 
-.member {
-    text-align: center;
-}
+        .member {
+            text-align: center;
+        }
 
-.member img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid #ddd;
-    margin-bottom: 10px;
-}
+        .member img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #ddd;
+            margin-bottom: 10px;
+        }
 
-.member p {
-    font-size: 14px;
-    color: #333;
-}
+        .member p {
+            font-size: 14px;
+            color: #333;
+        }
 
 
-	/* Vision Section */
-/*.vision {
+        /* Vision Section */
+        /*.vision {
     padding: 40px 20px;
     background-color: #ffffff;
     margin-bottom: 20px;
@@ -288,8 +309,8 @@
 
 .vision-photos img {
     width: 140px; /* Slightly smaller width to accommodate reduced gap */
-    /*height: 140px; /* Slightly smaller height to match width */
-    /*border-radius: 10px;
+        /*height: 140px; /* Slightly smaller height to match width */
+        /*border-radius: 10px;
     object-fit: cover;
     border: 2px solid #ddd;
 }*/
@@ -308,86 +329,119 @@
 
         section h2 {
             font-size: 36px;
-            color: #333333; /* Dark Gray */
+            color: #333333;
+            /* Dark Gray */
         }
 
         section p {
             font-size: 18px;
-            color: #c8c2c2; /* Lighter Gray */
+            color: #c8c2c2;
+            /* Lighter Gray */
         }
-	/* Introduction and Photos Section */
+
+        /* Introduction and Photos Section */
         .introduction-photos {
-            display: flex; /* Use Flexbox to align items */
-            align-items: flex-start; /* Align items to the top */
-            gap: 20px; /* Space between the photos and the text */
+            display: flex;
+            /* Use Flexbox to align items */
+            align-items: flex-start;
+            /* Align items to the top */
+            gap: 20px;
+            /* Space between the photos and the text */
             margin-bottom: 20px;
             max-width: 1200px;
             margin: 20px auto;
         }
 
         .photos-container {
-            display: grid; /* Use Grid to arrange photos */
-            grid-template-columns: repeat(2, 1fr); /* 2 columns grid */
-            gap: 20px; /* Space between photos */
+            display: grid;
+            /* Use Grid to arrange photos */
+            grid-template-columns: repeat(2, 1fr);
+            /* 2 columns grid */
+            gap: 20px;
+            /* Space between photos */
         }
 
         .photos-container img {
-            width: 150px; /* Width for the photos */
-            height: 150px; /* Height for the photos */
+            width: 150px;
+            /* Width for the photos */
+            height: 150px;
+            /* Height for the photos */
             border-radius: 10px;
             object-fit: cover;
             border: 2px solid #ddd;
         }
+
         /* Box styling for Programs & Activities and Our Goals sections */
-.programs-activities-box, .goals-box {
-    background-color:orange; /* Red Background */
-    color: white; /* White Text */
-    padding: 30px;
-    border-radius: 15px; /* Rounded Corners */
-    max-width: 1000px;
-    margin: 40px auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
-    text-align: center;
-}
+        .programs-activities-box,
+        .goals-box {
+            background-color: orange;
+            /* Red Background */
+            color: white;
+            /* White Text */
+            padding: 30px;
+            border-radius: 15px;
+            /* Rounded Corners */
+            max-width: 1000px;
+            margin: 40px auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            /* Light shadow for depth */
+            text-align: center;
+        }
 
-.programs-activities-box h2, .goals-box h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: white; /* Ensure header is white */
-}
+        .programs-activities-box h2,
+        .goals-box h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: white;
+            /* Ensure header is white */
+        }
 
-.activities-list, .goals-list {
-    list-style-type: none; /* Remove bullets */
-    padding: 0;
-    font-size: 18px;
-    line-height: 1.8;
-}
+        .activities-list,
+        .goals-list {
+            list-style-type: none;
+            /* Remove bullets */
+            padding: 0;
+            font-size: 18px;
+            line-height: 1.8;
+        }
 
-.activities-list li, .goals-list li {
-    margin-bottom: 10px;
-    background-color: #f4f4f4; /* Light background for each item */
-    color: #333;
-    padding: 10px 15px;
-    border-radius: 10px; /* Rounded edges for individual items */
-    transition: transform 0.3s ease; /* Add smooth hover effect */
-}
+        .activities-list li,
+        .goals-list li {
+            margin-bottom: 10px;
+            background-color: #f4f4f4;
+            /* Light background for each item */
+            color: #333;
+            padding: 10px 15px;
+            border-radius: 10px;
+            /* Rounded edges for individual items */
+            transition: transform 0.3s ease;
+            /* Add smooth hover effect */
+        }
 
-.activities-list li:hover, .goals-list li:hover {
-    transform: translateY(-5px); /* Lift up the item on hover */
-    background-color: #ffffff; /* Change background on hover */
-    color:orange; /* Change text color on hover */
-}
+        .activities-list li:hover,
+        .goals-list li:hover {
+            transform: translateY(-5px);
+            /* Lift up the item on hover */
+            background-color: #ffffff;
+            /* Change background on hover */
+            color: orange;
+            /* Change text color on hover */
+        }
 
-/* List Item Hover Effect */
-.activities-list li:hover, .goals-list li:hover {
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Add shadow on hover */
-    transform: translateY(-3px); /* Lift items on hover */
-}
+        /* List Item Hover Effect */
+        .activities-list li:hover,
+        .goals-list li:hover {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            /* Add shadow on hover */
+            transform: translateY(-3px);
+            /* Lift items on hover */
+        }
 
 
         /* Join Message Section */
-	  .join-message {
-            background-color: #b7282e; /* IITM Red */
+        .join-message {
+            background-color: #b7282e;
+            /* IITM Red */
             color: rgb(255, 255, 255);
             padding: 20px;
             text-align: center;
@@ -398,300 +452,360 @@
 
         /* Footer */
         footer {
-            background-color: #333333; /* Dark Gray */
-            color: white;
-            padding: 40px 20px;
+    background-color: #333333; /* Dark Gray */
+    color: white;
+    padding: 40px 20px;
+    width: 100%;
+    box-sizing: border-box; /* Prevent padding from affecting the layout */
+    text-align: center; /* Center text on smaller screens */
+    border-top: 5px solid coral; /* Add a decorative border to the top */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items at the top for consistency */
+    flex-wrap: wrap;
+    gap: 30px; /* More space between sections */
+}
+
+.footer-section {
+    flex: 1 1 25%; /* Sections will take 25% of the space on larger screens */
+    min-width: 200px; /* Ensure sections don’t shrink too much on smaller screens */
+    margin-bottom: 20px;
+}
+
+.footer-section h4 {
+    color: coral; /* Stand out with a vibrant color */
+    margin-bottom: 15px;
+    font-size: 1.4em; /* Slightly larger font size for better readability */
+    text-transform: uppercase; /* Add a professional touch */
+}
+
+.footer-section p,
+.footer-section a {
+    color: #ccc; /* Softer white for better contrast */
+    text-decoration: none;
+    line-height: 1.8; /* More spacing for readability */
+    font-size: 0.95em; /* Ensure smaller text doesn’t dominate */
+}
+
+.footer-section a:hover {
+    color: coral; /* Make hover color consistent */
+    text-decoration: underline; /* Add hover underline for clarity */
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; /* Standardize spacing for lists */
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #ddd;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    color: coral;
+}
+
+footer a {
+    transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+footer a:hover {
+    color: coral;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Stack sections vertically on smaller screens */
+        text-align: center;
+    }
+
+    .footer-section {
+        flex: 1 1 100%; /* Ensure sections take full width */
+    }
+}
+
+
+
+        .founders {
+            text-align: center;
+            margin: 40px 0;
         }
 
-        .footer-content {
+        .founders-grid {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
+            gap: 20px;
             flex-wrap: wrap;
         }
 
-        .footer-section {
-            margin-bottom: 20px;
+        .founder-card {
+            background-color: #f0e4ff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            max-width: 250px;
+            text-align: center;
         }
 
-        .footer-section h4 {
-            margin-bottom: 10px;
+        .founder-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            border: 2px solid #ccc;
         }
 
-        .footer-section p, .footer-section a {
-            color: #ddd;
+        .founder-card h3 {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 10px 0 5px;
+        }
+
+        .founder-title {
+            color: #6a5acd;
+            font-weight: bold;
+        }
+
+        .founder-quote {
+            font-size: 14px;
+            color: #333;
+            margin: 10px 0 15px;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .social-icons a {
+            color: #333;
+            font-size: 18px;
             text-decoration: none;
+            transition: color 0.3s ease;
         }
 
-        .footer-section a:hover {
-            text-decoration: underline;
+        .social-icons a:hover {
+            color: #6a5acd;
         }
-        .founders {
-    text-align: center;
-    margin: 40px 0;
-}
 
-.founders-grid {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
+        .mentors {
+            text-align: center;
+            margin: 40px 0;
+        }
 
-.founder-card {
-    background-color: #f0e4ff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    max-width: 250px;
-    text-align: center;
-}
+        .mentors-grid {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
 
-.founder-card img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 15px;
-    border: 2px solid #ccc;
-}
+        .mentor-card {
+            background-color: #e0f7fa;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            max-width: 250px;
+            text-align: center;
+        }
 
-.founder-card h3 {
-    font-size: 18px;
-    font-weight: bold;
-    margin: 10px 0 5px;
-}
+        .mentor-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            border: 2px solid #ccc;
+        }
 
-.founder-title {
-    color: #6a5acd;
-    font-weight: bold;
-}
+        .mentor-card h3 {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 10px 0 5px;
+        }
 
-.founder-quote {
-    font-size: 14px;
-    color: #333;
-    margin: 10px 0 15px;
-}
+        .mentor-title {
+            color: #00796b;
+            font-weight: bold;
+        }
 
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
+        .mentor-quote {
+            font-size: 14px;
+            color: #333;
+            margin: 10px 0 15px;
+        }
 
-.social-icons a {
-    color: #333;
-    font-size: 18px;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
 
-.social-icons a:hover {
-    color: #6a5acd;
-}
-.mentors {
-    text-align: center;
-    margin: 40px 0;
-}
+        .social-icons a {
+            color: #333;
+            font-size: 18px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
 
-.mentors-grid {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
+        .social-icons a:hover {
+            color: #00796b;
+        }
 
-.mentor-card {
-    background-color: #e0f7fa;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    max-width: 250px;
-    text-align: center;
-}
+        .happiness-team {
+            text-align: center;
+            margin: 40px 0;
+        }
 
-.mentor-card img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 15px;
-    border: 2px solid #ccc;
-}
+        .happiness-team-grid {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
 
-.mentor-card h3 {
-    font-size: 18px;
-    font-weight: bold;
-    margin: 10px 0 5px;
-}
+        .team-member-card {
+            background-color: #fce4ec;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            max-width: 250px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-.mentor-title {
-    color: #00796b;
-    font-weight: bold;
-}
+        .team-member-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            border: 2px solid #ccc;
+        }
 
-.mentor-quote {
-    font-size: 14px;
-    color: #333;
-    margin: 10px 0 15px;
-}
+        .team-member-card h3 {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 10px 0 5px;
+        }
 
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
+        .team-title {
+            color: #d81b60;
+            font-weight: bold;
+        }
 
-.social-icons a {
-    color: #333;
-    font-size: 18px;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
+        .team-quote {
+            font-size: 14px;
+            color: #333;
+            margin: 10px 0 15px;
+        }
 
-.social-icons a:hover {
-    color: #00796b;
-}
-.happiness-team {
-    text-align: center;
-    margin: 40px 0;
-}
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
 
-.happiness-team-grid {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
+        .social-icons a {
+            color: #333;
+            font-size: 18px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
 
-.team-member-card {
-    background-color: #fce4ec;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    max-width: 250px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+        .social-icons a:hover {
+            color: #d81b60;
+        }
 
-.team-member-card img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 15px;
-    border: 2px solid #ccc;
-}
+        /* Hover effect for scaling the card */
+        .team-member-card:hover {
+            transform: scale(1.05);
+            /* Scales the card up by 5% */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            /* Enhances the shadow on hover */
+        }
 
-.team-member-card h3 {
-    font-size: 18px;
-    font-weight: bold;
-    margin: 10px 0 5px;
-}
+        .happiness-team {
+            text-align: center;
+            margin: 40px 0;
+        }
 
-.team-title {
-    color: #d81b60;
-    font-weight: bold;
-}
+        .happiness-team-grid {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
 
-.team-quote {
-    font-size: 14px;
-    color: #333;
-    margin: 10px 0 15px;
-}
+        .team-member-card {
+            background-color: #fce4ec;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            max-width: 250px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
+        .team-member-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            border: 2px solid #ccc;
+        }
 
-.social-icons a {
-    color: #333;
-    font-size: 18px;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
+        .team-member-card h3 {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 10px 0 5px;
+        }
 
-.social-icons a:hover {
-    color: #d81b60;
-}
+        .team-title {
+            color: #d81b60;
+            font-weight: bold;
+        }
 
-/* Hover effect for scaling the card */
-.team-member-card:hover {
-    transform: scale(1.05); /* Scales the card up by 5% */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhances the shadow on hover */
-}
-.happiness-team {
-    text-align: center;
-    margin: 40px 0;
-}
+        .team-quote {
+            font-size: 14px;
+            color: #333;
+            margin: 10px 0 15px;
+        }
 
-.happiness-team-grid {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
 
-.team-member-card {
-    background-color: #fce4ec;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    max-width: 250px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+        .social-icons a {
+            color: #333;
+            font-size: 18px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
 
-.team-member-card img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 15px;
-    border: 2px solid #ccc;
-}
+        .social-icons a:hover {
+            color: #d81b60;
+        }
 
-.team-member-card h3 {
-    font-size: 18px;
-    font-weight: bold;
-    margin: 10px 0 5px;
-}
-
-.team-title {
-    color: #d81b60;
-    font-weight: bold;
-}
-
-.team-quote {
-    font-size: 14px;
-    color: #333;
-    margin: 10px 0 15px;
-}
-
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
-.social-icons a {
-    color: #333;
-    font-size: 18px;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.social-icons a:hover {
-    color: #d81b60;
-}
-
-/* Hover effect for scaling the card */
-.team-member-card:hover {
-    transform: scale(1.05); /* Scales the card up by 5% */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhances the shadow on hover */
-}
-
-
-
-        
+        /* Hover effect for scaling the card */
+        .team-member-card:hover {
+            transform: scale(1.05);
+            /* Scales the card up by 5% */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            /* Enhances the shadow on hover */
+        }
     </style>
 </head>
+
 <body>
 
     <!-- Top Bar Section -->
@@ -702,15 +816,15 @@
         <nav class="top-nav">
             <ul>
                 <li><a href="{{ url_for('home') }}">Home</a></li>
-              <li><a href="{{ url_for('about') }}">About Us</a></li>
-              <li><a href="{{ url_for('work') }}">Our Work</a></li>
-              <li><a href="{{ url_for('testimonials') }}">Testimonials</a></li>
-              <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
-              <li><a href="{{ url_for('contribute') }}">Contribute</a></li>
-              <li><a href="{{ url_for('contact') }}">Contact</a></li>
-              
-                
-              
+                <li><a href="{{ url_for('about') }}">About Us</a></li>
+                <li><a href="{{ url_for('work') }}">Our Work</a></li>
+                <li><a href="{{ url_for('testimonials') }}">Testimonials</a></li>
+                <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+                <li><a href="{{ url_for('contribute') }}">Contribute</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+
+
+
             </ul>
         </nav>
     </div>
@@ -721,13 +835,13 @@
         <a href="{{ url_for('contact') }}"><button class="join-btn">Join Now</button></a>
     </div>
     <!-- Background Photo Section -->
-<section class="background-photo">
-    <div class="photo-overlay">
-        <h2>Together we can make a change</h2>
-    </div>
-</section>
+    <section class="background-photo">
+        <div class="photo-overlay">
+            <h2>Together we can make a change</h2>
+        </div>
+    </section>
 
-    
+
 
     <!-- Founders Section -->
     <section class="founders">
@@ -760,67 +874,67 @@
             <!-- Add more founders as needed -->
         </div>
     </section>
-    
-<section class="mentors">
-    <h2>Our Mentors</h2>
-    <div class="mentors-grid">
-        <div class="mentor-card">
-            <img src="mentor1.jpg" alt="Mentor 1">
-            <h3>Sneha</h3>
-            <p class="mentor-title">Senior Mentor</p>
-            <p class="mentor-quote">"Guiding the next generation with experience and wisdom."</p>
-            <div class="social-icons">
-                <a href="#"><i class="fa fa-facebook"></i></a>
-                <a href="#"><i class="fa fa-twitter"></i></a>
-                <a href="#"><i class="fa fa-google"></i></a>
-                <a href="#"><i class="fa fa-linkedin"></i></a>
-            </div>
-        </div>
-        <div class="mentor-card">
-            <img src="mentor2.jpg" alt="Mentor 2">
-            <h3>Himani Kokila</h3>
-            <p class="mentor-title">Technical Mentor</p>
-            <p class="mentor-quote">"Empowering innovation through mentorship and support."</p>
-            <div class="social-icons">
-                <a href="#"><i class="fa fa-facebook"></i></a>
-                <a href="#"><i class="fa fa-twitter"></i></a>
-                <a href="#"><i class="fa fa-google"></i></a>
-                <a href="#"><i class="fa fa-linkedin"></i></a>
-            </div>
-        </div>
-        </div>
-        </section>
-        <!-- Add more mentors as needed -->
-        <section class="happiness-team">
-            <h2>Happiness Manager Team</h2>
-            <div class="happiness-team-grid">
-                <div class="team-member-card">
-                    <img src="isha.jpg" alt="Isha Rathore">
-                    <h3>Isha Rathore</h3>
-                    <p class="team-title">Team Lead</p>
-                    <p class="team-quote">"Inspiring happiness and fostering team spirit."</p>
-                    <div class="social-icons">
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-                        <a href="#"><i class="fa fa-twitter"></i></a>
-                        <a href="#"><i class="fa fa-google"></i></a>
-                        <a href="#"><i class="fa fa-linkedin"></i></a>
-                    </div>
-                </div>
-                <div class="team-member-card">
-                    <img src="bhavana.jpg" alt="Bhavana">
-                    <h3>Bhavana</h3>
-                    <p class="team-title">Team Member</p>
-                    <p class="team-quote">"Creating a positive and supportive environment."</p>
-                    <div class="social-icons">
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-                        <a href="#"><i class="fa fa-twitter"></i></a>
-                        <a href="#"><i class="fa fa-google"></i></a>
-                        <a href="#"><i class="fa fa-linkedin"></i></a>
-                    </div>
+
+    <section class="mentors">
+        <h2>Our Mentors</h2>
+        <div class="mentors-grid">
+            <div class="mentor-card">
+                <img src="mentor1.jpg" alt="Mentor 1">
+                <h3>Sneha</h3>
+                <p class="mentor-title">Senior Mentor</p>
+                <p class="mentor-quote">"Guiding the next generation with experience and wisdom."</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-google"></i></a>
+                    <a href="#"><i class="fa fa-linkedin"></i></a>
                 </div>
             </div>
-        </section>
-        
+            <div class="mentor-card">
+                <img src="mentor2.jpg" alt="Mentor 2">
+                <h3>Himani Kokila</h3>
+                <p class="mentor-title">Technical Mentor</p>
+                <p class="mentor-quote">"Empowering innovation through mentorship and support."</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-google"></i></a>
+                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Add more mentors as needed -->
+    <section class="happiness-team">
+        <h2>Happiness Manager Team</h2>
+        <div class="happiness-team-grid">
+            <div class="team-member-card">
+                <img src="isha.jpg" alt="Isha Rathore">
+                <h3>Isha Rathore</h3>
+                <p class="team-title">Team Lead</p>
+                <p class="team-quote">"Inspiring happiness and fostering team spirit."</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-google"></i></a>
+                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="team-member-card">
+                <img src="bhavana.jpg" alt="Bhavana">
+                <h3>Bhavana</h3>
+                <p class="team-title">Team Member</p>
+                <p class="team-quote">"Creating a positive and supportive environment."</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-google"></i></a>
+                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     </div>
     <section class="happiness-team">
         <h2>Happiness Manager Team</h2>
@@ -863,16 +977,16 @@
             </div>
         </div>
     </section>
-    
+
     </section>
-    
-</section>
+
+    </section>
 
     <!-- Our Team Section -
     <section class="our-team">
         <h2>Our Team</h2>
         <div class="team-grid">
-            <!-- Operations --
+            < !-- Operations --
             <div class="team-member">
                 <h2>Operations</h2>
                 <img src="operations.jpg" alt="Operations" class="team-photo">
@@ -886,15 +1000,15 @@
                         <img src="team2.jpg" alt="Team Member 2">
                         <p>Member Name 2</p>
                     </div>
-                    <!-- Add more members as needed -->
-                </div>
-            </div>
+                    < !-- Add more members as needed -->
+    </div>
+    </div>
 
 
-            <!-- Web Development -->
-          
+    <!-- Web Development -->
 
-            <!-- Finance 
+
+    <!-- Finance 
             <div class="team-member">
                 <h2>Finance</h2>
                 <img src="finance.jpg" alt="Finance" class="team-photo">
@@ -908,11 +1022,11 @@
                         <img src="team6.jpg" alt="Team Member 6">
                         <p>Member Name 6</p>
                     </div>
-                    <!-- Add more members as needed -->
-                </div>
-            </div>
+                    < !-- Add more members as needed -->
+    </div>
+    </div>
 
-            <!-- Happiness --
+    <!-- Happiness --
             <div class="team-member">
                 <h2>Happiness</h2>
                 <img src="happiness.jpg" alt="Happiness" class="team-photo">
@@ -926,16 +1040,16 @@
                         <img src="team8.jpg" alt="Team Member 8">
                         <p>Member Name 8</p>
                     </div>
-                    <!-- Add more members as needed -->
-                </div>
-            </div>
-        </div>
-        
+                    < !-- Add more members as needed -->
+    </div>
+    </div>
+    </div>
+
     </section>
     <!-- Introduction and Photos Section -->
     <section class="introduction-photos">
-        
- <!-- Modified Section -->
+
+        <!-- Modified Section -->
         <div class="photos-container"> <!-- New Photos Container -->
             <img src="photo1.jpg" alt="Photo 1"> <!-- Add your images here -->
             <img src="photo2.jpg" alt="Photo 2">
@@ -944,11 +1058,14 @@
         </div>
         <div class="introduction">
             <h2>Introduction</h2>
-            <p>The Foundation Day of the sanskar is Jan 26,2023. Sanskar is a charitable group driven by compassionate individuals aiming to aid those in need. We extend a helping hand with vital necessities such as food, clothing, education, books, and medicine, fostering equality and to ease the burdens of those facing urgent hardships, promoting fairness and supporting honest workers along the way.</p>
+            <p>The Foundation Day of the sanskar is Jan 26,2023. Sanskar is a charitable group driven by compassionate
+                individuals aiming to aid those in need. We extend a helping hand with vital necessities such as food,
+                clothing, education, books, and medicine, fostering equality and to ease the burdens of those facing
+                urgent hardships, promoting fairness and supporting honest workers along the way.</p>
         </div>
     </section>
 
-    
+
 
     <!-- Vision Section 
     <section class="vision">
@@ -961,10 +1078,10 @@ for growth, smiles, happiness, and quality education worldwide.</p>
 	<div class="vision-photos">
             <img src="vision1.jpg" alt="Vision 1">
 	    <img src="vision2.jpg" alt="Vision 2">-->
-	    <!-- Vision Section -->
+    <!-- Vision Section -->
 
-            <!-- Add more photos as needed -->
-        </div>
+    <!-- Add more photos as needed -->
+    </div>
     </section>
 
     <!-- Programs and Activities Section -->
@@ -985,10 +1102,11 @@ for growth, smiles, happiness, and quality education worldwide.</p>
         <h2>Our Goals</h2>
         <ul class="goals-list">
             <li>• Empower communities to make the world a peaceful place.</li>
-            <li>• Ensure everyone has access to essentials, opportunities for growth, smiles, happiness, and quality education worldwide.</li>
+            <li>• Ensure everyone has access to essentials, opportunities for growth, smiles, happiness, and quality
+                education worldwide.</li>
         </ul>
     </section>
-    
+
 
 
 
@@ -1003,25 +1121,29 @@ for growth, smiles, happiness, and quality education worldwide.</p>
         <div class="footer-content">
             <div class="footer-section about">
                 <h4>About Us</h4>
-		<p>Together we can bring changes in the society,</p>
-		<p>also sometimes the small happiness is the key</p>
-		<p>to a reason for the bigger happiness.</p>
+                <p>Together we can bring changes in the society,</p>
+                <p>also sometimes the small happiness is the key</p>
+                <p>to a reason for the bigger happiness.</p>
             </div>
             <div class="footer-section links">
                 <h4>Quick Links</h4>
-                <p><a href="#">Programs</a></p>
-                <p><a href="#">Events</a></p>
-                <p><a href="#">Contact Us</a></p>
+                <ul>
+                    <li><a href="https://www.instagram.com/sanskar.mkf?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                            target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                    <li><a href="https://www.linkedin.com/company/sanskarfoundation/" target="_blank"
+                            rel="noopener noreferrer">LinkedIn</a></li>
+                    <li><a href="/contact">Contact Us</a></li>
+                </ul>
+
             </div>
             <div class="footer-section contact">
                 <h4>Contact</h4>
                 <p>Address: Your organization's address</p>
                 <p>Phone: +123 456 7890</p>
-                <p>Email: info@yourorganization.org</p>
+                <p>Email: <a href="mailto:sanskarmkf@gmail.com">sanskarmkf@gmail.com</a></p>
             </div>
         </div>
     </footer>
-
 </body>
-</html>
 
+</html>

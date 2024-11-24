@@ -18,13 +18,15 @@
 
      <!-- Top Bar Section -->
      <div class="top-bar">
-      <div class="logo">
-        <img src="{{ url_for('static', filename='LOGO.png') }}" alt="Logo" width="100">
+      <div class="logo-text">
+        <div class="logo">
+          <img src="{{ url_for('static', filename='logo1.png') }}" alt="Logo" width="100">
+        </div>
+        <span class="logo-text-content">SANSKAR</span>
       </div>
       <nav class="top-nav">
           <ul>
               <li><a href="{{ url_for('home') }}">Home</a></li>
-              <li><a href="{{ url_for('about') }}">About Us</a></li>
               <li><a href="{{ url_for('work') }}">Our Work</a></li>
               <li><a href="{{ url_for('testimonials') }}">Testimonials</a></li>
               <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
@@ -45,19 +47,24 @@
 
 <!-- Children Welfare Program Section -->
 <section class="event-section">
-    <h2>Breeze Foundation: Bringing smiles</h2>
-    <p>Date: February 18, 2023</p>
-    <p>
-        Description:
-        On this day, we spent a joyful day at Sri Saibaba Old Age & Orphan Children’s Home in Bengaluru. We distributed snacks and created happy memories, ensuring every child felt loved. This visit reinforced our commitment to uplifting vulnerable communities.</p>
-    
-    <p>Our goal is to provide support and joy to children in need, and the smiles we received made it all worthwhile. This program emphasizes our dedication to fostering a sense of belonging and care within our community.</p>
-  
+  <div class="event-content">
+    <h2>Bringing Smiles to Young Hearts</h2>
+    <p><strong>Date:</strong> October 19, 2024</p>
+    <p>We are profoundly thankful to the Breeze Foundation for making it possible to organize A Visit to the Serve Needy Orphanage, Bengaluru. This event aimed to foster social values, provide career guidance, and raise awareness about critical issues like drug usage and environmental cleanliness. Despite challenges such as overcrowding, limited resources, and language barriers, the day unfolded as a meaningful experience. Activities like a drawing competition inspired the children’s creativity, while counseling sessions helped them envision and plan for their future aspirations. Fun games brought joy and laughter, creating moments of connection and positivity that resonated deeply with the children.
+    </p>
+    <p>The visit concluded with a warm dinner, leaving the children feeling appreciated and valued, and reminding us of the impact such small gestures can have on their lives. Beyond just addressing their immediate needs, this initiative was about giving them hope and motivation to dream big. The experience underscored the importance of consistent efforts to support underprivileged children, inspiring us to continue organizing similar events. Through these initiatives, we aim to bring light, positivity, and encouragement into their lives, empowering them to believe in brighter futures and stronger communities.
+
+
+
+    </p>
+  </div>
     <div class="event-images">
       <img src="{{ url_for('static', filename='breeze foundation 3.JPG') }}" alt="Children Welfare Program Image 1">
-      <img src="{{ url_for('static', filename='breeze foundation 5.JPG') }}" alt="Children Welfare Program Image 2">
-      <img src="{{ url_for('static', filename='breeze foundation 6.JPG') }}" alt="Children Welfare Program Image 3">
-      <img src="{{ url_for('static', filename='breeze foundation 1.JPG') }}" alt="Children Welfare Program Image 4">
+      <img src="{{ url_for('static', filename='brzee4.JPG') }}" alt="Children Welfare Program Image 2">
+      <img src="{{ url_for('static', filename='Brzee20.JPG') }}" alt="Children Welfare Program Image 3">
+      <img src="{{ url_for('static', filename='brzee2.JPG') }}" alt="Children Welfare Program Image 4">
+      <img src="{{ url_for('static', filename='brzee5.JPG') }}" alt="Children Welfare Program Image 4">
+      <img src="{{ url_for('static', filename='breeze foundation 2.JPG') }}" alt="Children Welfare Program Image 4">
       <!-- Add more images using url_for as needed -->
   </div>
   
@@ -69,22 +76,29 @@
  <!-- Footer Section -->
  <footer>
   <div class="footer-content">
-      <div class="contact-us">
-          <h3>Contact Us</h3>
-          <p>Email: sanskarmkf@gmail.com</p>
-          <p>Phone: +91-1234567890</p>
+    <div class="footer-section about">
+      <h4>SANSKAR</h4>
+      <p>Together we can bring changes in the society,</p>
+<p>also sometimes the small happiness is the key</p>
+<p>to a reason for the bigger happiness.</p>
       </div>
-      <div class="follow-us">
-          <h3>Follow Us</h3>
-          <ul>
-              <li><a href="#">Facebook</a></li>
-              <li><a href="https://www.instagram.com/sanskar.mkf?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">Instagram</a></li>
-              <li><a href="https://www.linkedin.com/company/sanskarfoundation/">LinkedIn</a></li>
-          </ul>
-      </div>
-      <div class="copyright">
-          
-      </div>
+    <div class="footer-section links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a
+            href="https://www.instagram.com/sanskar.mkf?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+            target="_blank" rel="noopener noreferrer">Instagram</a></li>
+        <li><a href="https://www.linkedin.com/company/sanskarfoundation/" target="_blank"
+            rel="noopener noreferrer">LinkedIn</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+      </ul>
+
+    </div>
+    <div class="footer-section contact">
+      <h4>Contact</h4>
+      <p>Phone: +917983923205</p>
+      <p>Email: <a href="mailto:sanskarmkf@gmail.com">sanskarmkf@gmail.com</a></p>
+    </div>
   </div>
 </footer>
   
@@ -190,20 +204,53 @@ body {
     }
     
     /* Top Bar Section */
-    .top-bar {
+   
+  .top-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333333; /* Dark Gray */
+    background-color: #333333;
+    /* Dark Gray */
     padding: 20px 40px;
-    }
-    
-    .top-bar .logo img {
-    width: 55px;      /* Increase the width of the logo */
-    margin-top: -20px; /* Move the logo slightly up */
-    padding: 8px;     /* Adjust padding around the logo */
+  }
+
+  .logo-text {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo img {
+    width: 65px;
+    /* Adjust the size of the logo */
+    margin-top: -15px;
+    /* Move the logo slightly up */
+    padding: 8px;
+    /* Adjust padding around the logo */
     margin-left: -30px;
-}
+  }
+
+  .logo-text-content {
+    color: white;
+    font-size: 30px;
+    /* Adjust font size for text */
+    font-weight: bold;
+    margin-left: -1px;
+    /* Space between the logo and the text */
+    font-family: Arial, sans-serif;
+    /* Optional: Choose a font */
+    margin-top: -20px;
+    font-family: 'Playfair Display', serif; /* A popular serif font */
+  }
+
+  .top-bar .logo img {
+    width: 55px;
+    /* Increase the width of the logo */
+    margin-top: -20px;
+    /* Move the logo slightly up */
+    padding: 8px;
+    /* Adjust padding around the logo */
+    margin-left: -30px;
+  }
 
     .top-nav ul {
     list-style: none;
@@ -220,165 +267,144 @@ body {
     font-size: 16px;
     }
     
-  .event-section {
-    margin-top:80px;
-    padding: 20px;
-    background-color: #f8f9fa;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-    
-  .event-section {
-    margin-top: 80px;
-    padding: 20px;
-    background-color: #f8f9fa;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-  
-  .event-section h2 {
-    font-size: 2em;
-    color: #333;
-    margin-bottom: 15px;
-  }
-  
-  .event-section p {
-    font-size: 1.1em;
-    color: #555;
-    margin: 10px 0;
-  }
-  
-  .event-images {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px; /* Adjust gap between images as needed */
-    margin-top: 30px;
+     
+    .event-section {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5em;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 2em auto;
+  max-width: 1200px;
+  gap: 1.5em;
+}
+
+.event-content {
+  flex: 1 1 100%;
+  text-align: left;
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+
+.event-content h2 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+  color: #444;
+  text-align: center;
+}
+
+.event-content p {
+  line-height: 1.8;
+  margin-bottom: 1.5em;
+  color: #555;
+  text-align: center;
+}
+
+.event-images {
+  flex: 1 1 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5em;
 }
 
 .event-images img {
-    width:500px; /* Adjust width to control the image size */
-    height: 400px;
-    border: 5px solid #d1e7dd; /* Light green border */
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s, box-shadow 0.3s;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .event-images img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-}
-  
-  .event-images img::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 10px;
-    background: linear-gradient(45deg, rgba(255, 204, 204, 0.4), rgba(204, 255, 255, 0.4));
-    z-index: -1; /* Place behind the image */
-  }
-  footer {
-    background-color: #333333; /* Dark Gray */
-    padding: 40px;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    }
-    
-    .footer-content {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 1200px;
-    flex-wrap: wrap;
-    }
-    
-    .footer-section {
-    flex: 1;
-    padding: 20px;
-    }
-    
-    .footer-section h4 {
-    margin-bottom: 20px;
-    font-size: 20px;
-    color: #ffffff;
-    }
-    
-    .footer-section p, .footer-section a {
-    color: #dddddd;
-    font-size: 16px;
-    text-decoration: none;
-    }
-    .sliding-pictures {
-        display: flex;
-        overflow: hidden;
-        margin-bottom: 20px;
-        height: 400px;
-        background-color: #f1f1f1;
-        border-radius: 8px;
-    }
-    
-    .sliding-pictures img {
-        width: 100%;
-        animation: slide 7s infinite linear;
-    }
-    
-    .footer-section a:hover {
-    color: #ffffff;
-    text-decoration: underline;
-    }
-    
-    .footer-section .copyright {
-    text-align: center;
-    width: 100%;
-    margin-top: 20px;
-    font-size: 14px;
-    color: #888888;
-    }
-    footer {
-    background-color:grey;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    width: 100%; /* Sets the width to 100% of its container */
-    margin-top: -50px;
-    
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+  
+  
+  
+  
+  footer {
+    background-color: #333333; /* Dark Gray */
+    color: white;
+    padding: 40px 20px;
+    width: 100%;
+    box-sizing: border-box; /* Prevent padding from affecting the layout */
+    text-align: center; /* Center text on smaller screens */
+    border-top: 5px solid coral; /* Add a decorative border to the top */
+}
 
 .footer-content {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
+    align-items: flex-start; /* Align items at the top for consistency */
+    flex-wrap: wrap;
+    gap: 30px; /* More space between sections */
 }
 
-.contact-us, .follow-us, .copyright {
-    flex-basis: 33.33%;
+.footer-section {
+    flex: 1 1 25%; /* Sections will take 25% of the space on larger screens */
+    min-width: 200px; /* Ensure sections don’t shrink too much on smaller screens */
+    margin-bottom: 20px;
 }
 
-.contact-us p, .follow-us ul li {
-    margin: 5px 0;
+.footer-section h4 {
+    color: coral; /* Stand out with a vibrant color */
+    margin-bottom: 15px;
+    font-size: 1.4em; /* Slightly larger font size for better readability */
+    text-transform: uppercase; /* Add a professional touch */
 }
 
-.follow-us ul {
-    list-style: none;
+.footer-section p,
+.footer-section a {
+    color: #ccc; /* Softer white for better contrast */
+    text-decoration: none;
+    line-height: 1.8; /* More spacing for readability */
+    font-size: 0.95em; /* Ensure smaller text doesn’t dominate */
+}
+
+.footer-section a:hover {
+    color: coral; /* Make hover color consistent */
+    text-decoration: underline; /* Add hover underline for clarity */
+}
+
+.footer-section ul {
+    list-style-type: none;
     padding: 0;
+    margin: 0; /* Standardize spacing for lists */
 }
 
-.follow-us ul li a {
-    color: #fff;
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #ddd;
     text-decoration: none;
 }
-  
+
+.footer-section ul li a:hover {
+    color: coral;
+}
+
+footer a {
+    transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+footer a:hover {
+    color: coral;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Stack sections vertically on smaller screens */
+        text-align: center;
+    }
+
+    .footer-section {
+        flex: 1 1 100%; /* Ensure sections take full width */
+    }
+}
   
   </STYLE>
 

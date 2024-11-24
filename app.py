@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request  # Added request import
+from flask import send_from_directory
 import pandas as pd
 import os
 from werkzeug.utils import secure_filename
@@ -131,9 +132,8 @@ def gallery():
     return render_template('gallery.html')
 
 @app.route('/achievement')
-def achievement():
+def achievement():   
     return render_template('achievement.html')
-
 
 
 @app.route('/p1')
