@@ -11,7 +11,6 @@
 <body>
 
 
-
   <!-- Top Bar Section -->
   <div class="top-bar">
     <div class="logo-text">
@@ -23,6 +22,7 @@
     <nav class="top-nav">
       <ul>
         <li><a href="{{ url_for('home') }}">Home</a></li>
+        <!--<li><a href="{{ url_for('about') }}">About Us</a></li>-->
         <li><a href="{{ url_for('work') }}">Our Work</a></li>
         <li><a href="{{ url_for('testimonials') }}">Testimonials</a></li>
         <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
@@ -146,8 +146,8 @@
       <img src="{{ url_for('static', filename='20TH oct.JPG') }}" alt="Children 3">
       <img src="{{ url_for('static', filename='brzee12.JPG') }}" alt="Children 4">
       <img src="{{ url_for('static', filename='IMG_3909.JPG') }}" alt="Education">
+    </div>
   </div>
-</div>
 
 
 
@@ -160,32 +160,35 @@
         <img src="{{ url_for('static', filename='haldwani11.jpg') }}" alt="Achievement 1">
       </div>
       <div class="achievement-info">
-        <h3>A NEW BEGINNING| EDUCATIONAL DRIVE IN HALDWANI </h3>
+        <h3>A NEW BEGINNING| EDUCATIONAL DRIVE IN HALDWANI
+        </h3>
         <p class="achievement-date">Sep. 15th</p>
         <p class="achievement-description">Sanskar, a student-led initiative, uplifts communities across India through
           education, medical aid, and member contributions. Projects like MKOnlineClasses and the Data Science Club
           provide essential resources to underprivileged children, fostering positive change and spreading hope.</p>
         <div class="achievement-meta">
           <!-- <span class="comments">21 <i class="fa fa-comment"></i></span> -->
-          <a href="{{ url_for('achievement') }}" class="learn-more" >View More...</a>
+          <a href="{{ url_for('achievement') }}" class="learn-more">View More...</a>
 
         </div>
       </div>
     </div>
     <div class="container">
       <div class="description">
-
-       <h3> LABOUR DAY 2024 | CELEBRATING UNSUNG HEROES</h3>
-       <p class ="achievement-date">May. 1st </p>
-       <p></p>
-        <p>We have distributed necessities, refreshments, and educational materials to nearly 100 people. Heartfelt congratulations and gratitude go to all the core members and the Sanskar family for making this milestone possible. A special thanks to everyone for their presence and encouragement, which continue to spread positivity and make a difference together.</p>
+        <p>we have distributed necessities refreshment and education to early nearly 100 people Heart Will
+          congratulation and Thanks to all the core members and members of Sanskar family for making this milestone
+          possible special thanks to everyone for their presence and encouragement that continuous spreading positivity
+          and making a difference together</p>
       </div>
       <div class="video-container">
         <!-- Custom Thumbnail -->
-        <div class="video-thumbnail" onclick="playVideo()">
-          <a href="https://www.youtube.com/watch?v=hIJ0mAD5V_o" target="_blank"></a>
-            <img src="{{ url_for('static', filename='labour day(acharya)13.jpg') }}" alt="Video Thumbnail">
-            <div class="youtube-icon"></div>
+<!-- Custom Thumbnail -->
+<div class="video-thumbnail">
+  <a href="https://www.youtube.com/watch?v=hIJ0mAD5V_o" target="_blank">
+      <img src="{{ url_for('static', filename='labour day(acharya)13.jpg') }}" alt="Video Thumbnail">
+      <div class="youtube-icon"></div>
+  </a>
+</div>
 
         </div>
 
@@ -197,9 +200,9 @@
         <div class="footer-section about">
           <h4>SANSKAR</h4>
           <p>Together we can bring changes in the society,</p>
-    <p>also sometimes the small happiness is the key</p>
-    <p>to a reason for the bigger happiness.</p>
-          </div>
+          <p>also sometimes the small happiness is the key</p>
+          <p>to a reason for the bigger happiness.</p>
+        </div>
         <div class="footer-section links">
           <h4>Quick Links</h4>
           <ul>
@@ -213,7 +216,7 @@
         </div>
         <div class="footer-section contact">
           <h4>Contact</h4>
-          <p>Phone: +917983923205</p>
+          <p>Phone: +919818885691</p>
           <p>Email: <a href="mailto:sanskarmkf@gmail.com">sanskarmkf@gmail.com</a></p>
         </div>
       </div>
@@ -278,7 +281,6 @@
     height: auto;
     object-fit: cover;
     position: relative;
-    
   }
 
   .slide img {
@@ -290,11 +292,10 @@
     margin: 0 auto;
     overflow: hidden;
     object-fit: cover;
-    opacity: 2.0;
-    background-color: rgba(0, 0, 0, 0.6); 
+    opacity: 1.0;
     /* Add this to make the image semi-transparent */
   }
-  
+
 
   /* Text Overlay with Animation */
 
@@ -307,12 +308,12 @@
   }
 
   .sanskar-heading {
-    font-size: 55px;
+    font-size: 50px;
     font-weight: bold;
     color: #333;
     margin-top: 100px;
     text-align: center;
-    font-family: 'Playfair Display', serif; /* A popular serif font */
+    font-style:italic;
   }
 
 
@@ -507,7 +508,7 @@
     font-family: Arial, sans-serif;
     /* Optional: Choose a font */
     margin-top: -20px;
-    font-family: 'Playfair Display', serif; /* A popular serif font */
+    font-style: italic;
   }
 
   .top-bar .logo img {
@@ -625,7 +626,6 @@
     text-align: center;
     font-weight: bold;
     letter-spacing: 1.5px;
-    font-family: 'Playfair Display', serif; /* A popular serif font */
   }
 
   /* Container and grid layout */
@@ -796,7 +796,6 @@
     z-index: 1;
     letter-spacing: 2px;
     margin-bottom: 20px;
-    font-family: 'Playfair Display', serif; /* A popular serif font */
     /* Adjust margin for spacing */
   }
 
@@ -871,7 +870,6 @@
     /* Center align text */
     overflow: hidden;
     /* Hide any overflowing content */
-    font-family: 'Playfair Display', serif; /* A popular serif font */
   }
 
   .content-wrapper {
@@ -1040,7 +1038,7 @@
     /* Space between achievements */
     padding: 20px;
     color: #000;
-    font-family: 'Playfair Display', serif; /* A popular serif font */
+    font-family: fantasy;
     font-size: 40px;
 
   }
@@ -1200,38 +1198,49 @@
     border: 5px solid rgba(255, 255, 255, 0.5);
     background-color: #f1f1f1;
     height: 400px;
-    display: flex; /* Ensures images align properly */
-}
+    display: flex;
+    /* Ensures images align properly */
+  }
 
-.sliding-pictures img {
+  .sliding-pictures img {
     width: 100%;
     flex-shrink: 0;
     height: 100%;
     object-fit: cover;
-    animation: slide 10s infinite ease-in-out; /* Slightly shorter animation duration */
-}
+    animation: slide 10s infinite ease-in-out;
+    /* Slightly shorter animation duration */
+  }
 
-@keyframes slide {
-    0%, 20% {
-        transform: translateX(0%);
+  @keyframes slide {
+
+    0%,
+    20% {
+      transform: translateX(0%);
     }
-    25%, 45% {
-        transform: translateX(-100%);
+
+    25%,
+    45% {
+      transform: translateX(-100%);
     }
-    50%, 70% {
-        transform: translateX(-200%);
+
+    50%,
+    70% {
+      transform: translateX(-200%);
     }
-    75%, 95% {
-        transform: translateX(-300%);
+
+    75%,
+    95% {
+      transform: translateX(-300%);
     }
+
     100% {
-        transform: translateX(0%);
+      transform: translateX(0%);
     }
-}
+  }
 
 
 
-  /*vide0*/
+
   /* Container styling for text and video */
   .container {
     display: flex;
@@ -1321,87 +1330,106 @@
   /* Footer */
 
   footer {
-    background-color: #333333; /* Dark Gray */
+    background-color: #333333;
+    /* Dark Gray */
     color: white;
     padding: 40px 20px;
     width: 100%;
-    box-sizing: border-box; /* Prevent padding from affecting the layout */
-    text-align: center; /* Center text on smaller screens */
-    border-top: 5px solid coral; /* Add a decorative border to the top */
-}
+    box-sizing: border-box;
+    /* Prevent padding from affecting the layout */
+    text-align: center;
+    /* Center text on smaller screens */
+    border-top: 5px solid coral;
+    /* Add a decorative border to the top */
+  }
 
-.footer-content {
+  .footer-content {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start; /* Align items at the top for consistency */
+    align-items: flex-start;
+    /* Align items at the top for consistency */
     flex-wrap: wrap;
-    gap: 30px; /* More space between sections */
-}
+    gap: 30px;
+    /* More space between sections */
+  }
 
-.footer-section {
-    flex: 1 1 25%; /* Sections will take 25% of the space on larger screens */
-    min-width: 200px; /* Ensure sections don’t shrink too much on smaller screens */
+  .footer-section {
+    flex: 1 1 25%;
+    /* Sections will take 25% of the space on larger screens */
+    min-width: 200px;
+    /* Ensure sections don’t shrink too much on smaller screens */
     margin-bottom: 20px;
-}
+  }
 
-.footer-section h4 {
-    color: coral; /* Stand out with a vibrant color */
+  .footer-section h4 {
+    color: coral;
+    /* Stand out with a vibrant color */
     margin-bottom: 15px;
-    font-size: 1.4em; /* Slightly larger font size for better readability */
-    text-transform: uppercase; /* Add a professional touch */
-}
+    font-size: 1.4em;
+    /* Slightly larger font size for better readability */
+    text-transform: uppercase;
+    /* Add a professional touch */
+  }
 
-.footer-section p,
-.footer-section a {
-    color: #ccc; /* Softer white for better contrast */
+  .footer-section p,
+  .footer-section a {
+    color: #ccc;
+    /* Softer white for better contrast */
     text-decoration: none;
-    line-height: 1.8; /* More spacing for readability */
-    font-size: 0.95em; /* Ensure smaller text doesn’t dominate */
-}
+    line-height: 1.8;
+    /* More spacing for readability */
+    font-size: 0.95em;
+    /* Ensure smaller text doesn’t dominate */
+  }
 
-.footer-section a:hover {
-    color: coral; /* Make hover color consistent */
-    text-decoration: underline; /* Add hover underline for clarity */
-}
+  .footer-section a:hover {
+    color: coral;
+    /* Make hover color consistent */
+    text-decoration: underline;
+    /* Add hover underline for clarity */
+  }
 
-.footer-section ul {
+  .footer-section ul {
     list-style-type: none;
     padding: 0;
-    margin: 0; /* Standardize spacing for lists */
-}
+    margin: 0;
+    /* Standardize spacing for lists */
+  }
 
-.footer-section ul li {
+  .footer-section ul li {
     margin-bottom: 10px;
-}
+  }
 
-.footer-section ul li a {
+  .footer-section ul li a {
     color: #ddd;
     text-decoration: none;
-}
+  }
 
-.footer-section ul li a:hover {
+  .footer-section ul li a:hover {
     color: coral;
-}
+  }
 
-footer a {
-    transition: color 0.3s ease; /* Smooth hover effect */
-}
+  footer a {
+    transition: color 0.3s ease;
+    /* Smooth hover effect */
+  }
 
-footer a:hover {
+  footer a:hover {
     color: coral;
-}
+  }
 
-@media (max-width: 768px) {
+  @media (max-width: 768px) {
     .footer-content {
-        flex-direction: column; /* Stack sections vertically on smaller screens */
-        text-align: center;
+      flex-direction: column;
+      /* Stack sections vertically on smaller screens */
+      text-align: center;
     }
 
     .footer-section {
-        flex: 1 1 100%; /* Ensure sections take full width */
+      flex: 1 1 100%;
+      /* Ensure sections take full width */
     }
-}
-
+  }
 </style>
 <script>
   let currentIndex = 0;
